@@ -31,7 +31,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['8000-wendybovill-milestonepr-l6cezvkc4vc.ws-eu101.gitpod.io',
                  'localhost', '127.0.0.1']
 
-
+SITE = 1
 # Application definition
 
 INSTALLED_APPS = [
