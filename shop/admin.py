@@ -9,6 +9,9 @@ class CategoryAdmin(admin.ModelAdmin):
         'name',
         'tag',
         'discount',
+        'image',
+        'image_url',
+        'season',
     )
 
     ordering = ('name',)
