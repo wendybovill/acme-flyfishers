@@ -11,7 +11,7 @@ class Category(models.Model):
                               null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     season = models.CharField(max_length=250, null=True, blank=True)
-    
+
     class Meta:
         verbose_name_plural = 'categories'
 
