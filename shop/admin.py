@@ -5,28 +5,31 @@ from .models import Category, Product
 
 
 class CategoryAdmin(admin.ModelAdmin):
+    readonly_fields = ['image_preview',]
     list_display = (
         'name',
+        'friendly_name',
         'tag',
         'discount',
         'image',
         'image_url',
-        'season',
+        'description',
     )
 
     ordering = ('name',)
 
 
 class ProductAdmin(admin.ModelAdmin):
+    readonly_fields = ['image_preview',]
     list_display = (
+        'image',
+        'image_url',
         'title',
         'sku',
         'price',
         'category',
         'tag',
         'description',
-        'image',
-        'image_url',
         'colours',
         'discount',
         'special_offer',
