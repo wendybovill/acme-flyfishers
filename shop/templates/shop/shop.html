@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block more_css %}
+<link rel="stylesheet" href="/static/css/shop.css">
+{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block carousel %}
+{% for slide in slides %}
+<div id="{{slide.number}}" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="{{ slide.number }}" data-slide-to="0" class="active"></li>
+    </ol>
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <img src="{{ slide.image_path }}" class="d-block w-100" alt="{{ slide.alt }}">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>{{ slide.title }}</h5>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-target="{{ slide.number }}" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-target="{{ slide.number }}" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </button>
+</div>
+{% endfor %}
+{% endblock %}
+
+{% block content %}
+<div class="container h-100">
+    <div class="row h-100">
+        <div class="col-7 col-md-6 my-auto">
+            <h1 class="display-4 logo-font text-black">
+                View the Range
+            </h1>
+            <div class="my-5">
+                <h4>
+                    <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+    $('.carousel').carousel()
+</script>
+{% endblock %}

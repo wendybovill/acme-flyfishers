@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Product
+from .models import Category, Product, Slide
 
 # register
 
@@ -39,5 +39,22 @@ class ProductAdmin(admin.ModelAdmin):
     ordering = ('title',)
 
 
+class SlideAdmin(admin.ModelAdmin):
+    readonly_fields = ['image_preview', 'image_path']
+    list_display = (
+        'name',
+        'number',
+        'title',
+        'image',
+        'image_url',
+        'alt',
+        'tag',
+        'caption',
+    )
+
+    ordering = ('number',)
+
+
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Product, ProductAdmin)
+admin.site.register(Slide, SlideAdmin)
