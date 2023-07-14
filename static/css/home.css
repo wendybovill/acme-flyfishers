@@ -2,11 +2,70 @@ html {
     height: 100%;
 }
 
-.welcome {
-    background-color: rgba(0, 0, 0, 0.63);
+body {
+    background: url('/media/frontpage2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    color: rgb(255, 255, 255);
+    font-family: 'Lato';
+    padding: 0;
+    margin: 0;
 }
 
-.entry-title h1 {
+main {
+    height: calc(100vh - 164px);
+}
+
+.welcome {
+    padding: 100px 0 0 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    display: block;
+    padding-top: 25px;
+}
+
+h1 {
+    color: red;
+}
+
+h2 {
+    color: red;
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-size: 1.2rem !important;
+}
+
+.white-btn {
+    background: white;
+    color: black;
+    border: 1px solid white;
+    padding-bottom: 25px;
+}
+
+.white-btn:hover {
+    background: black;
     color: white;
-    font-size: 1.2ems;
+    border: 1px solid white;
+    padding-bottom: 25px;
+}
+
+.glow:hover {
+    box-shadow: rgba(255, 255, 255, 0.253) 0 0 15px 10px;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.63);
+    width: 100vw;
+    height: calc(100vh + 100px);
 }

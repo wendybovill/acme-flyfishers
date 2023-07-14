@@ -1,3 +1,96 @@
 html {
     height: 100%;
 }
+
+body {
+    background-image: unset !important;
+    background-color: black;
+    height: calc(100vh - 164px);
+    font-family: 'Lato';
+    margin: 0;
+    color: white !important;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: red;
+}
+
+#shopSlideshow {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+#shopSlideshow img {
+    width: 100%;
+}
+
+.carousel,
+.item,
+.active {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.welcome {
+    background-color: rgba(0, 0, 0, 0.63);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    display: block;
+}
+
+h2 {
+    font-size: 1.75rem !important;
+}
+
+section#productsection {
+    padding: 15px 25px;
+}
+
+footer {
+    background: url('/media/frontpage.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 200px;
+    width: 100vw;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.562);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 200px;
+    font-size: 0.9rem;
+}
+
+.white-btn {
+    background: white;
+    color: black;
+    border: 1px solid white;
+    border-radius: 25px;
+}
+
+.white-btn:hover {
+    background: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 25px;
+
+}
+
+.glow:hover {
+    box-shadow: rgba(255, 255, 255, 0.253) 0 0 15px 10px;
+}

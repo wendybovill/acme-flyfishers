@@ -2,16 +2,17 @@ html {
     height: 100%;
 }
 
+.logo {
+    height: 90px;
+    width: auto;
+}
+
 body {
     background: url('/media/frontpage2.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: rgb(24, 57, 224);
     font-family: 'Lato';
-}
-
-.welcome {
-    background-color: rgba(0, 0, 0, 0.63);
 }
 
 .logo-text {
@@ -25,11 +26,6 @@ hr {
     border-color: red;
 }
 
-h1 {
-    color: rgb(163, 0, 0);
-    font-size: 1rem;
-}
-
 .intro-text {
     color: white;
     width: 100%;
@@ -37,5 +33,9 @@ h1 {
 }
 
 .bg-black {
-    background-color: rgba(0, 0, 0, 0.637) !important;
+    background-color: rgba(0, 0, 0, 0.637);
+}
+
+.textshadow {
+    text-shadow: black 2px 2px 3px 5px;
 }
