@@ -11,8 +11,8 @@ body {
     background: url('/media/frontpage2.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: rgb(24, 57, 224);
-    font-family: 'Lato';
+    color: rgb(49, 49, 49);
+    font-family: 'Raleway', sans-serif;
 }
 
 .logo-text {
@@ -39,3 +39,18 @@ hr {
 .textshadow {
     text-shadow: black 2px 2px 3px 5px;
 }
+
+
+/* ==================================== */
+
+
+/*                                      */
+
+
+/*            Media Queries             */
+
+
+/*                                      */
+
+
+/* ==================================== */
