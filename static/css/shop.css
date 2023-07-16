@@ -52,6 +52,9 @@ h2 {
 
 section#productsection {
     padding: 15px 25px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 footer {

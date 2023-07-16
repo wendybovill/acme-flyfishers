@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category, Slide
+from .models import Product, Category, Slide, Season
 
 # Create your views here.
 
@@ -14,6 +14,7 @@ def shop(request):
     products = Product.objects.all()
     query = None
     categories = None
+    season = None
     sort = None
     direction = None
 
@@ -24,7 +25,9 @@ def shop(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
-            if sortkey == 'category':
+            if sortkey == 'season':
+                sortkey = 'season__name'
+            elif sortkey == 'category':
                 sortkey = 'category__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
@@ -37,12 +40,17 @@ def shop(request):
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
+        if 'season' in request.GET:
+            seasons = request.GET['season'].split(',')
+            products = products.filter(season__name__in=seasons)
+            seasons = Season.objects.filter(name__in=seasons)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
                 messages.error(request,
                                "You didn't enter any search criteria!")
-                return redirect(reverse('products'))
+                return redirect(reverse('shop'))
 
             queries = Q(name__icontains=query) | Q(
                 description__icontains=query)
@@ -58,3 +66,5 @@ def shop(request):
     }
 
     return render(request, 'shop/shop.html', context)
+
+

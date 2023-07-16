@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Product, Slide
+from .models import Category, Product, Slide, Season
 
 # register
 
@@ -19,24 +19,37 @@ class CategoryAdmin(admin.ModelAdmin):
     ordering = ('name',)
 
 
+class SeasonAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+        'friendly_name',
+    )
+
+    ordering = ('name',)
+
+
 class ProductAdmin(admin.ModelAdmin):
     readonly_fields = ['image_preview',]
     list_display = (
+        'name',
         'image',
         'image_url',
-        'title',
         'sku',
         'price',
+        'stock',
         'category',
         'tag',
+        'friendly_name',
         'description',
+        'hook_size',
         'colours',
         'discount',
         'special_offer',
-        'product_group',
+        'multiple_products',
+        'season',
     )
 
-    ordering = ('title',)
+    ordering = ('name',)
 
 
 class SlideAdmin(admin.ModelAdmin):
@@ -56,5 +69,6 @@ class SlideAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Category, CategoryAdmin)
+admin.site.register(Season, SeasonAdmin)
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Slide, SlideAdmin)
