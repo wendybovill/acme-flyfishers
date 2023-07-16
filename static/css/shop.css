@@ -30,12 +30,6 @@ h5 {
     width: 100%;
 }
 
-.carousel,
-.item,
-.active {
-    height: 100%;
-}
-
 .carousel-inner {
     height: 100%;
 }
@@ -93,4 +87,33 @@ footer {
 
 .glow:hover {
     box-shadow: rgba(255, 255, 255, 0.253) 0 0 15px 10px;
+}
+
+
+/* ==================================== */
+
+
+/*                                      */
+
+
+/*            Media Queries             */
+
+
+/*                                      */
+
+
+/* ==================================== */
+
+
+/* Extra Large screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding-top: 65px;
+    }
 }

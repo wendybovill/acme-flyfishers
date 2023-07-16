@@ -1,14 +1,14 @@
 <div class="collapse navbar-collapse" id="navigation">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item d-block d-md-none">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="" id="home-link">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}" id="home-link">
                 Home
             </a>
         </li>
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="category-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Homeware
+                Categories
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="category-link">
                 <a href="" class="dropdown-item">Wet Flies</a>
@@ -17,8 +17,8 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="view-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Shop
+            <a class="font-weight-bold nav-link text-black mr-5" href="#" id="view-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                View Range
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="view-products-link">
                 <a href="" class="dropdown-item">By Price</a>
