@@ -10,7 +10,9 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-.welcome {}
+main {
+    height: 100vh;
+}
 
 h1,
 h2,
@@ -40,6 +42,18 @@ h4 {
     font-size: 1.2rem !important;
 }
 
+.welcome {
+    padding-top: 65px;
+    padding-bottom: 45px;
+}
+
+div.center {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 25%;
+}
+
 .white-btn {
     background: white;
     color: black;
@@ -55,19 +69,19 @@ h4 {
 }
 
 .red-btn {
-    background: black;
-    color: white;
-    font-weight: 700;
-    border: 1px solid black;
-    padding-bottom: 50px;
-}
-
-.red-btn:hover {
-    background: red;
+    background: white;
     color: black;
     font-weight: 700;
     border: 1px solid red;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
+}
+
+.red-btn:hover {
+    background: black;
+    color: red;
+    font-weight: 700;
+    border: 1px solid white;
+    padding-bottom: 10px;
 }
 
 .glow:hover {
@@ -76,6 +90,54 @@ h4 {
 
 .overlay {
     background-color: rgba(0, 0, 0, 0.63);
+    width: calc(100vw- 116px);
+    height: 100vh;
+}
+
+footer {
+    min-height: 65px;
+    max-height: 200px;
+    height: 100%;
     width: 100vw;
-    height: calc(100vh + 164px);
+    padding: 50px 0;
+    justify-content: space-around;
+    background-color: black;
+}
+
+/* ==================================== */
+
+
+/*                                      */
+
+
+/*            Media Queries             */
+
+
+/*                                      */
+
+
+/* ==================================== */
+
+
+/* Extra Large screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding-top: 65px;
+    }
+}
+
+@media (max-width: 450px) {
+    body {
+        background: url('/media/frontpage2.jpg') no-repeat right center fixed;
+        background-size: cover;
+        height: calc(100vh - 65px);
+        color: rgb(255, 255, 255);
+        font-family: 'Raleway', sans-serif;
+    }
 }

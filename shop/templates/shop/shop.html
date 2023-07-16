@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="container h-100 m-0 p-0">
+<div class="h-100 m-0 p-0">
     <div id="shopSlideshow" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#shopSlideshow" data-slide-to="0" class="active"></li>
@@ -49,6 +49,11 @@
                     {% for category in current_categories %}
                     <a class="category-badge text-decoration-none" href="{% url 'shop' %}?category={{ category.name }}">
                         <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ category.friendly_name }}</span>
+                    </a>
+                    {% endfor %}
+                    {% for season in current_seasons %}
+                    <a class="category-badge text-decoration-none" href="{% url 'shop' %}?season={{ season.name }}">
+                        <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ season.friendly_name }}time</span>
                     </a>
                     {% endfor %}
 
@@ -90,7 +95,7 @@
                     <div class="row">
                         {% for product in products %}
                         <div class="h-100 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card h-100 border-0">
+                            <div class="card h-100 border-1">
                                 {% if product.image %}
                                 <a href="">
                                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -104,9 +109,7 @@
                                     <p class="mb-0">{{ product.name }}</p>
                                     {% if product.special_offer %}
                                     <p class="small mt-1 mb-0">
-                                        <a class="text-red" href="{% url 'shop' %}?category={{ product.category.name }}">
-                                            <i class="fa-solid fa-tags mr-1"></i></i>SPECIAL OFFER
-                                        </a>
+                                        <i class="fa-solid fa-tags mr-1 tag-offer"></i></i> <a class="" href="{% url 'shop' %}?category={{ product.category.name }}"><span class="offer"> SPECIAL OFFER </span></a>
                                     </p>
                                     {% endif %}
                                     {% if product.multiple_product %}
@@ -154,7 +157,6 @@
                         </div>
                         {% if forloop.counter|divisibleby:1 %}
                         <div class="col-12 d-sm-none mb-5">
-                            <hr class="w-50 mb-1">
                         </div>
                         {% endif %}
                         {% if forloop.counter|divisibleby:2 %}
@@ -164,12 +166,12 @@
                         {% endif %}
                         {% if forloop.counter|divisibleby:3 %}
                         <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                            <hr class="w-50 mb-1">
+                            <hr class="w-75 mb-1">
                         </div>
                         {% endif %}
                         {% if forloop.counter|divisibleby:4 %}
                         <div class="col-12 d-none d-xl-block mb-5">
-                            <hr class="w-50 mb-1">
+                            <hr class="w-100 mb-1">
                         </div>
                         {% endif %}
                         {% endfor %}
@@ -177,16 +179,18 @@
                 </div>
             </div>
         </div>
-        <div class="btt-button shadow-sm rounded-0 border border-black">
-            <a class="btt-link d-flex h-100">
-                <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+        <div class="">
+            <a class="top-button top-link d-flex">
+                <i class="fas fa-arrow-up mx-auto my-auto"></i>
             </a>
         </div>
     </section>
-    <footer>
-        <div class="overlay">
-            Copyright
+    <footer class="text-center">
+
+        <div class="overlay copyright">
+            &copy;2023 Copyright ACME Flydressers. All rights reserved. Images property of ACME Flydresers.
         </div>
+
     </footer>
 </div>
 {% endblock %}
@@ -194,7 +198,7 @@
 {% block postloadjs %}
 {{ block.super }}
 <script type="text/javascript">
-    $('.btt-link').click(function(e) {
+    $('.top-link').click(function(e) {
         window.scrollTo(0, 0)
     })
 </script>

@@ -14,7 +14,7 @@ def shop(request):
     products = Product.objects.all()
     query = None
     categories = None
-    season = None
+    seasons = None
     sort = None
     direction = None
 
@@ -62,9 +62,8 @@ def shop(request):
         'products': products,
         'search_term': query,
         'current_categories': categories,
+        'current_seasons': seasons,
         'current_sorting': current_sorting,
     }
 
     return render(request, 'shop/shop.html', context)
-
-

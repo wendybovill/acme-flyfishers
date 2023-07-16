@@ -15,36 +15,39 @@
 {% endblock %}
 
 {% block content %}
-<main class="">
-    <div class="overlay">
-        <div class="container">
-            <div class="row h-100">
-                <div class="welcome h-100">
-                    <h1 class="text-white">Welcome to ACME Flydressers </h1>
+<main class="overlay h-100">
+    <div class="container h-100 ">
+        <div class="welcome text-center">
+            <h1 class="text-white">Welcome to ACME Flydressers </h1>
 
-                    Approaching half a century of dressing Trout, Atlantic Salmon, Large Mouth Bass and Saltwater flies, our ethos is: <br>
-                    <h3 class="text-white">"Quality in Excellence"</h3>
-                </div>
-                <div class="container column h-100 text-white md-12">
-                    <div class="column h-100 text-justify text-white md-12">
-                        <div class="column h-100 text-justify">
-                            <h4 class="textshadow">We tie flies to catch fish not flyfishers.</h4>
-                            <h4>Our approach to your success is simple, use: </h4>
-                            <ul class="">
-                                <li>The Highest Quality materials available</li>
-                                <li>The Best Practice tying techniques</li>
-                                <li>The most Effective Business Model, enabling low overheads and affordable prices</li>
-                            </ul>
-                            <h4>We tie flies that enhance your confidence... the catching is up to you!</h4>
-                        </div>
-                        <div class="column">
-                            <h4>
-                                <a href="{% url 'shop' %}" class="shop-now-button btn btn-md red-btn rounded-0 text-uppercase py-3 glow">View Now</a>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
+            <h4 class="py-2">Approaching half a century of dressing Trout, Atlantic Salmon, Large Mouth Bass and Saltwater flies, our ethos is: <br></h4>
+            <h3 class="text-white">"Quality in Excellence"</h3>
+        </div>
+
+        <div class="column text-white md-12">
+            <div class="column text-justify col-md-8 col-sm-12 offset-md-2 offset-sm-0 offset-lg-3">
+                <h4 class="textshadow">We tie flies to catch fish not flyfishers.</h4>
+                <h4>Our approach to your success is simple, use: </h4>
+                <ul class="">
+                    <li>The Highest Quality materials available</li>
+                    <li>The Best Practice tying techniques</li>
+                    <li>The most Effective Business Model, enabling low overheads and affordable prices</li>
+                </ul>
+                <h4>We tie flies that enhance your confidence... the catching is up to you!</h4>
+            </div>
+            <div class="column text-center">
+                <h4>
+                    <a href="{% url 'shop' %}" class="shop-now-button btn btn-md red-btn rounded-0 text-uppercase py-3 glow">View Now</a>
+                </h4>
             </div>
         </div>
+
+    </div>
+    <footer class="text-center copyright">
+
+        &copy;2023 Copyright ACME Flydressers. All rights reserved. Images property of ACME Flydresers.
+
+    </footer>
 </main>
+
 {% endblock %}

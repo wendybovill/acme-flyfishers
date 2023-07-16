@@ -17,20 +17,40 @@ header {
 }
 
 body {
-    height: calc(100vh - 164px);
+    height: calc(100% - 164px);
     color: rgb(49, 49, 49);
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.logo-text {
-    font-family: 'Oswald';
+h2.logo-text {
+    font-family: 'Oswald' !important;
     font-size: 1.5rem;
     color: black;
     display: inline !important
 }
 
-.nav-link * {
+.dropdown-item:hover *,
+.nav-item:hover * {
+    color: rgb(88, 88, 88);
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-link *,
+.dropdown *,
+.nav-item * {
     color: black;
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a:hover {
+    text-decoration: none;
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(187, 185, 80);
+}
+
+a {
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(122, 103, 55);
 }
 
 hr {
@@ -83,17 +103,25 @@ h2 a:hover {
 .red-btn {
     background: black;
     color: white;
-    font-weight: 700;
+    font-weight: 300;
     border: 1px solid black;
     padding-bottom: 50px;
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .red-btn:hover {
     background: red;
     color: white;
-    font-weight: 700;
+    font-weight: 300;
     border: 1px solid red;
     padding-bottom: 50px;
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.copyright {
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 0.85rem;
 }
 
 h1 {
@@ -106,6 +134,34 @@ h1 {
 .logout {
     margin: 25px 50px;
 }
+
+.top-button {
+    height: 41px;
+    width: 41px;
+    position: fixed;
+    border: 2px solid white;
+    border-radius: 25px;
+    background-color: white;
+    color: black;
+    bottom: 15px;
+    right: 15px;
+    z-index: 50;
+}
+
+.top-button:hover {
+    height: 41px;
+    width: 41px;
+    position: fixed;
+    border: 2px solid rgb(158, 0, 0);
+    border-radius: 25px;
+    background-color: white;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+    z-index: 50;
+}
+
+
 
 /* ==================================== */
 
@@ -205,7 +261,7 @@ h1 {
 
 .custom-checkbox .custom-control-label::before {
     border-radius: 0;
-    border-color: #
+    border-color: darkgray;
 
     /* Slightly larger container on xl screens */
     @media (min-width: 1200px) {

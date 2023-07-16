@@ -4,11 +4,12 @@ html {
 
 body {
     background-image: unset !important;
-    background-color: black;
+    background-color: rgb(34, 34, 34);
     height: calc(100vh - 164px);
     font-family: 'Lato';
     margin: 0;
-    color: white !important;
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(71, 71, 71) !important;
     padding: 0;
 }
 
@@ -18,12 +19,15 @@ h3,
 h4,
 h5 {
     color: red;
+    display: block;
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #shopSlideshow {
     margin: 0;
     padding: 0;
     width: 100vw;
+    z-index: 100;
 }
 
 #shopSlideshow img {
@@ -36,14 +40,6 @@ h5 {
 
 .welcome {
     background-color: rgba(0, 0, 0, 0.63);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-    display: block;
 }
 
 h2 {
@@ -73,6 +69,10 @@ footer {
     font-size: 0.9rem;
 }
 
+.badge-white {
+    background-color: white;
+}
+
 .white-btn {
     background: white;
     color: black;
@@ -92,6 +92,37 @@ footer {
     box-shadow: rgba(255, 255, 255, 0.253) 0 0 15px 10px;
 }
 
+.card {
+    border: 1px solid rgb(150, 150, 150);
+    border-radius: 0;
+}
+
+.tag-offer {
+    background-color: white;
+    color: rgb(255, 0, 0);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+.offer {
+    background-color: white;
+    color: darkred;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+.offer:hover {
+    background-color: white;
+    color: rgb(255, 0, 0);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
 
 /* ==================================== */
 
