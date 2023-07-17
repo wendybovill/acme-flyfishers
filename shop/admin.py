@@ -41,11 +41,11 @@ class ProductAdmin(admin.ModelAdmin):
         'tag',
         'friendly_name',
         'description',
-        'hook_size',
+        'hooksize',
         'colours',
         'discount',
-        'special_offer',
-        'multiple_products',
+        'specialoffer',
+        'multipleproducts',
         'season',
     )
 

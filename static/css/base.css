@@ -86,6 +86,24 @@ h2 a:hover {
     text-decoration: none;
 }
 
+.dropdown-item {
+    color: black;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus,
+.dropdown-item:active:hover {
+    background-color: rgb(139, 132, 114);
+    color: white;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: rgb(122, 103, 55);
+}
+
 .white-btn {
     background: white;
     color: black;

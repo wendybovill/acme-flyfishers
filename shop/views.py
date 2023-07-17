@@ -17,6 +17,8 @@ def shop(request):
     seasons = None
     sort = None
     direction = None
+    hooksize = None
+    specialoffer = None
 
     if request.GET:
         if 'sort' in request.GET:
@@ -27,6 +29,10 @@ def shop(request):
                 products = products.annotate(lower_name=Lower('name'))
             if sortkey == 'season':
                 sortkey = 'season__name'
+            if sortkey == 'hooksize':
+                sortkey = 'hooksize'
+            if sortkey == 'specialoffer':
+                sortkey = 'specialoffer'
             elif sortkey == 'category':
                 sortkey = 'category__name'
             if 'direction' in request.GET:
@@ -44,6 +50,11 @@ def shop(request):
             seasons = request.GET['season'].split(',')
             products = products.filter(season__name__in=seasons)
             seasons = Season.objects.filter(name__in=seasons)
+
+        if 'hooksize' in request.GET:
+            products = request.GET['hooksize'].split(',')
+            products = products.filter(hooksize__name__in=products)
+            products = Product.objects.filter(name__in=products)
 
         if 'q' in request.GET:
             query = request.GET['q']

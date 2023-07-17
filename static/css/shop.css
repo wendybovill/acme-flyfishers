@@ -18,7 +18,7 @@ h2,
 h3,
 h4,
 h5 {
-    color: red;
+    color: #c4c4c4;
     display: block;
     font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -73,6 +73,19 @@ footer {
     background-color: white;
 }
 
+.badge {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
 .white-btn {
     background: white;
     color: black;
@@ -123,6 +136,15 @@ footer {
     font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
 }
+
+.custom-select,
+.custom-select-sm {
+    background: white;
+    color: black;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
 
 /* ==================================== */
 
