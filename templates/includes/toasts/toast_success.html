@@ -16,7 +16,7 @@
         </div>
         {% if total and not on_profile_page %}
         <p class="logo-font bg-black text-white py-1">Your Basket ({{ product_count }})</p>
-        <div class="basket-notification-wrapper">
+        <div class="basket-toast-wrapper">
             {% for item in basket_items %}
             <div class="row">
                 <div class="col-3 my-1">
@@ -28,7 +28,7 @@
                 </div>
                 <div class="col-9">
                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                    <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                    <p class="my-0 small text-muted">Quantity: {{ item.quantity }}</p>
                 </div>
             </div>
             {% endfor %}
@@ -42,7 +42,7 @@
                     </p>
                 </strong>
                 <a href="{% url 'view_basket' %}" class="btn red-btn btn-block rounded-0">
-                    <span class="text-uppercase">Go To Secure Checkout</span>
+                    <span class="text-uppercase">Checkout Now</span>
                 </a>
             </div>
         </div>

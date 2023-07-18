@@ -1,0 +1,69 @@
+.basket-toast-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* CSS-tricks https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
+/* PRIMARY CLASSES FROM BOOTSTRAP */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+
+
+/* ADDITIONAL HELPER CLASSES FROM BOOTSTRAP */
+.arrow-primary {
+    border-bottom-color: #006eff !important;
+}
+
+.arrow-secondary {
+    border-bottom-color: #7a8186 !important;
+}
+
+.arrow-success {
+    border-bottom-color: #06b82f !important;
+}
+
+.arrow-danger {
+    border-bottom-color: #dd0016 !important;
+}
+
+.arrow-warning {
+    border-bottom-color: #ff6a07 !important;
+}
+
+.arrow-info {
+    border-bottom-color: #3590c5 !important;
+}
+
+.arrow-light {
+    border-bottom-color: #f8f9fa !important;
+}
+
+.arrow-dark {
+    border-bottom-color: #343a40 !important;
+}
