@@ -101,6 +101,24 @@ footer {
 
 }
 
+.red-btn {
+    background: rgb(122, 103, 55);
+    color: rgb(182, 204, 194);
+    font-weight: 400;
+    border: 2px solid rgb(163, 159, 118);
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.red-btn:hover {
+    background: white;
+    color: black;
+    font-weight: 400;
+    border: 2px solid red;
+    padding: 10px;
+    vertical-align: middle;
+}
+
 .glow:hover {
     box-shadow: rgba(255, 255, 255, 0.253) 0 0 15px 10px;
 }
@@ -111,7 +129,6 @@ footer {
 }
 
 .tag-offer {
-    background-color: white;
     color: rgb(255, 0, 0);
     text-transform: uppercase;
     font-size: 1.1rem;
@@ -120,8 +137,7 @@ footer {
 }
 
 .offer {
-    background-color: white;
-    color: darkred;
+    color: rgb(255, 0, 0);
     text-transform: uppercase;
     font-size: 1.1rem;
     font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
@@ -129,8 +145,7 @@ footer {
 }
 
 .offer:hover {
-    background-color: white;
-    color: rgb(255, 0, 0);
+    color: rgb(153, 153, 153);
     text-transform: uppercase;
     font-size: 1.1rem;
     font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;

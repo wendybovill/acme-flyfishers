@@ -91,57 +91,59 @@
                     <div class="row">
                         {% for product in products %}
                         <div class="h-100 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card h-100 border-1">
-                                {% if product.image %}
-                                <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                </a>
-                                {% else %}
-                                <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                </a>
-                                {% endif %}
-                                <div class="card-body pb-0">
-                                    <p class="mb-0">{{ product.name }}</p>
-                                    {% if product.specialoffer %}
-                                    <p class="small mt-1 mb-0">
-                                        <i class="fa-solid fa-tags mr-1 tag-offer"></i></i><span class="offer"> SPECIAL OFFER </span>
-                                    </p>
+                            <a href="{% url 'view_product' product.id %}">
+                                <div class="card h-100 border-1">
+                                    {% if product.image %}
+                                    <a href="{% url 'view_product' product.id %}">
+                                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    </a>
+                                    {% else %}
+                                    <a href="{% url 'view_product' product.id %}">
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                    </a>
                                     {% endif %}
-                                </div>
-                                <div class="card-footer bg-white pt-0 border-0 text-left">
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold"><i class="fa-solid fa-money-bill-1-wave" title="Price"></i> £ {{ product.price }}</p>
-                                            {% if product.category %}
-                                            <p class="small mt-1 mb-0">
-                                                <a class="text-muted" href="{% url 'shop' %}?category={{ product.category.name }}">
-                                                    <i class="fa-regular fa-folder-open mr-1" title="Category"></i>{{ product.category.friendly_name }}
-                                                </a>
-                                            </p>
-                                            {% endif %}
-                                            {% if product.season %}
-                                            <p class="small mt-1 mb-0">
-                                                <a class="text-muted" href="{% url 'shop' %}?season={{ product.season.name }}">
-                                                    <i class="fa-solid fa-cloud-sun-rain mr-1" title="Season"></i>{{ product.season.friendly_name }}
-                                                </a>
-                                            </p>
-                                            {% endif %}
-                                            {% if product.hooksize%}
-                                            <small class="text-muted"><i class="fa-solid fa-ruler-combined mr-1" title="Hook Size"></i>{{ product.hooksize }}</small>
-                                            {% else %}
-                                            <small class="text-muted"></small>
-                                            {% endif %}
-                                            {% if request.user.is_superuser %}
-                                            <small class="ml-3">
-                                                <a href="">Edit</a> |
-                                                <a class="text-danger" href="">Delete</a>
-                                            </small>
-                                            {% endif %}
+                                    <div class="card-body pb-0">
+                                        <p class="mb-0">{{ product.name }}</p>
+                                        {% if product.specialoffer %}
+                                        <p class="small mt-1 mb-0">
+                                            <i class="fa-solid fa-tags mr-1 tag-offer"></i></i><span class="offer"> SPECIAL OFFER </span>
+                                        </p>
+                                        {% endif %}
+                                    </div>
+                                    <div class="card-footer bg-white pt-0 border-0 text-left">
+                                        <div class="row">
+                                            <div class="col">
+                                                <p class="lead mb-0 text-left font-weight-bold"><i class="fa-solid fa-money-bill-1-wave" title="Price"></i> £ {{ product.price }}</p>
+                                                {% if product.category %}
+                                                <p class="small mt-1 mb-0">
+                                                    <a class="text-muted" href="{% url 'shop' %}?category={{ product.category.name }}">
+                                                        <i class="fa-regular fa-folder-open mr-1" title="Category"></i>{{ product.category.friendly_name }}
+                                                    </a>
+                                                </p>
+                                                {% endif %}
+                                                {% if product.season %}
+                                                <p class="small mt-1 mb-0">
+                                                    <a class="text-muted" href="{% url 'shop' %}?season={{ product.season.name }}">
+                                                        <i class="fa-solid fa-cloud-sun-rain mr-1" title="Season"></i>{{ product.season.friendly_name }}
+                                                    </a>
+                                                </p>
+                                                {% endif %}
+                                                {% if product.hooksize%}
+                                                <small class="text-muted"><i class="fa-solid fa-ruler-combined mr-1" title="Hook Size"></i>{{ product.hooksize }}</small>
+                                                {% else %}
+                                                <small class="text-muted"></small>
+                                                {% endif %}
+                                                {% if request.user.is_superuser %}
+                                                <small class="ml-3">
+                                                    <a href="">Edit</a> |
+                                                    <a class="text-danger" href="">Delete</a>
+                                                </small>
+                                                {% endif %}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         {% if forloop.counter|divisibleby:1 %}
                         <div class="col-12 d-sm-none mb-5">

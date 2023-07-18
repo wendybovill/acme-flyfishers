@@ -78,3 +78,15 @@ def shop(request):
     }
 
     return render(request, 'shop/shop.html', context)
+
+
+def view_product(request, product_id):
+    """ A view to show individual product details """
+
+    product = get_object_or_404(Product, pk=product_id)
+
+    context = {
+        'product': product,
+    }
+
+    return render(request, 'shop/view_product.html', context)
