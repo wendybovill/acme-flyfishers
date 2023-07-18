@@ -181,13 +181,12 @@
 
 {% block postloadjs %}
 {{ block.super }}
+
 <script type="text/javascript">
     $('.button-top').click(function(e) {
         window.scrollTo(0, 0)
     })
-</script>
 
-<script type="text/javascript">
     $('#sort-field').change(function() {
         var selector = $(this);
         var currentUrl = new URL(window.location);
@@ -208,8 +207,7 @@
             window.location.replace(currentUrl);
         }
     })
-</script>
-<script type="text/javascript">
+
     $('.carousel').carousel()
 </script>
 {% endblock %}
