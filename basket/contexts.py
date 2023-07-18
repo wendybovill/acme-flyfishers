@@ -8,7 +8,7 @@ def basket_contents(request):
 
     basket_items = []
     subtotal = 0
-    total = 0
+    full_total = 0
     product_count = 0
     basket = request.session.get('basket', {})
 
@@ -24,20 +24,21 @@ def basket_contents(request):
 
     ukmail = Decimal(2.99)
 
-    subdelivery = subtotal * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
-    
+    subdelivery = subtotal * Decimal(
+        settings.STANDARD_DELIVERY_PERCENTAGE / 100)
+
     ukdelivery = ukmail + subdelivery
 
     delivery = ukdelivery
 
-    total = delivery + subtotal
+    full_total = delivery + subtotal
 
     context = {
         'basket_items': basket_items,
         'subtotal': subtotal,
         'product_count': product_count,
         'delivery': delivery,
-        'total': total,
+        'full_total': full_total,
     }
 
     return context
