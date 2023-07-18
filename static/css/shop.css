@@ -5,12 +5,18 @@ html {
 body {
     background-image: unset !important;
     background-color: rgb(34, 34, 34);
-    height: calc(100vh - 164px);
-    font-family: 'Lato';
+    height: calc(100vh - 200px);
     margin: 0;
     font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(71, 71, 71) !important;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding-bottom: 50px;
 }
 
 h1,
@@ -47,17 +53,10 @@ h2 {
 }
 
 section#productsection {
-    padding: 15px 25px;
+    padding: 15px 25px 50px 15px;
     justify-content: center;
     align-items: center;
     width: 100%;
-}
-
-footer {
-    background: url('/media/frontpage.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: 200px;
-    width: 100vw;
 }
 
 .overlay {
@@ -194,6 +193,20 @@ button:disabled {
     background-color: rgb(53, 53, 53);
     border-color: rgb(61, 61, 61);
     color: rgb(61, 61, 61);
+}
+
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    min-height: 65px;
+    max-height: 200px;
+    background: url('/media/frontpage.jpg') no-repeat center center fixed;
+    background-color: rgba(0, 0, 0, 0.521);
+    background-size: cover;
+    background-blend-mode: overlay;
 }
 
 /* ==================================== */

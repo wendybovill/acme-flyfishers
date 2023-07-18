@@ -17,9 +17,16 @@ header {
 }
 
 body {
-    height: calc(100% - 164px);
+    height: calc(100vh - 200px);
     color: rgb(49, 49, 49);
     font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding-bottom: 50px;
 }
 
 h2.logo-text {
@@ -45,7 +52,7 @@ h2.logo-text {
 a:hover {
     text-decoration: none;
     font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(187, 185, 80);
+    color: rgb(187, 182, 108);
 }
 
 a {
@@ -179,6 +186,17 @@ h1 {
     z-index: 50;
 }
 
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    min-height: 65px;
+    max-height: 200px;
+    height: auto;
+    background-color: black;
+}
 
 
 /* ==================================== */

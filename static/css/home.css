@@ -5,13 +5,16 @@ html {
 body {
     background: url('/media/frontpage2.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height: 100%;
     color: rgb(255, 255, 255);
     font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
-main {
-    height: 100vh;
+.main {
+    flex: 1;
+    padding-bottom: 50px;
 }
 
 h1,
@@ -90,18 +93,8 @@ div.center {
 
 .overlay {
     background-color: rgba(0, 0, 0, 0.63);
-    width: calc(100vw- 116px);
+    flex: 1;
     height: 100vh;
-}
-
-footer {
-    min-height: 65px;
-    max-height: 200px;
-    height: 100%;
-    width: 100vw;
-    padding: 50px 0;
-    justify-content: space-around;
-    background-color: black;
 }
 
 /* ==================================== */
@@ -136,7 +129,6 @@ footer {
     body {
         background: url('/media/frontpage2.jpg') no-repeat right center fixed;
         background-size: cover;
-        height: calc(100vh - 65px);
         color: rgb(255, 255, 255);
         font-family: 'Raleway', sans-serif;
     }
