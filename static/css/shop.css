@@ -161,6 +161,41 @@ footer {
 }
 
 
+.backtobrowse,
+.backtobrowse i {
+    color: rgb(179, 179, 179);
+}
+
+.backtobrowse a:hover,
+.backtobrowse i:hover,
+.btn:hover {
+    color: rgb(133, 132, 132);
+}
+
+i {
+    color: rgb(172, 172, 172);
+}
+
+button.qty-btn {
+    background: black;
+    color: white;
+    border: 1px solid white;
+
+}
+
+
+button.qty-btn:hover {
+    background: white;
+    color: rgb(0, 0, 0);
+    border: 1px solid white;
+}
+
+button:disabled {
+    background-color: rgb(53, 53, 53);
+    border-color: rgb(61, 61, 61);
+    color: rgb(61, 61, 61);
+}
+
 /* ==================================== */
 
 
