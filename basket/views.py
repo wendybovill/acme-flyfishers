@@ -30,3 +30,43 @@ def add_to_basket(request, item_id):
 
     request.session['basket'] = basket
     return redirect(redirect_url)
+
+
+def basket_update(request, item_id):
+    """update product quantity in basket"""
+
+    product = get_object_or_404(Product, pk=item_id)
+    quantity = int(request.POST.get('quantity'))
+    basket = request.session.get('basket', {})
+
+    if quantity > 0:
+        basket[item_id] = quantity
+        messages.success(request,
+                         (f'Updated {product.name} '
+                          f'quantity to {basket[item_id]}'))
+    else:
+        basket.pop(item_id)
+        messages.success(request,
+                         (f'Updated {product.name} '
+                          f'in your basket'))
+
+    request.session['basket'] = basket
+    return redirect(reverse('view_basket'))
+
+
+def delete_from_basket(request, item_id):
+    """delete product from basket"""
+
+    try:
+        product = get_object_or_404(Product, pk=item_id)
+        basket = request.session.get('basket', {})
+
+        basket.pop(item_id)
+        messages.success(request, f'Deleted {product.name} from your basket')
+
+        request.session['basket'] = basket
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        messages.error(request, f'Error deleting item: {e} from basket')
+        return HttpResponse(status=500)
