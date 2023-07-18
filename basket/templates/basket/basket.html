@@ -17,12 +17,12 @@
 
 <main class="main">
     {% block content %}
-    <section id="productsection">
+    <section id="productsection" class="center">
         <div class="container mb-2">
             <div class="row">
                 <div class="col">
 
-                    <h2 class="logo-font mb-4">Your Shopping Basket</h2>
+                    <h2 class="logo-font mb-4 text-center my-2">Your Shopping Basket</h2>
 
                 </div>
             </div>
@@ -58,11 +58,6 @@
                                 {% include "basket/product-quantity-form.html" %}
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col">
-                                <hr>
-                            </div>
-                        </div>
                         {% endfor %}
                         <div class="btt-button shadow-sm rounded-0">
                             <a class="d-flex h-100 button-top">
@@ -81,7 +76,6 @@
                                     <th scope="col">Subtotal</th>
                                 </tr>
                             </thead>
-
                             {% for item in basket_items %}
                             <tr>
                                 <td class="p-3 w-25">
@@ -100,7 +94,6 @@
                                     <p class="my-0 text-white">£{{ item.product.price | subtotal_sum:item.quantity }}</p>
                                 </td>
                             </tr>
-                            <hr>
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
@@ -133,11 +126,6 @@
 {% block postloadjs %}
 {{ block.super }}
 <script type="text/javascript">
-    $('.btt-link').click(function(e) {
-        window.scrollTo(0, 0)
-    })
-
-
     // Update quantity on click
     $('.update-link').click(function(e) {
 
@@ -153,7 +141,7 @@
 
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('delete_')[1];
-        var url = `/basket/delete/${itemId}/`;
+        var url = `/basket/delete_from_basket/${itemId}/`;
         var data = {
             'csrfmiddlewaretoken': csrfToken
         };
@@ -168,5 +156,6 @@
         window.scrollTo(0, 0)
     })
 </script>
+
 {% include 'shop/includes/script_product_add_quantity_update.html' %}
 {% endblock %}

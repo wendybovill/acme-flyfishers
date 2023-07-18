@@ -22,7 +22,13 @@ def basket_contents(request):
             'product': product,
         })
 
-    delivery = subtotal * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
+    ukmail = Decimal(2.99)
+
+    subdelivery = subtotal * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
+    
+    ukdelivery = ukmail + subdelivery
+
+    delivery = ukdelivery
 
     total = delivery + subtotal
 

@@ -1,3 +1,7 @@
-<h3><strong>Basket Total: £{{ total|floatformat:2 }}</strong></h3>
-<h4>Delivery: £{{ delivery|floatformat:2 }}</h4>
-<h4 class="mt-4"><strong>Total: £{{ total|floatformat:2 }}</strong></h4>
+<h5><strong>Basket Subtotal: £{{ subtotal|floatformat:2 }}</strong></h5>
+<p class="text-white">UK Delivery: £{{ delivery|floatformat:2 }}<br><small>* postage and packaging</small></p>
+
+<div class="m1">
+    <hr>
+</div>
+<h4 class="mt-4"><strong>Basket Total: £{{ total|floatformat:2 }}</strong></h4>

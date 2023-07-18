@@ -9,7 +9,7 @@ from .models import Product, Category, Slide, Season
 
 
 def shop(request):
-    """ A view to show all products, including sorting and search queries """
+    """ All product view with sorting and filters """
 
     products = Product.objects.all()
     query = None
@@ -63,8 +63,7 @@ def shop(request):
                                "You didn't enter any search criteria!")
                 return redirect(reverse('shop'))
 
-            queries = Q(name__icontains=query) | Q(
-                description__icontains=query)
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
