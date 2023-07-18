@@ -161,14 +161,18 @@ section#productsection {
 
 
 .backtobrowse,
-.backtobrowse i {
-    color: rgb(179, 179, 179);
+.backtobrowse i,
+a.update-link {
+    color: rgb(179, 179, 179) !important;
+    cursor: pointer;
 }
 
 .backtobrowse a:hover,
 .backtobrowse i:hover,
-.btn:hover {
-    color: rgb(133, 132, 132);
+.btn:hover,
+a.update-link:hover {
+    color: rgb(133, 132, 132) !important;
+    cursor: pointer;
 }
 
 i {
@@ -208,6 +212,18 @@ footer {
     background-size: cover;
     background-blend-mode: overlay;
 }
+
+
+a.delete-item {
+    color: rgb(184, 64, 64) !important;
+    cursor: pointer;
+}
+
+a.delete-item:hover {
+    color: rgb(255, 0, 0) !important;
+    cursor: pointer;
+}
+
 
 /* ==================================== */
 
