@@ -4,6 +4,7 @@ from django.dispatch import receiver
 from django.db.models.signals import post_save
 from django_countries.fields import CountryField
 
+
 class UserProfile(models.Model):
     """
     User Profile model for maintaining order history

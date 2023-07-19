@@ -1,0 +1,38 @@
+body {
+    background: url('/media/frontpage1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.63);
+    flex: 1;
+    height: 100vh;
+}
+
+.order-history {
+    max-height: 550px;
+    /* height of profile form + submit button */
+    overflow-y: auto;
+}
+
+#profile-update-form .form-control {
+    color: #857a3b;
+}
+
+#profile-update-form input::placeholder {
+    color: #aab7c4;
+}
+
+#id_default_country,
+#id_default_country option:not(:first-child) {
+    color: #4c4c4c;
+}
+
+#id_default_country option:first-child {
+    color: #aab7c4;
+}
