@@ -1,3 +1,4 @@
+import datetime
 from django.db import models
 from django.contrib.auth.models import User
 from django.dispatch import receiver
@@ -13,9 +14,19 @@ class UserProfile(models.Model):
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
-    default_full_name = models.CharField(max_length=200, null=True, blank=True)
+    user_title = models.CharField(max_length=80,
+                                  null=True, blank=True)
 
-    default_email = models.EmailField(max_length=254, null=True, blank=True)
+    default_first_name = models.CharField(max_length=100,
+                                          null=True, blank=True)
+
+    default_last_name = models.CharField(max_length=100,
+                                         null=True, blank=True)
+
+    default_full_name = f'{default_first_name}' + ' ' + f'{default_last_name}'
+
+    default_email = models.EmailField(max_length=254,
+                                      null=True, blank=True)
 
     default_street_address1 = models.CharField(max_length=80,
                                                null=True, blank=True)
