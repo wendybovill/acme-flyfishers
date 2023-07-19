@@ -32,9 +32,9 @@ class ProductAdmin(admin.ModelAdmin):
     readonly_fields = ['image_preview',]
     list_display = (
         'name',
+        'sku',
         'image',
         'image_url',
-        'sku',
         'price',
         'stock',
         'category',
