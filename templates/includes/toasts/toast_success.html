@@ -3,19 +3,24 @@
     <div class="w-100 toast-capper bg-success"></div>
     <div class="toast-header bg-white text-dark">
         <strong class="mr-auto">Success!</strong>
-        <button type="button" class="ml-2 mb-1 close text-light" data-dismiss="toast" aria-label="Close">
+        <button type="button" class="ml-2 mb-1 close text-dark" data-dismiss="toast" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
-    <div class="toast-body bg-white">
+    <div class="toast-body bg-white text-black">
+        {% if not basket_items %}
         <div class="row">
-            <div class="col">
+            <div class="col text-dark">
                 {{ message }}
-                <hr class="mt-1 mb-3">
             </div>
         </div>
-        {% if total and not on_profile_page %}
-        <p class="logo-font bg-black text-white py-1">Your Basket ({{ product_count }})</p>
+        {% elif full_total and not on_profile_page %}
+        <div class="row">
+            <div class="col text-dark">
+                {{ message }}
+            </div>
+        </div>
+        <p class="logo-font text-black py-1">Your Basket ({{ product_count }})</p>
         <div class="basket-toast-wrapper">
             {% for item in basket_items %}
             <div class="row">
@@ -35,15 +40,25 @@
         </div>
         <div class="row">
             <div class="col">
+                <hr class="mt-1 mb-3">
                 <strong>
-                    <p class="mt-3 mb-1 text-white">
+                    <p class="mt-3 mb-1 text-dark">
                         Subtotal:
-                        <span class="float-right">${{ subtotal|floatformat:2 }}</span>
+                        <span class="float-right">£{{ subtotal|floatformat:2 }}</span>
                     </p>
                 </strong>
+                {% if basket_items %}
                 <a href="{% url 'view_basket' %}" class="btn red-btn btn-block rounded-0">
                     <span class="text-uppercase">Checkout Now</span>
                 </a>
+                {% else %}
+                <a href="{% url 'shop' %}" class="btn btn-outline-black rounded-0 btn-lg backtobrowse">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase "> Back to Shop</span>
+                </a>
+                {% endif %}
             </div>
         </div>
         {% endif %}

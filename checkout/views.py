@@ -38,10 +38,7 @@ def checkout(request):
         basket = request.session.get('basket', {})
 
         form_data = {
-            'user_title': request.POST['user_title'],
-            'first_name': request.POST['first_name'],
-            'last_name': request.POST['last_name'],
-            'full_name': request.POST['first_name' + ' ' + 'last_name'],
+            'full_name': request.POST['full_name'],
             'street_address1': request.POST['street_address1'],
             'street_address2': request.POST['street_address2'],
             'town_or_city': request.POST['town_or_city'],
@@ -116,9 +113,6 @@ def checkout(request):
             try:
                 profile = UserProfile.objects.get(user=request.user)
                 order_form = OrderForm(initial={
-                    'user_title': profile.user.get_user_title(),
-                    'first_name': profile.user.get_first_name(),
-                    'last_name': profile.user.get_last_name(),
                     'full_name': profile.user.get_full_name(),
                     'street_address1': profile.default_street_address1,
                     'street_address2': profile.default_street_address2,
@@ -165,9 +159,7 @@ def checkout_success(request, order_number):
         # Save the user's info
         if save_info:
             profile_data = {
-                'user_title': order.user_title(),
-                'first_name': order.first_name(),
-                'last_name': order.last_name(),
+                'default_full_name': order.full_name,
                 'default_street_address1': order.street_address1,
                 'default_street_address2': order.street_address2,
                 'default_town_or_city': order.town_or_city,

@@ -5,7 +5,7 @@ from .models import Order
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
-        fields = ('first_name', 'last_name', 'full_name',
+        fields = ('full_name',
                   'street_address1', 'street_address2',
                   'town_or_city', 'postcode', 'country',
                   'county', 'email', 'phone_number',)
@@ -18,19 +18,29 @@ class OrderForm(forms.ModelForm):
         """
         super().__init__(*args, **kwargs)
         placeholders = {
-            'first_name': 'First Name',
-            'last_name': 'Last Name',
+            'full_name': 'Full Name',
             'street_address1': 'Street Address 1',
             'street_address2': 'Street Address 2',
             'postcode': 'Postal Code',
             'town_or_city': 'Town or City',
             'county': 'County, State or Locality',
-            'full_name': 'Full Name',
             'email': 'Email Address',
             'phone_number': 'Phone Number',
         }
 
-        self.fields['first_name'].widget.attrs['autofocus'] = True
+        self.fields['full_name'].widget.attrs['autofocus'] = True
+        self.fields['full_name'].widget.attrs['aria-label'] = 'Full Name'
+        self.fields['street_address1'].widget.attrs[
+            'aria-label'] = 'Street Address 1'
+        self.fields['street_address2'].widget.attrs[
+            'aria-label'] = 'Street Address 2'
+        self.fields['town_or_city'].widget.attrs['aria-label'] = 'Town or City'
+        self.fields['postcode'].widget.attrs['aria-label'] = 'Post Code'
+        self.fields['county'].widget.attrs['aria-label'] = 'County'
+        self.fields['country'].widget.attrs['aria-label'] = 'Country'
+        self.fields['email'].widget.attrs['aria-label'] = 'Email Address'
+        self.fields['phone_number'].widget.attrs['aria-label'] = 'Phone Number'
+
         for field in self.fields:
             if field != 'country':
                 if self.fields[field].required:

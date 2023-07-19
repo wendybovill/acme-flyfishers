@@ -1,13 +1,22 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+{% load static %}
+
 
 <head>
     <title>{% block head_title %}{% endblock %}</title>
     {% block extra_head %}
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/toast.css' %}">
     {% endblock %}
 </head>
 
 <body class="overlay-allauth">
+    <div class="container header">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
     {% block body %}
 
     {% if messages %}
@@ -21,21 +30,23 @@
     </div>
     {% endif %}
 
-    <div>
-        <strong>Menu:</strong>
-        <ul>
-            {% if user.is_authenticated %}
-            <li><a href="{% url 'account_email' %}">Change E-mail</a></li>
-            <li><a href="{% url 'account_logout' %}">Sign Out</a></li>
-            {% else %}
-            <li><a href="{% url 'account_login' %}">Sign In</a></li>
-            <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
-            {% endif %}
-        </ul>
-    </div>
 
-    {% block content %}
-    {% endblock %}
+    <main class="overlay">
+        {% block content %}
+        <div>
+            <strong>Menu:</strong>
+            <ul>
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'account_email' %}">Change E-mail</a></li>
+                <li><a href="{% url 'account_logout' %}">Sign Out</a></li>
+                {% else %}
+                <li><a href="{% url 'account_login' %}">Sign In</a></li>
+                <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        {% endblock %}
+    </main>
     {% endblock %}
     {% block extra_body %}
     {% endblock %}

@@ -14,9 +14,7 @@ class UserProfileForm(forms.ModelForm):
         """
         super().__init__(*args, **kwargs)
         placeholders = {
-            'user_title': 'Title',
-            'default_first_name': 'First Name',
-            'default_last_name': 'Last Name',
+            'default_full_name': 'Full Name',
             'default_email': 'Email Address',
             'default_street_address1': 'Street Address 1',
             'default_street_address2': 'Street Address 2',
@@ -26,12 +24,9 @@ class UserProfileForm(forms.ModelForm):
             'default_phone_number': 'Phone Number',
         }
 
-        self.fields['user_title'].widget.attrs[
-            'aria-label'] = 'Title'
-        self.fields['default_first_name'].widget.attrs[
-            'aria-label'] = 'First Name'
-        self.fields['default_last_name'].widget.attrs[
-            'aria-label'] = 'Last Name'
+        self.fields['default_full_name'].widget.attrs['autofocus'] = True
+        self.fields['default_full_name'].widget.attrs[
+            'aria-label'] = 'Full Name'
         self.fields['default_email'].widget.attrs[
             'aria-label'] = 'Email Address'
         self.fields['default_street_address1'].widget.attrs[
@@ -49,8 +44,6 @@ class UserProfileForm(forms.ModelForm):
         self.fields['default_phone_number'].widget.attrs[
             'aria-label'] = 'Phone Number'
 
-        self.fields['user_title'].widget.attrs['autofocus'] = True
-
         for field in self.fields:
             if field != 'default_country':
                 if self.fields[field].required:
@@ -61,5 +54,4 @@ class UserProfileForm(forms.ModelForm):
             self.fields[field].widget.attrs['class'] = ('border-black '
                                                         'rounded-0 '
                                                         'profile-form-input')
-        self.helper = FormHelper()
         self.fields[field].label = False

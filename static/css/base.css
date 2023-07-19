@@ -12,14 +12,17 @@ i {
     display: inline !important;
 }
 
-header {
+.header {
     height: 164px;
 }
 
 body {
-    height: calc(100vh - 200px);
-    color: rgb(49, 49, 49);
+    background-color: rgb(34, 34, 34);
+    height: calc(100vh - 164px);
+    margin: 0;
     font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 255, 255) !important;
+    padding: 0;
     display: flex;
     flex-direction: column;
 }
@@ -188,7 +191,7 @@ h1 {
 
 
 footer {
-    position: absolute;
+    position: fixed;
     width: 100%;
     bottom: 0;
     left: 0;

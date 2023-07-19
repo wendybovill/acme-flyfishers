@@ -125,6 +125,7 @@
 
 {% block postloadjs %}
 {{ block.super }}
+{% include 'shop/includes/script_product_add_quantity_update.html' %}
 <script type="text/javascript">
     // Update quantity on click
     $('.update-link').click(function(e) {
@@ -156,6 +157,4 @@
         window.scrollTo(0, 0)
     })
 </script>
-
-{% include 'shop/includes/script_product_add_quantity_update.html' %}
 {% endblock %}
