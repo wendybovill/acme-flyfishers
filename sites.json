@@ -1,0 +1,1 @@
+[{"model": "sites.site", "pk": 1, "fields": {"domain": "acme_flydressers.example.com", "name": "ACME Flydressers"}}]
