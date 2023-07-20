@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-wendybovill-milestonepr-l6cezvkc4vc.ws-eu101.gitpod.io',
-                 'localhost', '127.0.0.1']
+                 'localhost', '127.0.0.1','8000-wendybovill-milestonepr-l6cezvkc4vc.ws-eu102.gitpod.io']
 
 
 # Application definition
@@ -173,7 +173,18 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+
+
+
+# Stripe Requirements
+
+# Not using free delivery
+#FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 12
+STRIPE_CURRENCY = 'gbp'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

@@ -48,7 +48,7 @@
                 </div>
                 <div class="col-7">
                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                    {% if item.product.has_sizes %}<p class="my-0 small">Size: {{ item.size|upper }}</p>{% endif %}
+                    {% if item.product.hooksize %}<p class="my-0 small">Size: {{ item.hooksize }}</p>{% endif %}
                     <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                 </div>
                 <div class="col-3 text-right">
@@ -76,8 +76,6 @@
                 {% csrf_token %}
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
-                    {{ order_form.first_name | as_crispy_field }}
-                    {{ order_form.last_name | as_crispy_field }}
                     {{ order_form.full_name | as_crispy_field }}
                     {{ order_form.email | as_crispy_field }}
                 </fieldset>

@@ -12,13 +12,13 @@ i {
     display: inline !important;
 }
 
-.header {
-    height: 164px;
+header {
+    height: 200px;
 }
 
 body {
     background-color: rgb(34, 34, 34);
-    height: calc(100vh - 164px);
+    height: 100%;
     margin: 0;
     font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(255, 255, 255) !important;
@@ -29,7 +29,6 @@ body {
 
 main {
     flex: 1;
-    padding-bottom: 50px;
 }
 
 h2.logo-text {
@@ -128,22 +127,92 @@ h2 a:hover {
     padding-bottom: 50px;
 }
 
-.red-btn {
-    background: black;
-    color: white;
-    font-weight: 300;
-    border: 1px solid black;
-    padding-bottom: 50px;
-    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+.btn.btn-outline-black,
+a.btn.btn-outline-black rounded-0 {
+    background-color: rgb(202, 202, 202) !important;
+    color: rgb(99, 99, 99) !important;
+    font-weight: 400 !important;
+    border: 2px solid rgb(161, 161, 161) !important;
+    padding: 7px !important;
+    vertical-align: middle !important;
 }
 
-.red-btn:hover {
-    background: red;
-    color: white;
-    font-weight: 300;
-    border: 1px solid red;
-    padding-bottom: 50px;
-    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+.btn.btn-outline-black:hover,
+a.btn-outline-black:hover {
+    background: rgb(255, 255, 255) !important;
+    color: rgb(0, 0, 0);
+    font-weight: 400 !important;
+    border: 2px solid red !important;
+    padding: 7px !important;
+    vertical-align: middle !important;
+}
+
+button,
+.red-btn,
+.btn-sm,
+.btn-lg,
+.btn-outline-black {
+    background-color: rgb(122, 103, 55) !important;
+    color: rgb(182, 204, 194) !important;
+    font-weight: 400 !important;
+    border: 2px solid rgb(163, 159, 118) !important;
+    padding: 7px !important;
+    vertical-align: middle !important;
+}
+
+button:hover,
+.red-btn:hover,
+.btn-sm:hover,
+.btn-lg:hover,
+.btn-outline-black:hover {
+    background: white !important;
+    color: rgb(0, 0, 0) !important;
+    font-weight: 400 !important;
+    border: 2px solid red !important;
+    padding: 7px !important;
+    vertical-align: middle !important;
+}
+
+button.qty-btn {
+    background: black !important;
+    color: white !important;
+    border: 1px solid rgb(255, 255, 255) !important;
+    padding: 0 4px !important;
+
+}
+
+button.qty-btn:hover {
+    background: white !important;
+    color: rgb(155, 155, 155) !important;
+    border: 1px solid rgb(212, 212, 212) !important;
+    padding: 0 4px !important;
+}
+
+i.fa-search {
+    color: rgb(168, 168, 168);
+}
+
+button.btn-search,
+.btn-search {
+    background: black !important;
+    color: white !important;
+    border: 1px solid rgb(212, 212, 212) !important;
+    padding: 0 4px !important;
+
+}
+
+button.btn-search:hover,
+.btn-search {
+    background: white !important;
+    color: rgb(131, 131, 131) !important;
+    border: 1px solid rgb(212, 212, 212) !important;
+    padding: 0 4px !important;
+}
+
+button:disabled {
+    background-color: rgb(53, 53, 53) !important;
+    border-color: rgb(61, 61, 61) !important;
+    color: rgb(61, 61, 61) !important;
 }
 
 .copyright {
@@ -191,15 +260,111 @@ h1 {
 
 
 footer {
-    position: fixed;
     width: 100%;
     bottom: 0;
     left: 0;
-    min-height: 65px;
-    max-height: 200px;
-    height: auto;
     background-color: black;
+    padding: 20px;
+    margin-top: 20px;
 }
+
+
+/* Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    /* mt-4 */
+    color: #6c757d;
+    /* text-secondary */
+}
+
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+    /* btn */
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #000;
+    border: 1px solid #000;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {
+    color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
+
+.allauth-form-inner-content a {
+    color: #17a2b8;
+    /* text-info */
+}
+
+/* Product Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    background: rgb(122, 103, 55);
+    color: rgb(182, 204, 194);
+    font-weight: 500;
+    border: 2px solid rgb(163, 159, 118);
+    padding: 7px;
+    cursor: pointer;
+}
+
+.btn-file:hover {
+    position: relative;
+    overflow: hidden;
+    background: white;
+    color: black;
+    font-weight: 500;
+    border: 2px solid red;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: darkgray;
+}
+
 
 
 /* ==================================== */
@@ -286,6 +451,23 @@ footer {
 .btn-file {
     position: relative;
     overflow: hidden;
+    background: rgb(122, 103, 55);
+    color: rgb(182, 204, 194);
+    font-weight: 500;
+    border: 2px solid rgb(163, 159, 118);
+    padding: 7px;
+    cursor: pointer;
+}
+
+.btn-file:hover {
+    position: relative;
+    overflow: hidden;
+    background: white;
+    color: black;
+    font-weight: 500;
+    border: 2px solid red;
+    padding: 7px;
+    cursor: pointer;
 }
 
 .btn-file input[type="file"] {
@@ -307,91 +489,6 @@ footer {
         .container {
             max-width: 80%;
         }
-    }
-
-    /* Allauth form formatting */
-
-    .allauth-form-inner-content p {
-        margin-top: 1.5rem;
-        /* mt-4 */
-        color: #6c757d;
-        /* text-secondary */
-    }
-
-    .allauth-form-inner-content input {
-        border-color: #000;
-        border-radius: 0;
-    }
-
-    .allauth-form-inner-content label:not([for='id_remember']) {
-        display: none;
-    }
-
-    .allauth-form-inner-content input::placeholder {
-        color: #aab7c4;
-    }
-
-    .allauth-form-inner-content button,
-    .allauth-form-inner-content input[type='submit'] {
-        /* btn */
-        display: inline-block;
-        font-weight: 400;
-        color: #fff;
-        text-align: center;
-        vertical-align: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        background-color: #000;
-        border: 1px solid #000;
-        padding: .375rem .75rem;
-        font-size: 1rem;
-        line-height: 1.5;
-        border-radius: 0;
-
-        /* standard bootstrap btn transitions */
-        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    }
-
-    .allauth-form-inner-content button:hover,
-    .allauth-form-inner-content input[type='submit']:hover {
-        color: #fff;
-        background-color: #222;
-        border-color: #222;
-    }
-
-    .allauth-form-inner-content a {
-        color: #17a2b8;
-        /* text-info */
-    }
-
-    /* Product Form */
-
-    .btn-file {
-        position: relative;
-        overflow: hidden;
-    }
-
-    .btn-file input[type="file"] {
-        position: absolute;
-        top: 0;
-        right: 0;
-        min-width: 100%;
-        min-height: 100%;
-        opacity: 0;
-        cursor: pointer;
-    }
-
-    .custom-checkbox .custom-control-label::before {
-        border-radius: 0;
-        border-color: #777777;
-    }
-
-    .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-        background-color: #4d4d4d;
-        border-color: #777777;
-        border-radius: 0;
     }
 
 
@@ -514,10 +611,6 @@ footer {
         font-size: .9rem;
     }
 
-    .btn.btn-outline-black.rounded-0,
-    .btn.btn-black.rounded-0 {
-        padding: .375rem .375rem;
-    }
 
     .btn.btn-outline-black.rounded-0.btn-lg,
     .btn.btn-black.rounded-0.btn-lg {

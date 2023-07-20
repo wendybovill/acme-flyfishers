@@ -3,7 +3,7 @@
 {% load basket_tools %}
 
 {% block more_css %}
-<link rel="stylesheet" href="{% static 'css/shop.css' %}">
+<link rel="stylesheet" href="{% static 'basket/css/basket.css' %}">
 {% endblock %}
 
 {% block page_header %}
@@ -109,7 +109,7 @@
                     </div>
                     {% else %}
                     <p class="lead mb-5 text-white">Your basket is empty.</p>
-                    <a href="{% url 'shop' %}" class="btn btn-outline-black rounded-0 btn-lg backtobrowse">
+                    <a href="{% url 'shop' %}" class="rounded-0 btn backtobrowse">
                         <span class="icon">
                             <i class="fas fa-chevron-left text-white"></i>
                         </span>
@@ -137,14 +137,14 @@
 
 
     // delete item and reload on click
-
-    $('.delete-item').click(function(e) {
-
+    $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('delete_')[1];
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var size = $(this).data('product_size');
         var url = `/basket/delete_from_basket/${itemId}/`;
         var data = {
-            'csrfmiddlewaretoken': csrfToken
+            'csrfmiddlewaretoken': csrfToken,
+            'product_size': size
         };
 
         $.post(url, data)
@@ -152,6 +152,7 @@
                 location.reload();
             });
     })
+
 
     $('.button-top').click(function(e) {
         window.scrollTo(0, 0)

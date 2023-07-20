@@ -23,7 +23,6 @@ body {
 
 main {
     flex: 1;
-    padding-bottom: 50px;
 }
 
 .order-history {
@@ -50,22 +49,34 @@ main {
 }
 
 
+button,
 .red-btn,
-button.red-btn {
-    background: rgb(122, 103, 55);
-    color: rgb(182, 204, 194);
-    font-weight: 400;
-    border: 2px solid rgb(163, 159, 118);
-    padding: 10px;
-    vertical-align: middle;
+.btn-sm,
+.btn-lg {
+    background-color: rgb(122, 103, 55) !important;
+    color: rgb(182, 204, 194) !important;
+    font-weight: 400 !important;
+    border: 2px solid rgb(163, 159, 118) !important;
+    padding: 7px !important;
+    vertical-align: middle !important;
 }
 
+button:hover,
 .red-btn:hover,
-button.red-btn:hover {
-    background: white;
-    color: black;
-    font-weight: 400;
-    border: 2px solid red;
-    padding: 10px;
-    vertical-align: middle;
+.btn-sm:hover,
+.btn-lg:hover {
+    background: white !important;
+    color: black !important;
+    font-weight: 400 !important;
+    border: 2px solid red !important;
+    padding: 7px !important;
+    vertical-align: middle !important;
+}
+
+footer {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 100px !important;
+    background-color: black;
 }

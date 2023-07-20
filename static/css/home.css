@@ -14,7 +14,6 @@ body {
 
 .main {
     flex: 1;
-    padding-bottom: 50px;
 }
 
 h1,
@@ -73,7 +72,7 @@ div.center {
 
 .red-btn {
     background: rgb(122, 103, 55);
-    color: rgb(182, 204, 194);
+    color: rgb(195, 211, 206);
     font-weight: 700;
     border: 2px solid rgb(163, 159, 118);
     padding-bottom: 10px;
@@ -95,6 +94,11 @@ div.center {
     background-color: rgba(0, 0, 0, 0.63);
     flex: 1;
     height: 100vh;
+    padding-bottom: 20px;
+}
+
+footer {
+    margin-top: 0 !important;
 }
 
 /* ==================================== */
