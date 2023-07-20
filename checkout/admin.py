@@ -11,23 +11,23 @@ class OrderAdmin(admin.ModelAdmin):
     inlines = (OrderLineItemAdminInline,)
 
     readonly_fields = ('order_number', 'date',
-                       'delivery_cost', 'order_total', 'subtotal',
-                       'full_total', 'original_basket',
+                       'delivery_cost', 'order_total',
+                       'original_bag',
                        'stripe_pid', 'grand_total',)
 
     fields = ('order_number', 'user_profile', 'date',
               'full_name', 'street_address1',
               'street_address2', 'town_or_city', 'postcode',
               'county', 'country', 'email', 'phone_number',
-              'delivery_cost', 'subtotal', 'order_total', 'full_total',
-              'original_basket', 'stripe_pid',)
+              'delivery_cost', 'order_total', 'grand_total',
+              'original_bag', 'stripe_pid',)
 
     list_display = ('order_number', 'user_profile', 'date',
                     'full_name', 'street_address1',
                     'street_address2', 'town_or_city', 'postcode',
                     'county', 'country', 'email', 'phone_number',
-                    'delivery_cost', 'order_total', 'full_total',
-                    'original_basket', 'stripe_pid',)
+                    'delivery_cost', 'order_total', 'grand_total',
+                    'original_bag', 'stripe_pid',)
 
     ordering = ('-date',)  # new orders at the top
 

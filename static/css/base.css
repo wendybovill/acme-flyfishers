@@ -367,6 +367,86 @@ footer {
 
 
 
+
+/* STRIPE */
+
+.StripeElement,
+.stripe-style-input {
+    box-sizing: border-box !important;
+    height: 40px !important;
+    padding: 10px 12px !important;
+    border: 1px solid transparent !important;
+    border-radius: 0px !important;
+    background-color: white !important;
+    box-shadow: 0 1px 3px 0 #e6ebf1 !important;
+    -webkit-transition: box-shadow 150ms ease !important;
+    transition: box-shadow 150ms ease !important;
+}
+
+.StripeElement--focus,
+.stripe-style-input:focus,
+.stripe-style-input:active {
+    box-shadow: 0 1px 3px 0 #857a3b !important;
+}
+
+.StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+}
+
+.stripe-style-input::placeholder {
+    color: #aab7c4 !important;
+}
+
+.fieldset-label {
+    position: relative !important;
+    right: .5rem !important;
+}
+
+#payment-form .form-control,
+#card-element {
+    color: #000 !important;
+    border: 1px solid #d1d1d1 !important;
+}
+
+select,
+select option {
+    color: #bebebe !important;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
+
+#loading-overlay {
+    display: none !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: #857a3b !important;
+    z-index: 9999 !important;
+}
+
+.loading-spinner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    height: 100% !important;
+    color: #857a3b !important;
+}
+
+.ElementsApp .InputElement {
+    color: white !important;
+}
+
+
+
+
+
+
 /* ==================================== */
 
 

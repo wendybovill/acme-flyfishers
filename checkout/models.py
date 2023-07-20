@@ -28,13 +28,9 @@ class Order(models.Model):
                                         null=False, default=0)
     order_total = models.DecimalField(max_digits=10, decimal_places=2,
                                       null=False, default=0)
-    subtotal = models.DecimalField(max_digits=10, decimal_places=2,
-                                   null=False, default=0)
-    full_total = models.DecimalField(max_digits=10, decimal_places=2,
-                                     null=False, default=0)
     grand_total = models.DecimalField(max_digits=10, decimal_places=2,
                                       null=False, default=0)
-    original_basket = models.TextField(null=False, blank=False, default='')
+    original_bag = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(max_length=254, null=False, blank=False,
                                   default='')
 
@@ -53,7 +49,7 @@ class Order(models.Model):
 
         sdp = settings.STANDARD_DELIVERY_PERCENTAGE
         self.delivery_cost = self.order_total * sdp / 100
-        self.full_total = self.order_total + self.delivery_cost
+        self.grand_total = self.order_total + self.delivery_cost
         self.save()
 
     def save(self, *args, **kwargs):

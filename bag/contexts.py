@@ -4,19 +4,19 @@ from django.shortcuts import get_object_or_404
 from shop.models import Product
 
 
-def basket_contents(request):
+def bag_contents(request):
 
-    basket_items = []
-    subtotal = 0
-    full_total = 0
+    bag_items = []
+    total = 0
+    grand_total = 0
     product_count = 0
-    basket = request.session.get('basket', {})
+    bag = request.session.get('bag', {})
 
-    for item_id, item_data in basket.items():
+    for item_id, item_data in bag.items():
         product = get_object_or_404(Product, pk=item_id)
-        subtotal += item_data * product.price
+        total += item_data * product.price
         product_count += item_data
-        basket_items.append({
+        bag_items.append({
             'item_id': item_id,
             'quantity': item_data,
             'product': product,
@@ -24,21 +24,21 @@ def basket_contents(request):
 
     ukmail = Decimal(2.99)
 
-    subdelivery = subtotal * Decimal(
+    subdelivery = total * Decimal(
         settings.STANDARD_DELIVERY_PERCENTAGE / 100)
 
     ukdelivery = ukmail + subdelivery
 
     delivery = ukdelivery
 
-    full_total = delivery + subtotal
+    grand_total = delivery + total
 
     context = {
-        'basket_items': basket_items,
-        'subtotal': subtotal,
+        'bag_items': bag_items,
+        'total': total,
         'product_count': product_count,
         'delivery': delivery,
-        'full_total': full_total,
+        'grand_total': grand_total,
     }
 
     return context
