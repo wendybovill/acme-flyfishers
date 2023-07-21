@@ -15,7 +15,7 @@ body {
     height: 164x;
 }
 
-.overlay {
+.darkoverlay {
     background-color: rgba(0, 0, 0, 0.63);
     flex: 1;
     height: 100vh;

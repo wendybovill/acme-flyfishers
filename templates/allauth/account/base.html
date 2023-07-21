@@ -1,19 +1,21 @@
 {% extends "base.html" %}
-<div class="container header">
+<div class="container header-container">
     <div class="row">
         <div class="col"></div>
     </div>
 </div>
-{% block content %}
-<div class="container">
-    <div class="overlay"></div>
-    <div class="row">
-        <div class="col-12 col-md-6">
-            <div class="allauth-form-inner-content">
-                {% block inner_content %}
-                {% endblock %}
+<main>
+    {% block content %}
+    <div class="container">
+        <div class="overlay"></div>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="allauth-form-inner-content">
+                    {% block inner_content %}
+                    {% endblock %}
+                </div>
             </div>
         </div>
     </div>
-</div>
-{% endblock %}
+    {% endblock %}
+</main>

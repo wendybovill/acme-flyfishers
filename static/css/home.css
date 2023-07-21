@@ -90,7 +90,7 @@ div.center {
     box-shadow: rgba(255, 255, 255, 0.253) 0 0 5px 5px;
 }
 
-.overlay {
+.darkoverlay {
     background-color: rgba(0, 0, 0, 0.63);
     flex: 1;
     height: 100vh;
