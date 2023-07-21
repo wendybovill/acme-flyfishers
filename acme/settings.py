@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'profiles',
     'checkout',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -108,10 +109,10 @@ SITE_ID = 1
 
 
 
-#ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+# ACCOUNT_AUTHENTICATION_METHOD = 'username_email'. -- uncomment when finished
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'none'
-# ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+# ACCOUNT_EMAIL_VERIFICATION = 'mandatory' -- uncomment when finished
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
@@ -172,13 +173,41 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 MEDIA_URL = '/media/'
-
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+
+# USE AWS IS SET IN env
+USE_AWS = os.environ.get('USE_AWS')
+
+# Cache Control for AWS
+if 'USE_AWS' in os.environ:
+
+    AWES_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000'
+    }
+
+# AWS Bucket S3 Settings:
+AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
+AWS_REGION_NAME = os.environ.get('AWS_REGION_NAME')
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+
+
+# Static and Media File Storage
+STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+STATICFILES_LOCATION = 'static'
+DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+MEDIAFILES_LOCATION = 'media'
+
+# Override URLS in production for Static and Media files
+STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
 #  Stripe Requirements
 #  Not using free delivery
