@@ -522,7 +522,7 @@ select option[value=""] {
 }
 
 .allauth-form-inner-content a {
-    color: #17a2b8;
+    color: #b8b517;
     /* text-info */
 }
 
@@ -594,7 +594,7 @@ select option[value=""] {
         }
 
         body {
-            height: calc(100vh - 116px);
+            height: 100%;
         }
 
         .display-4.logo-font.text-black {
@@ -667,7 +667,7 @@ select option[value=""] {
     }
 
     body {
-        height: calc(100vh - 116px);
+        height: 100%;
     }
 
     .display-4.logo-font.text-black {

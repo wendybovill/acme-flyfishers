@@ -11,12 +11,7 @@
     {% endblock %}
 </head>
 
-<body class="overlay-allauth">
-    <div class="container header">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
+<body>
     {% block body %}
 
     {% if messages %}
@@ -31,9 +26,8 @@
     {% endif %}
 
 
-    <main class="darkoverlay">
-        {% block inner-content %}
-        <div class="overlay"></div>
+    <main class="main">
+
         <div>
             <strong>Menu:</strong>
             <ul>
@@ -46,6 +40,7 @@
                 {% endif %}
             </ul>
         </div>
+        {% block inner-content %}
         {% endblock %}
     </main>
     {% endblock %}
