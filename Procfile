@@ -1,1 +1,1 @@
-web: gunicorn acme.wsgi.application
+web: gunicorn acme.wsgi:application
