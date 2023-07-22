@@ -79,4 +79,5 @@ footer {
     background-color: black;
     background: url('/media/footer.jpg') no-repeat bottom right fixed;
     background-size: cover;
+    padding: 30px;
 }
