@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.conf import settings
 from .forms import OrderForm
 from .models import Order, OrderLineItem
-from shop.models import Product
+from products.models import Product
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 from bag.contexts import bag_contents
@@ -97,7 +97,7 @@ def checkout(request):
         if not bag:
             messages.error(request,
                            "There's nothing in your basket at the moment")
-            return redirect(reverse('shop'))
+            return redirect(reverse('products'))
 
         current_bag = bag_contents(request)
         total = current_bag['grand_total']

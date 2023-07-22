@@ -1,0 +1,50 @@
+[{
+    "model": "products.season",
+    "pk": 1,
+    "fields": {
+        "name": "spring",
+        "friendly_name": "Spring"
+    }
+}, {
+    "model": "products.season",
+    "pk": 2,
+    "fields": {
+        "name": "summer",
+        "friendly_name": "Summer"
+    }
+}, {
+    "model": "products.season",
+    "pk": 3,
+    "fields": {
+        "name": "autumn",
+        "friendly_name": "Autumn"
+    }
+}, {
+    "model": "products.season",
+    "pk": 4,
+    "fields": {
+        "name": "winter",
+        "friendly_name": "Winter"
+    }
+}, {
+    "model": "products.season",
+    "pk": 5,
+    "fields": {
+        "name": "spring-summer",
+        "friendly_name": "Spring / Summer"
+    }
+}, {
+    "model": "products.season",
+    "pk": 6,
+    "fields": {
+        "name": "autumn-winter",
+        "friendly_name": "Autumn / Winter"
+    }
+}, {
+    "model": "products.season",
+    "pk": 7,
+    "fields": {
+        "name": "variety",
+        "friendly_name": "Variety"
+    }
+}]

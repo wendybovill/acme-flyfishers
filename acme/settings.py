@@ -49,13 +49,14 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'shop',
     'home',
     'bag',
     'crispy_forms',
     'profiles',
     'checkout',
     'storages',
+    'products',
+    'shop'
 ]
 
 MIDDLEWARE = [

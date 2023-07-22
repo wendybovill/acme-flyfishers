@@ -9,7 +9,7 @@ from .forms import ProductForm
 # Create your views here.
 
 
-def shop(request):
+def products(request):
     """ All product view with sorting and filters """
 
     products = Product.objects.all()
@@ -62,7 +62,7 @@ def shop(request):
             if not query:
                 messages.error(request,
                                "You didn't enter any search criteria!")
-                return redirect(reverse('shop'))
+                return redirect(reverse('products'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
@@ -77,7 +77,7 @@ def shop(request):
         'current_sorting': current_sorting,
     }
 
-    return render(request, 'shop/shop.html', context)
+    return render(request, 'products/products.html', context)
 
 
 def view_product(request, product_id):
@@ -89,14 +89,14 @@ def view_product(request, product_id):
         'product': product,
     }
 
-    return render(request, 'shop/view-product.html', context)
+    return render(request, 'products/view-product.html', context)
 
 
 @login_required
 def add_product(request):
-    """ Add a New product to the Shop """
+    """ Add a New product to the products """
     if not request.user.is_superuser:
-        messages.error(request, 'Restricted to Shop')
+        messages.error(request, 'Restricted to products')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -112,7 +112,7 @@ def add_product(request):
     else:
         form = ProductForm()
 
-    template = 'shop/add-product.html'
+    template = 'products/add-product.html'
     context = {
         'form': form,
     }
@@ -122,9 +122,9 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-    """ Edit and Update a product in the Shop """
+    """ Edit and Update a product in the products """
     if not request.user.is_superuser:
-        messages.error(request, 'Restricted to Shop Owners')
+        messages.error(request, 'Restricted to products Owners')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
@@ -142,7 +142,7 @@ def edit_product(request, product_id):
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
 
-    template = 'shop/edit-product.html'
+    template = 'products/edit-product.html'
     context = {
         'form': form,
         'product': product,
@@ -153,12 +153,12 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """ Delete a product from the Shop """
+    """ Delete a product from the products """
     if not request.user.is_superuser:
-        messages.error(request, 'Restricted to Shop Owners')
+        messages.error(request, 'Restricted to products Owners')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'Product deleted from store')
-    return redirect(reverse('shop'))
+    return redirect(reverse('products'))

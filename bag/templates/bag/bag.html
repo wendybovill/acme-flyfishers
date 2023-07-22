@@ -110,11 +110,11 @@
                     </div>
                     {% else %}
                     <p class="lead mb-5 text-white">Your bag is empty.</p>
-                    <a href="{% url 'shop' %}" class="rounded-0 btn backtobrowse">
+                    <a href="{% url 'products' %}" class="rounded-0 btn backtobrowse">
                         <span class="icon">
                             <i class="fas fa-chevron-left text-white"></i>
                         </span>
-                        <span class="text-uppercase text-white">Back to Shop</span>
+                        <span class="text-uppercase text-white">Back to products</span>
                     </a>
                     {% endif %}
                 </div>
@@ -126,7 +126,7 @@
 
 {% block postloadjs %}
 {{ block.super }}
-{% include 'shop/includes/script_product_add_quantity_update.html' %}
+{% include 'products/includes/script_product_add_quantity_update.html' %}
 <script type="text/javascript">
     // Update quantity on click
     $('.update-link').click(function(e) {
