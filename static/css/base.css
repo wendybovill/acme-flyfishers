@@ -13,7 +13,7 @@ i {
 }
 
 header {
-    height: 200px;
+    height: auto;
 }
 
 body {
@@ -29,6 +29,7 @@ body {
 
 main {
     flex: 1;
+    margin-top: 65px;
 }
 
 h2.logo-text {
