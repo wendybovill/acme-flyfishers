@@ -14,12 +14,12 @@ def products(request):
 
     products = Product.objects.all()
     query = None
-    categories = None
-    seasons = None
-    sort = None
-    direction = None
-    hooksize = None
-    specialoffer = None
+    categories = product.categories
+    seasons = product.seasons
+    sort = direction
+    direction = desc
+    hooksize = product.hooksize
+    specialoffer = product.specialoffer
 
     if request.GET:
         if 'sort' in request.GET:
@@ -71,6 +71,8 @@ def products(request):
 
     context = {
         'products': products,
+        'seasons': products.seasons,
+        'categories': products.category,
         'search_term': query,
         'current_categories': categories,
         'current_seasons': seasons,
