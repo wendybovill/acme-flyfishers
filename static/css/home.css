@@ -91,7 +91,7 @@ div.center {
 }
 
 .darkoverlay {
-    background-color: rgba(0, 0, 0, 0.63);
+    background-color: rgba(0, 0, 0, 0.527);
     flex: 1;
     height: 100vh;
     padding-bottom: 20px;

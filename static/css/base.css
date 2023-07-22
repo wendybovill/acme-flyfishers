@@ -29,7 +29,6 @@ body {
 
 main {
     flex: 1;
-    margin-top: 65px;
 }
 
 h2.logo-text {
@@ -271,6 +270,10 @@ footer {
 
 
 /* Allauth form formatting */
+
+.aullauth {
+    margin-top: 2rem;
+}
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem;
