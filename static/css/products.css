@@ -212,9 +212,9 @@ footer {
     left: 0;
     height: 100px !important;
     background-color: black;
-    background: url('/media/footer.jpg') no-repeat bottom right fixed;
+    background: url('/media/footer.jpg') no-repeat center center;
     background-size: cover;
-    padding: 30px;
+    padding: 60px;
 }
 
 
