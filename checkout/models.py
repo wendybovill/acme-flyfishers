@@ -10,7 +10,7 @@ from django.utils.html import html, mark_safe
 
 
 class Order(models.Model):
-    order_number = models.CharField(max_length=8, null=False, editable=False)
+    order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
                                      null=True, blank=True,
                                      related_name='orders')
@@ -24,7 +24,7 @@ class Order(models.Model):
     country = CountryField(blank_label='Country *', null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
     date = models.DateTimeField(auto_now_add=True)
-    delivery_cost = models.DecimalField(max_digits=6, decimal_places=2,
+    delivery_cost = models.DecimalField(max_digits=8, decimal_places=2,
                                         null=False, default=0)
     order_total = models.DecimalField(max_digits=10, decimal_places=2,
                                       null=False, default=0)

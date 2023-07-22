@@ -41,7 +41,7 @@ class ProductAdmin(admin.ModelAdmin):
         'tag',
         'friendly_name',
         'description',
-        'hooksize',
+        'size',
         'colours',
         'discount',
         'specialoffer',

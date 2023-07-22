@@ -43,11 +43,12 @@ class Season(models.Model):
 
 class Product(models.Model):
     name = models.CharField(max_length=250)
-    sku = models.CharField(max_length=50, null=True, blank=True)
+    sku = models.CharField(max_length=50, null=False, editable=False)
     category = models.ForeignKey(Category, related_name='products', null=True,
                                  blank=True, on_delete=models.SET_NULL)
     description = models.TextField(blank=True)
-    hooksize = models.CharField(max_length=50, null=True, blank=True)
+    has_sizes = models.BooleanField(default=False, null=True, blank=True)
+    size = models.CharField(max_length=5, null=True, blank=True)
     tag = models.SlugField(max_length=250)
     price = models.DecimalField(max_digits=4, decimal_places=2)
     image = models.ImageField(upload_to='product_images/',
