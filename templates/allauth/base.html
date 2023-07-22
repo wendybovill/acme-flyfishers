@@ -6,7 +6,6 @@
 <head>
     <title>{% block head_title %}{% endblock %}</title>
     {% block extra_head %}
-    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
     <link rel="stylesheet" href="{% static 'css/toast.css' %}">
     {% endblock %}
 </head>
@@ -26,20 +25,21 @@
     {% endif %}
 
 
-    <main class="main">
 
-        <div>
-            <strong>Menu:</strong>
-            <ul>
-                {% if user.is_authenticated %}
-                <li><a href="{% url 'account_email' %}">Change E-mail</a></li>
-                <li><a href="{% url 'account_logout' %}">Sign Out</a></li>
-                {% else %}
-                <li><a href="{% url 'account_login' %}">Sign In</a></li>
-                <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
-                {% endif %}
-            </ul>
-        </div>
+
+    <div>
+        <strong>Menu:</strong>
+        <ul>
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'account_email' %}">Change E-mail</a></li>
+            <li><a href="{% url 'account_logout' %}">Sign Out</a></li>
+            {% else %}
+            <li><a href="{% url 'account_login' %}">Sign In</a></li>
+            <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+            {% endif %}
+        </ul>
+    </div>
+    <main class="main">
         {% block content %}
         {% endblock %}
     </main>
