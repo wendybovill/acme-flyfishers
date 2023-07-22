@@ -3,8 +3,6 @@ html {
 }
 
 body {
-    background: url('/media/frontpage2.jpg') no-repeat center center fixed;
-    background-size: cover;
     height: 100%;
     color: rgb(255, 255, 255);
     font-family: 'Raleway', sans-serif;
@@ -88,13 +86,6 @@ div.center {
 
 .glow:hover {
     box-shadow: rgba(255, 255, 255, 0.253) 0 0 5px 5px;
-}
-
-.darkoverlay {
-    background-color: rgba(0, 0, 0, 0.527);
-    flex: 1;
-    height: 100vh;
-    padding-bottom: 20px;
 }
 
 footer {

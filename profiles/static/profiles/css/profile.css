@@ -1,6 +1,4 @@
 body {
-    background: url('/media/frontpage1.jpg') no-repeat center center fixed;
-    background-size: cover;
     height: calc(100vh - 164px);
     margin: 0;
     font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
@@ -79,4 +77,6 @@ footer {
     left: 0;
     height: 100px !important;
     background-color: black;
+    background: url('/media/footer.jpg') no-repeat bottom right fixed;
+    background-size: cover;
 }
