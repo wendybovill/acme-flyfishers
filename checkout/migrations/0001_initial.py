@@ -11,7 +11,6 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('profiles', '0002_auto_20230719_1119'),
-        ('shop', '0019_alter_product_sku'),
     ]
 
     operations = [
@@ -49,7 +48,7 @@ class Migration(migrations.Migration):
                 ('product_size', models.CharField(blank=True, max_length=2, null=True)),
                 ('quantity', models.IntegerField(default=0)),
                 ('order', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='lineitems', to='checkout.order')),
-                ('product', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='shop.product')),
+                ('product', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='products.product')),
             ],
         ),
     ]

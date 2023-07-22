@@ -56,7 +56,6 @@ INSTALLED_APPS = [
     'checkout',
     'storages',
     'products',
-    'shop'
 ]
 
 MIDDLEWARE = [
@@ -214,7 +213,7 @@ MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
 #  Stripe Requirements
 #  Not using free delivery
-#  FREE_DELIVERY_THRESHOLD = 50
+FREE_DELIVERY_THRESHOLD = 100
 STANDARD_DELIVERY_PERCENTAGE = 12
 STRIPE_CURRENCY = 'gbp'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
