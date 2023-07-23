@@ -210,11 +210,11 @@ footer {
     width: 100%;
     bottom: 0;
     left: 0;
-    height: 100px !important;
+    height: 90px !important;
     background-color: black;
-    background: url('/media/footer.jpg') no-repeat center center;
+    background: url('/media/footer.jpg') no-repeat bottom right fixed;
     background-size: cover;
-    padding: 60px;
+    padding: 40px;
 }
 
 

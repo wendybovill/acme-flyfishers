@@ -54,7 +54,7 @@ h2 {
 }
 
 section#productsection {
-    padding: 15px 25px 50px 15px;
+    padding: 116px 25px 50px 15px;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -203,16 +203,14 @@ button:disabled {
 
 
 footer {
-    position: fixed;
     width: 100%;
     bottom: 0;
     left: 0;
-    min-height: 65px;
-    max-height: 200px;
-    background: url('/media/frontpage.jpg') no-repeat center center fixed;
-    background-color: rgba(0, 0, 0, 0.521);
+    height: 90px !important;
+    background-color: black;
+    background: url('/media/footer.jpg') no-repeat bottom right fixed;
     background-size: cover;
-    background-blend-mode: overlay;
+    padding: 40px;
 }
 
 
@@ -251,6 +249,18 @@ a.remove-item:hover {
 
 @media (max-width: 991px) {
     .header {
-        padding-top: 65px;
+        padding-top: 116px;
+    }
+}
+
+@media (max-width: 500px) {
+    .header {
+        padding-top: 80px;
+    }
+}
+
+@media (min-width: 200px) and (max-width:499) {
+    .header {
+        padding-top: 80px;
     }
 }
