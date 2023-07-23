@@ -330,7 +330,7 @@ footer {
 }
 
 .allauth-form-inner-content a {
-    color: #17a2b8;
+    color: rgb(122, 103, 55);
     /* text-info */
 }
 
@@ -534,7 +534,7 @@ select option[value=""] {
     }
 
     .allauth-form-inner-content a {
-        color: #17a2b8;
+        color: rgb(122, 103, 55);
         /* text-info */
     }
 
