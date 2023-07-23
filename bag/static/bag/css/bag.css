@@ -5,7 +5,7 @@ html {
 body {
     background-image: unset !important;
     background-color: rgb(34, 34, 34);
-    height: calc(100vh - 200px);
+    height: 100vh;
     margin: 0;
     font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(177, 177, 177) !important;

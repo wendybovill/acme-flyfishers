@@ -6,8 +6,6 @@ i {
     color: black;
 }
 
-
-
 .logo {
     height: 90px;
     width: auto;
@@ -278,6 +276,9 @@ footer {
     padding: 40px;
 }
 
+div.order-history.table-responsive {
+    margin-top: 50px;
+}
 
 /* Allauth form formatting */
 
