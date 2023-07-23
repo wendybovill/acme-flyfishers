@@ -92,8 +92,10 @@ div.center {
 }
 
 footer {
-    margin-top: 0 !important;
-    padding: 30px;
+
+    background-color: black;
+    background-image: none;
+
 }
 
 /* ==================================== */
