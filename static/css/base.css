@@ -662,9 +662,10 @@ select option[value=""] {
     }
 }
 
-@media (min-width: 150px) and (max-width: 400px) {
+@media (max-width: 300px) {
     .header-container {
         padding-top: 65px;
+        margin-left: 20px;
     }
 
     main {
@@ -711,12 +712,16 @@ select option[value=""] {
     .decrement-qty {
         padding: .25rem .5rem !important;
     }
+
+    .copyright {
+        font-size: 0.8em;
+    }
 }
 
-@media (max-width: 300px) {
+
+@media (min-width: 150px) and (max-width: 400px) {
     .header-container {
         padding-top: 65px;
-        margin-left: 20px;
     }
 
     main {
