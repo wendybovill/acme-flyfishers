@@ -7,8 +7,7 @@ i {
 }
 
 main {
-    height: calc(100% - 116px) !important;
-    padding-top: 200px !important;
+    flex: 1;
 }
 
 .logo {
@@ -477,7 +476,6 @@ select option[value=""] {
 
     main {
         flex: 1;
-        padding-top: 200px;
     }
 
 
@@ -586,7 +584,6 @@ select option[value=""] {
 
     main {
         flex: 1;
-        padding-top: 165px;
     }
 
     div.allauth-form-inner-content {
@@ -605,9 +602,6 @@ select option[value=""] {
 
     main {
         flex: 1;
-        padding-top: 116px;
-        margin-top: 200px;
-        margin-left: 20px;
     }
 
     body {
@@ -666,9 +660,6 @@ select option[value=""] {
 
     main {
         flex: 1;
-        padding-top: 116px;
-        margin-top: 200px;
-        margin-left: 20px;
     }
 
     body {
@@ -722,7 +713,6 @@ select option[value=""] {
 
     main {
         flex: 1;
-        padding-top: 116px;
     }
 
     body {
