@@ -581,7 +581,7 @@ select option[value=""] {
 
     .header-container,
     .container {
-        margin-top: 164px;
+        margin-top: 65px;
     }
 
     main {
@@ -589,7 +589,7 @@ select option[value=""] {
     }
 
     div.allauth-form-inner-content {
-        margin-top: 164px;
+        margin-top: 165px;
         /* mt-4 */
         color: #6c757d;
         /* text-secondary */
@@ -599,7 +599,7 @@ select option[value=""] {
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 65px;
     }
 
     main {
@@ -651,13 +651,13 @@ select option[value=""] {
 
 @media (min-width: 400px) and (max-width: 600) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 65px;
     }
 }
 
 @media (min-width: 150px) and (max-width: 400px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 65px;
     }
 
     main {
@@ -707,9 +707,8 @@ select option[value=""] {
 }
 
 @media (max-width: 300px) {
-    div.container.header-container {
-        padding-top: 116px;
-        margin-top: 200px;
+    .header-container {
+        padding-top: 65px;
         margin-left: 20px;
     }
 
