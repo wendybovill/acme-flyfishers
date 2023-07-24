@@ -217,8 +217,8 @@ button:disabled {
 
 .copyright {
     font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
-    color: #4d4a41;
-    font-size: 0.7em;
+    color: #64625a;
+    font-size: 0.9em;
 }
 
 h1 {
@@ -775,8 +775,8 @@ select option[value=""] {
     }
 
     .copyright {
-        font-size: 0.7em !important;
-        color: #4d4a41;
+        font-size: 0.9em !important;
+        color: #64625a;
     }
 }
 
@@ -832,8 +832,8 @@ select option[value=""] {
     }
 
     .copyright {
-        font-size: 0.7em !important;
-        color: #4d4a41;
+        font-size: 0.9em !important;
+        color: #64625a;
     }
 }
 
