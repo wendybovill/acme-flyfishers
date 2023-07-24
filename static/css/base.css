@@ -270,10 +270,11 @@ footer {
     bottom: 0;
     left: 0;
     height: 130px !important;
+    background-color: black;
     background: url('/media/footer.jpg') no-repeat bottom right;
-    background-size: cover;
-    padding: 30px 5px;
-    position: fixed;
+    background-size: constrain;
+    padding: 25px 0;
+    margin-top: 50px;
     justify-content: center;
     font-size: 0.9em;
 }

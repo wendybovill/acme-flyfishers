@@ -98,11 +98,9 @@ footer {
     left: 0;
     height: 130px !important;
     background-color: black;
-    padding: 30px 5px;
-    position: fixed;
-    justify-content: center;
+    padding: 25px 0;
+    margin-top: 50px;
     font-size: 0.9em;
-    margin-top: 20px;
 }
 
 /* ==================================== */
