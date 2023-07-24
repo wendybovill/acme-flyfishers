@@ -102,6 +102,7 @@ footer {
     padding: 25px 0;
     margin-top: 50px;
     font-size: 0.9em;
+    position: relative;
 }
 
 /* ==================================== */

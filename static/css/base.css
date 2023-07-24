@@ -600,6 +600,18 @@ select option[value=""] {
         flex: 1;
     }
 
+    button,
+    .btn,
+    .btn-red,
+    .btn-white {
+
+        margin: 25px !important;
+    }
+
+    body {
+        line-height: 1.1;
+    }
+
 
     /* Allauth form formatting */
 
@@ -701,7 +713,7 @@ select option[value=""] {
 
     .header-container,
     .container {
-        margin-top: 150px;
+        margin-top: 125px;
     }
 
     main {
@@ -713,6 +725,18 @@ select option[value=""] {
         /* mt-4 */
         color: #6c757d;
         /* text-secondary */
+    }
+
+    button,
+    .btn,
+    .btn-red,
+    .btn-white {
+
+        margin: 25px !important;
+    }
+
+    body {
+        line-height: 1.1;
     }
 }
 
