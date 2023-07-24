@@ -51,14 +51,12 @@
                         <div class="image-container my-1">
                             <h2 class="mb-0 py-2 text-center">{{ product.name }}</h2>
                             {% if product.image %}
-                            <div id="imgView" class="modal">
-                                <span class="close">&times;</span>
-                                <img class="modal-content card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}" id="product{ product.id }}">
-                                <div id="caption"></div>
+                            <img class="modal-content card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}" id="product{{ product.id }}">
+                            <div id="imgView{{ product.id }}" class="modal" style="z-index: 9990;">
+                                <span class="close" style="z-index: 9995;">&times;</span>
+                                <img class="modal-content card-img-top img-fluid" style="z-index: 9991;" src="{{ product.image.url }}" alt="{{ product.name }}" id="product{{ product.id }}">
+                                <div id="caption" style="z-index: 9994;"></div>
                             </div>
-                            <a href="{{ product.image.url }}" target="_blank">
-                                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                            </a>
                             {% else %}
                             <a href="">
                                 <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
@@ -158,12 +156,12 @@
     })
 
     // Get Modal to display product image
-    var modal = document.getElementById("imgView{{product.id}}");
+    var modal = document.getElementById("imgView{{ product.id }}");
 
     // Alt text is product name, used as caption for image
-    var img = document.getElementById("product{{product.id}}");
+    var img = document.getElementById("product{{ product.id }}");
 
-    var modalImg = document.getElementById("product{{product.id}}");
+    var modalImg = document.getElementById("product{{ product.id }}");
     var captionText = document.getElementById("caption");
 
     img.onclick = function() {
@@ -171,7 +169,17 @@
         modalImg.src = this.src;
         captionText.innerHTML = this.alt;
     }
+
+    // Close the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // onClick function to click to close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
 </script>
+
+
 
 {% include 'products/includes/script_product_add_quantity_update.html' %}
 {% endblock %}
