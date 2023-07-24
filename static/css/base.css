@@ -924,10 +924,11 @@ select option[value=""] {
     #productsection {
         width: 90%;
         font-size: 0.9em;
-
-    }
-
-    #productsSlideshow {
         margin-top: 65px;
     }
+
+    #productsection {
+        margin-bottom: 65px;
+    }
+
 }
