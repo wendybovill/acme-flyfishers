@@ -217,8 +217,8 @@ button:disabled {
 
 .copyright {
     font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
-    color: #9d9d9d;
-    font-size: rgb(179, 179, 179)em;
+    color: #4d4a41;
+    font-size: 0.7em;
 }
 
 h1 {
@@ -269,7 +269,7 @@ footer {
     width: 100%;
     bottom: 0;
     left: 0;
-    height: 130px !important;
+    height: 150px !important;
     background-color: black;
     background: url('/media/footer.jpg') no-repeat bottom right;
     background-size: constrain;
@@ -593,6 +593,7 @@ select option[value=""] {
 @media (min-width: 1200px) {
     .container {
         max-width: 80%;
+        height: 150px;
     }
 
     main {
@@ -700,7 +701,7 @@ select option[value=""] {
 
     .header-container,
     .container {
-        margin-top: 80px;
+        margin-top: 150px;
     }
 
     main {
@@ -718,7 +719,7 @@ select option[value=""] {
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 150px;
     }
 
     main {
@@ -770,17 +771,18 @@ select option[value=""] {
 
 @media (min-width: 400px) and (max-width: 600) {
     .header-container {
-        padding-top: 120px;
+        padding-top: 80px;
     }
 
     .copyright {
-        font-size: 0.8em;
+        font-size: 0.7em !important;
+        color: #4d4a41;
     }
 }
 
 @media (max-width: 300px) {
     .header-container {
-        padding-top: 120px;
+        padding-top: 80px;
         margin-left: 20px;
     }
 
@@ -830,7 +832,8 @@ select option[value=""] {
     }
 
     .copyright {
-        font-size: 0.8em;
+        font-size: 0.7em !important;
+        color: #4d4a41;
     }
 }
 
