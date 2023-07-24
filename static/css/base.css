@@ -611,7 +611,7 @@ select option[value=""] {
 @media (min-width: 1200px) {
     .container {
         max-width: 80%;
-        height: 150px;
+        height: 80px;
     }
 
     main {
