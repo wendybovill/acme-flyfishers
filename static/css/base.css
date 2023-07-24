@@ -30,7 +30,7 @@ body {
 
 h2.logo-text {
     font-family: 'Oswald' !important;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: black;
     display: inline !important
 }
@@ -90,7 +90,7 @@ h2 a {
 
 h2 a:hover {
     font-size: 1.8rem;
-    font-weight: 800;
+    font-weight: 500;
     color: red;
     cursor: pointer;
     text-decoration: none;
@@ -343,7 +343,7 @@ div.order-history.table-responsive {
     border: 1px solid #000;
     padding: .375rem .75rem;
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.2;
     border-radius: 0;
 
     /* standard bootstrap btn transitions */
@@ -626,11 +626,6 @@ select option[value=""] {
         margin: 25px !important;
     }
 
-    body {
-        line-height: 1.1;
-    }
-
-
     /* Allauth form formatting */
 
     .allauth-form-inner-content p {
@@ -753,9 +748,6 @@ select option[value=""] {
         margin: 25px !important;
     }
 
-    body {
-        line-height: 1.1;
-    }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
