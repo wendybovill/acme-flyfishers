@@ -96,6 +96,7 @@
                                 <a href="{% url 'view_product' product.id %}">
                                     <div class="card h-100 border-1">
                                         {% if product.image %}
+
                                         <a href="{% url 'view_product' product.id %}">
                                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                                         </a>
@@ -211,5 +212,13 @@
     })
 
     $('.carousel').carousel()
+
+    // Retrieve close element
+    var span = document.getElementsByClassName("close")[0];
+
+    // Onclick X, closes the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
 </script>
 {% endblock %}

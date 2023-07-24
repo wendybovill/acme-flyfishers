@@ -51,6 +51,11 @@
                         <div class="image-container my-1">
                             <h2 class="mb-0 py-2 text-center">{{ product.name }}</h2>
                             {% if product.image %}
+                            <div id="imgView" class="modal">
+                                <span class="close">&times;</span>
+                                <img class="modal-content card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}" id="product{ product.id }}">
+                                <div id="caption"></div>
+                            </div>
                             <a href="{{ product.image.url }}" target="_blank">
                                 <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                             </a>
@@ -151,6 +156,21 @@
     $('.button-top').click(function(e) {
         window.scrollTo(0, 0)
     })
+
+    // Get Modal to display product image
+    var modal = document.getElementById("imgView{{product.id}}");
+
+    // Alt text is product name, used as caption for image
+    var img = document.getElementById("product{{product.id}}");
+
+    var modalImg = document.getElementById("product{{product.id}}");
+    var captionText = document.getElementById("caption");
+
+    img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
 </script>
 
 {% include 'products/includes/script_product_add_quantity_update.html' %}
