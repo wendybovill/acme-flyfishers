@@ -7,42 +7,105 @@
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
 {% endblock %}
 {% block page_header %}
-<div class="container header">
-    <div class="row">
-        <div class="col"></div>
-    </div>
-</div>
+
 {% endblock %}
 
-<main class="main">
+<main>
     {% block content %}
     <div class="overlay"></div>
-    <div class="container h-100 ">
+    {% for entry in entries %}
+    {% if entry.section %}
+    <section>
         <div class="welcome text-center">
-            <h2 class="text-white">Welcome to ACME Flydressers </h2>
 
-            <p class="py-2 lead">Approaching half a century of dressing Trout, Atlantic Salmon, Large Mouth Bass and Saltwater flies, our ethos is: <br></p>
-            <blockquote class="blockquote">
-                <p>"Quality in Excellence"</p>
-            </blockquote>
+            {% if entry.section %} <h2>{{ entry.section }} </h2>{% endif %}
+
+            {% if entry.heading1 %} <h3 class="text-white">{{ entry.heading1 }} </h3>{% endif %}
+            {% if entry.heading2 %} <h3 class="text-white">{{ entry.heading2 }} </h3>{% endif %}
+            {% if entry.heading3 %} <h3 class="text-white">{{ entry.heading3 }} </h3>{% endif %}
+
+
+
+            {% if entry.blockquote %} <blockquote class="blockquote">{{ entry.blockquote }} </blockquote>{% endif %}
         </div>
-        <div class="column text-white md-12">
-            <div class="column text-justify col-md-8 col-sm-12 offset-md-2 offset-sm-0 offset-lg-3">
-                <h4 class="textshadow">We tie flies to catch fish not flyfishers.</h4>
-                <h4>Our approach to your success is simple, use: </h4>
-                <ul class="">
-                    <li>The Highest Quality materials available</li>
-                    <li>The Best Practice tying techniques</li>
-                    <li>The most Effective Business Model, enabling low overheads and affordable prices</li>
-                </ul>
-                <h4><strong>We tie flies that enhance your confidence... the catching is up to you!</strong></h4>
+
+
+        <div class="column text-white md-12" style="justify-content: center; {% if section.paddingleft %}padding-left: {{ section.paddingleft }}; {% endif %} {% if section.paddingright %}padding-right: {{ section.paddingright }}; {% endif %}">
+            <div class="column text-justify col-md-8 col-sm-12">
+                {% if entry.startercontent %} <p class="py-2 lead">{{ entry.startercontent }}</p> {% endif %}
+                {% if entry.maincontent %}<h4 class="textshadow">{{ entry.maincontent }} </h4>{% endif %}
+
+                {% if entry.bulletpoint1 %}
+                <ul>
+                    <li>{{ entry.bulletpoint1 }} </li>{% endif %}
+                    {% if entry.bulletpoint2 %} <li>{{ entry.bulletpoint2 }} </li>{% endif %}
+                    {% if entry.bulletpoint3 %} <li>{{ entry.bulletpoint3 }} </li> {% endif %}
+                    {% if entry.bulletpoint4 %} <li>{{ entry.bulletpoint4 }} </li> {% endif %}
+                    {% if entry.bulletpoint5 %} <li>{{ entry.bulletpoint5 }} </li> {% endif %}
+                    {% if entry.bulletpoint1 %}
+                </ul>{% endif %}
+
+                {% if entry.endcontent %}<h4><strong>{{ entry.endcontent }}</strong></h4>{% endif %}
             </div>
             <div class="column text-center">
                 <h4>
                     <a href="{% url 'products' %}" class="shop-now-button btn btn-md red-btn btn-lg rounded-0 text-uppercase py-3 glow">Shop Products</a>
+
                 </h4>
             </div>
+    </section>
+
+    {% else %}
+
+    <div class="container">
+
+        <div class="welcome text-center">
+
+            {% if entry.heading1 %} <h2>{{ entry.heading1 }}</h2>{% endif %}
+
+            {% if entry.heading2 %} <h3 class="text-white">{{ entry.heading2 }} </h3>{% endif %}
+            {% if entry.heading3 %} <h3 class="text-white">{{ entry.heading3 }} </h3>{% endif %}
+
+
+
+            {% if entry.blockquote %} <blockquote class="blockquote">{{ entry.blockquote }} </blockquote>{% endif %}
+        </div>
+
+
+        <div class="column text-white md-12">
+            <div class="column text-justify col-md-8 col-sm-12">
+                {% if entry.startercontent %} <p class="py-2 lead">{{ entry.startercontent }}</p> {% endif %}
+                {% if entry.maincontent %}<h4 class="textshadow">{{ entry.maincontent }} </h4>{% endif %}
+
+                {% if entry.bulletpoint1 %}
+                <ul>
+                    <li>{{ entry.bulletpoint1 }} </li>{% endif %}
+                    {% if entry.bulletpoint2 %} <li>{{ entry.bulletpoint2 }} </li>{% endif %}
+                    {% if entry.bulletpoint3 %} <li>{{ entry.bulletpoint3 }} </li> {% endif %}
+                    {% if entry.bulletpoint4 %} <li>{{ entry.bulletpoint4 }} </li> {% endif %}
+                    {% if entry.bulletpoint5 %} <li>{{ entry.bulletpoint5 }} </li> {% endif %}
+                    {% if entry.bulletpoint1 %}
+                </ul>{% endif %}
+
+                {% if entry.endcontent %}<h4><strong>{{ entry.endcontent }}</strong></h4>{% endif %}
+            </div>
+            <div class="column text-center">
+                <h4>
+                    <a href="{% url 'products' %}" class="shop-now-button btn btn-md red-btn btn-lg rounded-0 text-uppercase py-3 glow">Shop Products</a>
+
+                </h4>
+            </div>
+
+
         </div>
     </div>
+
+    </div>
+    {% endif %}
+
+    {% endfor %}
+
+
+
     {% endblock %}
 </main>
