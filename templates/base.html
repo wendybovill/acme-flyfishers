@@ -123,16 +123,16 @@
         {% block content %}
         {% endblock %}
     </main>
+    <footer class="text-center">
+        <div class="copyright">
+            <a class="" href="{% url 'contact' %}" id="contact-link">Contact Us</a>
+            <br>
+            &copy;2023 Copyright ACME Flydressers | All rights reserved. Product Images are property of ACME Flydressers
+        </div>
 
+    </footer>
 </body>
-<footer class="text-center">
-    <div class="copyright">
-        <a class="" href="{% url 'contact' %}" id="contact-link">Contact Us</a>
-        <br>
-        &copy;2023 Copyright ACME Flydressers | All rights reserved. Product Images are property of ACME Flydressers
-    </div>
 
-</footer>
 {% block postloadjs %}
 <script type="text/javascript">
     $('.toast').toast('show');
