@@ -96,11 +96,11 @@ footer {
     width: 100%;
     bottom: 0;
     left: 0;
-    height: 150px !important;
     background-image: unset;
     background-color: black;
-    padding: 25px 0;
+    padding: 5px 0;
     margin-top: 50px;
+    justify-content: center;
     font-size: 0.9em;
     position: relative;
 }
