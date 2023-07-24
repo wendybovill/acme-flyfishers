@@ -13,6 +13,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
+    font-size: 80%;
 }
 
 main {
@@ -213,7 +214,7 @@ footer {
     margin-top: 50px;
     justify-content: center;
     font-size: 0.9em;
-    position: relative;
+    position: fixed;
 }
 
 
