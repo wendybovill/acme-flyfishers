@@ -9,10 +9,11 @@
 </div>
 {% endblock %}
 
-<main>
-    {% block content %}
-    <div class="overlay"></div>
-    <div class="container">
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container">
+    <main>
         <div class="row">
             <div class="col-12 col-md-6">
                 <hr>
@@ -40,9 +41,10 @@
                 </form>
             </div>
         </div>
-    </div>
-    {% endblock %}
-</main>
+    </main>
+</div>
+{% endblock %}
+
 
 {% block postloadjs %}
 {{ block.super }}

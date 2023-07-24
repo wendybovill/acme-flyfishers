@@ -1,6 +1,6 @@
 <div class="collapse navbar-collapse" id="navigation">
     <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item d-block d-md-none">
+        <li class="nav-item d-block">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}" id="home-link">
                 Home
             </a>
@@ -10,8 +10,8 @@
                 Category
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="category-link">
-                <a href="{% url 'products' %}?category=wetflies" class="dropdown-item">Wet Flies</a>
-                <a href="{% url 'products' %}?category=dryflies" class="dropdown-item">Dry Flies</a>
+                <a href="{% url 'products' %}?category=wet" class="dropdown-item">Wet Flies</a>
+                <a href="{% url 'products' %}?category=dry" class="dropdown-item">Dry Flies</a>
                 <a href="{% url 'products' %}?category=nymphs" class="dropdown-item">Nymphs</a>
             </div>
         </li>
@@ -42,12 +42,17 @@
             </div>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
                 <a href="{% url 'products' %}?category=specialoffer" class="dropdown-item">On Promotion</a>
             </div>
+        </li>
+        <li class="nav-item dblock">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'contact' %}" id="contact-link">
+                Contact Us
+            </a>
         </li>
     </ul>
 </div>
