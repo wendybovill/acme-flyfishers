@@ -808,10 +808,6 @@ select option[value=""] {
         flex: 1;
     }
 
-    #productsSlideshow {
-        margin-top: 65px;
-    }
-
     body {
         height: 100vh;
     }
@@ -861,6 +857,22 @@ select option[value=""] {
     footer {
 
         position: relative;
+    }
+
+    footer {
+
+        position: relative;
+    }
+
+    #productsection img,
+    #productsection {
+        width: 90%;
+        font-size: 0.9em;
+        margin-top: 65px;
+    }
+
+    #productsection {
+        margin-bottom: 65px;
     }
 }
 
