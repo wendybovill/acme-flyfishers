@@ -261,7 +261,7 @@ h1 {
     color: black;
     bottom: 15px;
     right: 15px;
-    z-index: 800;
+    z-index: 1500;
     cursor: pointer;
 }
 
@@ -276,7 +276,7 @@ h1 {
     bottom: 15px;
     right: 15px;
     cursor: pointer;
-    z-index: 800;
+    z-index: 1500;
 }
 
 ul li {
@@ -618,7 +618,6 @@ select option[value=""] {
         flex: 1;
     }
 
-    button,
     .btn,
     .btn-red,
     .btn-white {
@@ -740,7 +739,6 @@ select option[value=""] {
         /* text-secondary */
     }
 
-    button,
     .btn,
     .btn-red,
     .btn-white {
