@@ -54,12 +54,12 @@ main {
 a:hover {
     text-decoration: none;
     font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(187, 182, 108);
+    color: rgb(163, 147, 3);
 }
 
 a {
     font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(122, 103, 55);
+    color: rgb(170, 158, 103);
 }
 
 hr {
