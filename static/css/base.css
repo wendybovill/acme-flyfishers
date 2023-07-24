@@ -269,11 +269,10 @@ footer {
     width: 100%;
     bottom: 0;
     left: 0;
-    height: 90px !important;
-    background-color: black;
-    background: url('/media/footer.jpg') no-repeat bottom right fixed;
+    height: 130px !important;
+    background: url('/media/footer.jpg') no-repeat bottom right;
     background-size: cover;
-    padding: 10px;
+    padding: 30px 5px;
     position: fixed;
     justify-content: center;
     font-size: 0.9em;
@@ -770,7 +769,7 @@ select option[value=""] {
 
 @media (min-width: 400px) and (max-width: 600) {
     .header-container {
-        padding-top: 65px;
+        padding-top: 120px;
     }
 
     .copyright {
@@ -780,7 +779,7 @@ select option[value=""] {
 
 @media (max-width: 300px) {
     .header-container {
-        padding-top: 65px;
+        padding-top: 120px;
         margin-left: 20px;
     }
 
@@ -837,7 +836,7 @@ select option[value=""] {
 
 @media (min-width: 150px) and (max-width: 400px) {
     .header-container {
-        padding-top: 65px;
+        padding-top: 80px;
     }
 
     main {
