@@ -84,3 +84,20 @@ footer {
     font-size: 0.9em;
     position: fixed;
 }
+
+.backtobrowse,
+.backtobrowse i,
+a.update-link,
+.btn {
+    color: rgb(179, 179, 179) !important;
+    cursor: pointer;
+}
+
+.backtobrowse:hover,
+.backtobrowse i:hover,
+.btn:hover,
+a.update-link:hover,
+.btn:hover {
+    color: rgb(133, 132, 132) !important;
+    cursor: pointer;
+}
