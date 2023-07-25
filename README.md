@@ -253,10 +253,9 @@ was designed in Illustrator and hand drawn. Client gave specifics of what he req
 
 3. Documentation including readme file, spec sheet. Estimated time 1 week.
 
-4. Development strategy: Develop the base views and build on those then add the styles, which is then used as a template for the
-	rest of the site pages, models etc. 
-
-5.	The code for the Routes are determined by the Views required and the way they need to function and relate to the other models and views. The Database Schema is created based on the functionality plan and routes required.
+4. Development strategy: Develop the base views and build on those then add the styles, which is then used as a template for the rest of the site pages, models etc.
+   
+5. The code for the Routes are determined by the Views required and the way they need to function and relate to the other models and views. The Database Schema is created based on the functionality plan and routes required.
 
 
 ## Design Variation:
