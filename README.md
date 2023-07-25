@@ -103,7 +103,7 @@ Please view the Database Schema Plan below.
 |![Database Schema](https://github.com/wendybovill/milestone-project-4/blob/1e4de3814bbd065a365cb5473397696f5a1a58cd/Documentation/images/otherimages/databaseschema.png)  |
 
 
-   **Blueprint:** Documentation for Database Schema and Website Plan 
+   **Blueprint:** Site Flow Chart Website Views Plan 
 ![Site Flow Chart Blueprint](https://github.com/wendybovill/milestone-project-4/blob/1e4de3814bbd065a365cb5473397696f5a1a58cd/Documentation/images/otherimages/viewsplan.png)
 
 [Back to Index](#index)
@@ -132,21 +132,24 @@ Please view the Database Schema Plan below.
 
 Html<br>
 Css<br>
-MaterializeCss (included in script and style links)<br>
+Javascript
+Bootstrap (included in script and style links)<br>
 Gitpod<br>
 VS Code<br>
 Git Repository<br>
 JS Query<br>
 Favicons (as pngs and linked in styles in html head section)<br>
 FontAwesome<br>
-Jinja Template<br>
-Mongo Database<br>
+ElephantSQL
+Gunicorn
+AWS S3 Bucket
+Pillow - for python images
 Heroku<br>
 Adobe Illustrator to create the Favicon image<br>
 Pexels.com for the free image used on the site<br>
 Balsamiq for Wireframes<br>
-Lucid Charts for the Site Blueprint (Flowchart Diagram)<br>
-Microsoft Excel to create the usercases that are then uploaded as CSS to convert to MD Tables<br>
+Lucid Charts for the Site (Flowchart Diagram) and Database Schema<br>
+Microsoft Excel to create the usercases that are then uploaded as CSV to convert to MD Tables<br>
 MD Table converter<br>
 Favicon Converter<br>
 Chrome, Firefox, Safari<br>
