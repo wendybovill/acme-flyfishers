@@ -288,11 +288,11 @@ The site has extra features added which are not in the original mockups/wirefram
 
 # Deployment Process
 
-## Steps to Deployment                                                                                                                                            
+## Steps to Deployment
 
-| 1  	| Sign Up to Heroku or Sign in                                                                                                                                                                      	|
-|----	|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
-| 2  	| Create a new App on Heroku                                                                                                                                                                        	|
+
+| 1  	| Sign Up to Heroku or Sign in      |                                                                                                                        
+| 2  	| Create a new App on Heroku        |                                                                                                                                                               	|
 | 3  	| Go to ElephantSQL and sign up or sign in                                                                                                                                                          	|
 | 4  	| Create a new database and Sign in                                                                                                                                                                 	|
 | 5  	| Then go to AWS Bucket Storage, and Join up or sign in                                                                                                                                             	|
