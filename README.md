@@ -181,59 +181,25 @@ Various Python Modules:<br>
 
 **Development Method:**
 
-After receiving technical specification and design requirements, wireframe was created in Balsamiq.
-The Html and CSS were created for the templates to, the base template was created using HTML and Django templatetags.
-Each html page was created as the python functions and routes were created requiring that view.
-CSS was modified on an ongoing basis in accordance with relevant view being developed.
-CSS was designed with Mobile First approach, allowing for larger screens responsiveness as a last
-modification requirement. Text across the site is scaled in accordance to the size of the viewing device.
+- After receiving technical specification and design requirements, wireframe was created in Balsamiq. The Html and CSS were created for the templates to, the base template was created using HTML and Django templatetags. Each html page was created as the python functions and routes were created requiring that view.
+- CSS was modified on an ongoing basis in accordance with relevant view being developed. CSS was designed with Mobile First approach, allowing for larger screens responsiveness as a last modification requirement. Text across the site is scaled in accordance to the size of the viewing device.
+  
+- Javascript was used to assist forms and to enhance User Experience. Javascript is used to create a modal popup of the images in the 'View Product' route. Rather than a user just viewing the small image, and a larger image load into a new browser window which the user would then have to go back using the back arrows to get to the site, I applied a JS modal to allow the image to open on the same page and the user to then close it with as little fuss as possible. This is less annoying than a set size image opening and then having to try and find the browser tab you had opened previously. The functions for styles were taken from Bootstrap and adjusted and modified as required according to component instructions. Javascript component has been used for the slideshow on the products view.
+  
+- Research was done on StackFlow, and WC3 and many other sites, as well as using some code inspired from the CI modules. Function planning and route planning took place before routes were developed. These were planned on paper (I prefer working on paper for planning). Database Schema was also planned on paper before being compiled into a digital document.
 
-Javascript was used to assist forms and to enhance User Experience. Javascript is used to create a modal popup
-of the images in the 'View Product' route. Rather than a user just viewing the small image, and a larger image load
-into a new browser window which the user would then have to go back using the back arrows to get to the site, 
-I applied a JS modal to allow the image to open on the same page and the user to then close it with as little fuss
-as possible. This is less annoying than a set size image opening and then having to try and find the browser tab
-you had open previously. The functions for styles were taken from the
-MaterializeCSS requirements and modified as required in the instructions.
-Research was done on StackFlow, and WC3 and many other sites, as well as using some code inspired
-from the CI modules. Function planning and route planning took place before routes were developed.
-These were planned on paper (I prefer working on paper for planning). Database Schema was also
-planned on paper. Please see attached document: Plans.
+- When deciding on the view, the basic variables were setup based on my rough sketches and page flows. The Contact Us form was planned and
+implemented in accordance with the required routes, models, forms and urls, using the Django structure, and also retrieving variables and passing them into the routes and templates, such as user, name, email etc.
 
-The basic variables were setup based on my rough sketches and page flows. forms were planned and
-implemented in accordance with the required routes, where necessary also passing the variables
-required into the routes (such as username, error code, user id, type id, etc). 
+- The Home page editing was also planned out and then the modal view implemented based on python language requirements and django dependencies. Good practice was followed in order to keep the folder and file structures in place and keep the development environment secure while testing and developing.
 
-Emails sending functions and templates were created in the App file after the other basic site functions.
-The search parameter was created after the emails and required further research in flask documentation
-and Mongo Database Documentation to ensure I did it correctly. I also looked into Python documentation
-to support my functions being correct, ensure the syntax was correct, as well as understand how the
-timer function works which I then implemented in my timer function within the search index creation 
-and search index dropping.
+- Testing took place at the same time as development. I would develop and then link the dependencies together and then test. Then make changes and test again. I tested right throughout using the problems raised within the Gitpod Visual Code workspace terminals, which has some additional apps from the market place installed that alerted me to an error when there was one. The debug environment was also set to true and this helped with troubleshooting and then continued development. This allowed me to correct code as I was writing throughout, I was testing on the live server.
 
-I tested right throughout using the problems raised within the Gitpod Visual Code workspace terminals, as
-well as using debug with Werkzeug indicating the errors and the error causes. This allowed me to 
-correct code as I was writing throughout, I was testing on the live server. This was up until
-the emails were needing to be tested. I could not do this within the Gitpod environment, it kept 
-timing out. So I then had to deploy to Heroku to test the email sending correctly. I used my own
-host company called "Wideworldwebhosting.co.uk" to create an email address and email routes.
-I used the configuration from this in creating the requirements in the settings in the app for
-sending emails. I also added these to Heroku in order to test the email sending. These gave no issues.
-Sending emails and clients (as well as the admin) receive emails.
+- The development method involved me planning the site requirements based on user stories, in order to develop a site that was beneficial, we needed to get an idea of the site that needed to be developed and the specifications and features it would require.
 
-Emails are sent to the client with the information they have sent to the admin.
-Emails confirming Sign up are sent to the client, as well as emails asking the user to verify their
-email address are sent to the client and received by the client. 
+- Once the Minimal Viable Product was developed, styles were corrected and then other features were added to enhance user experience, such as the image modal, and the ability for a superuser to change content on the Home page.
 
-After this I continued to work in the gitpod environment testing and debugging when sending to the 
-live server that comes with Gitpod. However, whenever an email required to be sent I had to re-deploy
-the code to Heroku to use the updated code and test on Heroku. Testing was performed manually.
-
-At the end of the Development, before final testing the code for CSS and html was again put through
-the respective validators at W3 Validator and Jigsaw. Errors were identifed and fixed where necessary. Notes were
-created of the errors and added to the debugging md file. There were numerous errors with MaterializeCSS third
-party extension, however these I have left as they are not within my remit. They are not causing any
-site errors or errors within my code. 
+- Error correcting took place frequently as my internet connection kept dropping out, requiring me to redo part of the codes (repeatedly), and throwing errors when an incomplete code was committed to github and not updated properly. This meant the development took longer than anticipated and was rather tough for this project.
 
 [Back to Index](#index)
 
