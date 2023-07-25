@@ -1,5 +1,5 @@
 
-# Milestone 3 Project: Back End Development
+# Milestone 4 Project: Ecommerce Full Stack Framework, Using Django, Python, AWS, SqlLite (ElephantSQL)
 [Deployed Project Link](http://event-lister.herokuapp.com/)
 ![ACME Flydressers](https://github.com/wendybovill/milestone-project-4/blob/1e4de3814bbd065a365cb5473397696f5a1a58cd/Documentation/images/otherimages/ACMEdevices.jpeg)
 
