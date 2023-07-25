@@ -55,13 +55,6 @@ h2 {
     font-size: 1.75rem !important;
 }
 
-section#productsection {
-    padding: 116px 25px 50px 15px;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
 .darkoverlay {
     background-color: rgba(0, 0, 0, 0.62);
     width: 100%;
@@ -267,4 +260,12 @@ a.remove-item:hover {
     .header {
         padding-top: 80px;
     }
+
+    #productsection {
+        padding: 25px 15px 50px 15px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
 }

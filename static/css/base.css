@@ -246,7 +246,7 @@ button:disabled {
     border: 2px solid white;
     border-radius: 25px;
     background-color: white;
-    color: black;
+    color: black !important;
     bottom: 15px;
     right: 15px;
     z-index: 1500;
@@ -258,7 +258,7 @@ button:disabled {
     height: 41px;
     width: 41px;
     position: fixed;
-    border: 2px solid rgb(158, 0, 0);
+    border: 2px solid rgb(158, 0, 0) !important;
     border-radius: 25px;
     background-color: white;
     bottom: 15px;
@@ -829,7 +829,7 @@ select option[value=""] {
     }
 }
 
-@media (min-width:250) and (max-width: 350px) {
+@media (min-width:250) and (max-width: 399px) {
     .header-container {
         padding-top: 90px;
         margin-left: 20px;
@@ -903,6 +903,13 @@ select option[value=""] {
     .bottom-space {
         margin-button: 1.2rem;
     }
+
+    #productsection {
+        padding: 25px 15px 50px 15px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
 }
 
 
@@ -970,6 +977,13 @@ select option[value=""] {
 
     #productsection {
         margin-bottom: 65px;
+    }
+
+    #productsection {
+        padding: 25px 15px 50px 15px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 
 }
