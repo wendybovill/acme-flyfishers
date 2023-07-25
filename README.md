@@ -203,6 +203,9 @@ implemented in accordance with the required routes, models, forms and urls, usin
 
 - Error correcting took place frequently as my internet connection kept dropping out, requiring me to redo part of the codes (repeatedly), and throwing errors when an incomplete code was committed to github and not updated properly. This meant the development took longer than anticipated and was rather tough for this project.
 
+![View Steps to Deployment](https://github.com/wendybovill/milestone-project-4/blob/66f8e8d5b8dddfd395dd55ba4caed7c92e09e2e6/Documentation/deployment.MD)
+
+
 [Back to Index](#index)
 
 
