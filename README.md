@@ -203,3 +203,25 @@ implemented in accordance with the required routes, models, forms and urls, usin
 
 [Back to Index](#index)
 
+
+
+# Security Features
+
+|  	| Security Features Added in the Development Process and Deployment Process: 	|
+|---	|---	|
+| 1 	| This project contains the use of Allauth, which has robust security if the settigns are correct.  	|
+| 2 	| On sign-up the user details are checked in the database to ensure there isn't an existing user, username or password 	|
+| 3 	| A confirmation email was sen to the user. 	|
+| 4 	| On sign-up a new user is sent an email to their email address where they then click a preconfigured url that will take them<br> to verify their email and log in with the credentials they selected on Sign Up. 	|
+| 5 	| Both username and password are case sensitive 	|
+| 6 	| The environment (env) file is added to .gitignore file and not made public 	|
+| 7 	| Environment secret variables such as Secret_key, passwords, database info, and email host sending logins are set in the<br> Heroku database Var config and not made public, they are kept hidden 	|
+| 8 	| Two factor authentication is setup on Heroku 	|
+| 9 	| Further defensive programming was developed as part of the testing process, to ensure that a user has to be logged in<br>to make any changes, and that they can only access there own account and posts 	|
+| 10 	| Defensive programming was completed to ensure a visitor to the site cannot alter the url to gain access to the backend<br> or to any of the signed up user accounts and features, for example to any area that is restricted to logged In<br> users, or the admin. When altering the url, the visitor is shown an error page and given feedback. 	|
+| 11	| Debug mode is set to False in the app.py file  	|
+| 12	| A User can only edit and update or delete their OWN entries, not those of others.<br>Those buttons are HIDDEN if the user is not the user who created that entry, or is not an admin user.<br>Admin can edit, update and delete their own and other users entries and profiles.  	|
+
+[Back to Index](#index)
+
+
