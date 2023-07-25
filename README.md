@@ -290,7 +290,7 @@ The site has extra features added which are not in the original mockups/wirefram
 
 ## Steps to Deployment                                                                                                                                             
 
-|    |                                                                                                                                                                                                 |
+                                                                                                                                                                                                     
 |----|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    |                                                                                                                                                                                                 |
 | 1  | Sign Up to Heroku or Sign in                                                                                                                                                                    |
