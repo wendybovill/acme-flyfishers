@@ -13,6 +13,14 @@ body {
     flex-direction: column;
 }
 
+.message-container {
+    position: inherit;
+    top: inherit;
+    right: in;
+    z-index: inherit;
+    font-size: 100%;
+}
+
 h1,
 h2,
 h3,

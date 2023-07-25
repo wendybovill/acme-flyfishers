@@ -24,7 +24,7 @@
             {% if entry.heading3 %} <h3 class="text-white">{{ entry.heading3 }} </h3>{% endif %}
             {% if entry.blockquote %} <blockquote class="blockquote">{{ entry.blockquote }} </blockquote>{% endif %}
         </div>
-        <div class="column text-white md-12" style="justify-content: center; {% if section.paddingleft %}padding-left: {{ section.paddingleft }}; {% endif %} {% if section.paddingright %}padding-right: {{ section.paddingright }}; {% endif %}">
+        <div class="column text-white md-12" style="justify-content: center; {% if section.backgroundcolor %} background-color: {{ section.backgroundcolor }}; {% endif %} {% if section.textcolor %} color: {{ section.textcolor }}; {% endif %} {% if section.paddingleft %} padding-left: {{ section.paddingleft }}; {% endif %} {% if section.paddingright %} padding-right: {{ section.paddingright }}; {% endif %}">
             <div class="column text-justify col-md-8 col-sm-12">
                 {% if entry.startercontent %} <p class="py-2 lead">{{ entry.startercontent }}</p> {% endif %}
                 {% if entry.maincontent %}<h4 class="textshadow">{{ entry.maincontent }} </h4>{% endif %}
