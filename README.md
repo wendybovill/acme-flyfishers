@@ -99,9 +99,9 @@ Please view the Database Schema Plan below.
 **Users are only allowed to edit their own events and event types, and as a result we have an 'added_by' field in the Event Types tables and in the Event tables. This allows the buttons for Edit and Delete to show only if the user is the user that added that entry, or if they are an admin user.**
 
 
-| Code Function Prep 	| Database Schema Plan 	|
-|---	|---	|
-| ![Database Schema](https://github.com/wendybovill/milestone-project-4/blob/1e4de3814bbd065a365cb5473397696f5a1a58cd/Documentation/images/otherimages/databaseschema.png)  	|
+| Database Schema Plan 	|
+|---	|
+|![Database Schema](https://github.com/wendybovill/milestone-project-4/blob/1e4de3814bbd065a365cb5473397696f5a1a58cd/Documentation/images/otherimages/databaseschema.png)  |
 
 
    **Blueprint:** Documentation for Database Schema and Website Plan 
