@@ -39,7 +39,7 @@
 
 # Target Audience
 
-- Fly Fishers who use fish for Salmon, Trout and Bass using handmade 'Flies' dressed to look like real insects in order to catch the fish.
+- Fly Fishers who use artificially made Flies to fish for Salmon, Trout and Bass using handmade 'Flies' dressed to look like real insects in order to catch the fish.
 
 - People who want to fish using a specific method, that requires specific equipment and crafted flies are part of this special equipment, but they can't make the equipment themselves.
 
