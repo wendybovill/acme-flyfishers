@@ -37,7 +37,7 @@
 
 # Target Audience
 
-- Fly Fishers who use artificially made Flies to fish for Salmon, Trout and Bass using handmade 'Flies' dressed to look like real insects in order to catch the fish.
+- Fly Fishers who use artificially made Flies to fish for Salmon, Trout and Bass using handmade 'Flies' dressed to look like real insects (" or a potential food item") in order to catch the fish.
 
 - People who want to fish using a specific method, that requires specific equipment and crafted flies are part of this special equipment, but they can't make the equipment themselves.
 
@@ -87,12 +87,13 @@ to be restored and orders to be shipped, the users can view their orders at anyt
 
 Once the views were identified, it was decided what each users would need for the views to operate correctly, portraying the correct information to each user, and this helped decide what routes were needed and therefore the functions to call and operate the routes and views by the user requirements.
 
-This is a Relational Database using Elephant Postgresl, and also using AWS Services for the storage of media. Heroku is the webserver.
+This is a Relational Database using Elephant Postgresl, and also using AWS Services for the storage of media. Heroku is the webserver. The Relational database allows for Table (Schema) linking from one to another, using ForeignKeys. 
 
-The Schema requires 15 tables, being: Site: Home, Entry, Section, Contact, User, Basket/Bag, Products, Categories, Seasons, as well as the Checkout table, Stripe Integration, a Store table for store admin to manage the products and their images etc.
+The Schema requires 13 tables (apart from the Site one itself): Home, Entry, Section, Contact, User, Basket/Bag, Products, Categories, Seasons, as well as the Checkout table, Stripe Integration, a Store table for store admin to manage the products and their images etc.
 
 Please view the Database Schema Plan below.
-
+It portrays how each table(schema) retrieves information from the other database and then returns information to be saved in itself or another table(schema).
+I prefer Relatonal databases over non-relational databases. I find they keep themselves inorder and need little maintenance and its 
 
 
 
@@ -114,7 +115,7 @@ Please view the Database Schema Plan below.
 |----------------	|-----------------------------	|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
 | 1              	| Pete - Owner                	| I need a website   I can sell the Fly Fishing flies from. These are handmade, and the site needs   to reflect the relaxing, yet classy sport, and have it appeal to all   generations. I need the site to have the products and categories available, a   checkout process, and an admin backend so that I can manage the products, and   view and dispatch the orders. I also need to be able to do a quote for a   custom order. And have a hidden product I can add to an invoice to be able to   customise that amount for that custom order. 	|
 | 2              	| Karen - Admin   and Manager 	| As a site admin   I need to easily be able to add products to the site, and remove or update   them. I also need to be able to add or change special offers. I need to be   able to send emails to the clients when orders are dispatched.                                                                                                                                                                                                                                                                                                        	|
-| 3              	| Andrew -   Customer         	| I need to be   able to access the products quickly by their type, and order quickly. I have   limitd time available to relax, and enjoy going fishing when I get the   chance. I want to be able to change the amount of any product ordered and   have a speedy checkout                                                                                                                                                                                                                                                                         	|
+| 3              	| Andrew -   Customer         	| I need to be   able to access the products quickly by their type, and order quickly. I have   limited time available to relax, and enjoy going fishing when I get the   chance. I want to be able to change the amount of any product ordered and   have a speedy checkout                                                                                                                                                                                                                                                                         	|
 | 4              	| Micah - Customer            	| I enjoy fly   fishing but battle to tie my own flies, I'd like to be able to request a   particular fly before placing an order.                                                                                                                                                                                                                                                                                                                                                                                                                  	|
 | 5              	| Sally - Customer            	| I don't know   much about fly fishing, but I'd like to be able to go on and view the   descriptions of each product so that I can choose some flies for his   birthday, that he can then use when he goes fly fishing.  I'm not very technical, so need to be able   to checkout easily and would like mutiple checkout options.                                                                                                                                                                                                                  	|
 | 6              	| Alex - Customer             	| I need to be   able to save my information and login, and view past orders, so I can keep   and eye on how much I spend. I am saving for a car. I enjoy trout fishing   when I get to go. Its important to me to have the order history in my account   view.                                                                                                                                                                                                                                                                                     	|
@@ -217,16 +218,16 @@ implemented in accordance with the required routes, models, forms and urls, usin
 |---	|---	|
 | 1 	| This project contains the use of Allauth, which has robust security if the settigns are correct.  	|
 | 2 	| On sign-up the user details are checked in the database to ensure there isn't an existing user, username or password 	|
-| 3 	| A confirmation email was sen to the user. 	|
+| 3 	| A confirmation email was sent to the user. 	|
 | 4 	| On sign-up a new user is sent an email to their email address where they then click a preconfigured url that will take them<br> to verify their email and log in with the credentials they selected on Sign Up. 	|
 | 5 	| Both username and password are case sensitive 	|
 | 6 	| The environment (env) file is added to .gitignore file and not made public 	|
 | 7 	| Environment secret variables such as Secret_key, passwords, database info, and email host sending logins are set in the<br> Heroku database Var config and not made public, they are kept hidden 	|
 | 8 	| Two factor authentication is setup on Heroku 	|
-| 9 	| Further defensive programming was developed as part of the testing process, to ensure that a user has to be logged in<br>to make any changes, and that they can only access there own account and posts 	|
+| 9 	| Further defensive programming was developed as part of the testing process, to ensure that a user has to be logged in<br>to make any changes to their profile and view their orders. 	|
 | 10 	| Defensive programming was completed to ensure a visitor to the site cannot alter the url to gain access to the backend<br> or to any of the signed up user accounts and features, for example to any area that is restricted to logged In<br> users, or the admin. When altering the url, the visitor is shown an error page and given feedback. 	|
-| 11	| Debug mode is set to False in the app.py file  	|
-| 12	| A User can only edit and update or delete their OWN entries, not those of others.<br>Those buttons are HIDDEN if the user is not the user who created that entry, or is not an admin user.<br>Admin can edit, update and delete their own and other users entries and profiles.  	|
+| 11	| Debug mode is set to False in the settings.py file using Developement mode variables set in Heroku and the development environment hidden env.  	|
+| 12	| A Registered User can only edit and update or delete their shipping details and personal information, not those of others. Historical Orders are rendered to view but can't be edited. Users can add products to basket, update their basket and remove items from their basket, as well as proceed to checkout.<br>Admin can edit, update and delete products and view orders and emails in the backend. Admins if logged into the backend can alter the Home Page content 	|
 
 [Back to Index](#index)
 
