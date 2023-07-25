@@ -154,23 +154,28 @@ Ipad, Iphone, Macbook for testing<br>
 Windows, Android phone for testing<br>
 Python<br>
 Various Python Modules:<br>
--   blinker==1.6.2<br>
--   click==8.1.3<br>
--   dnspython==2.3.0<br>
--   Flask==2.3.2<br>
--   Flask-Ext==0.1<br>
--   Flask-Mail==0.9.1<br>
--   Flask-PyMongo==2.3.0<br>
--   ipywidgets==8.0.6<br>
--   itsdangerous==2.1.2<br>
--   jupyter==1.0.0<br>
--   jupyter-console==6.6.3<br>
--   jupyterlab-widgets==3.0.7<br>
--   pymongo==4.3.3<br>
--   qtconsole==5.4.3<br>
--   QtPy==2.3.1<br>
--   Werkzeug==2.3.4<br>
--   widgetsnbextension==4.0.7<br>
+-   asgiref==3.7.2
+-   boto3==1.28.5
+-   botocore==1.31.5
+-   dj-database-url==0.5.0
+-   Django==3.2.20
+-   django-allauth==0.41.0
+-   django-colorfield==0.9.0
+-   django-countries==7.2.1
+-   django-crispy-forms==1.14.0
+-   django-storages==1.13.2
+-   gunicorn==20.1.0
+-   jmespath==1.0.1
+-   oauthlib==3.2.2
+-   Pillow==10.0.0
+-   psycopg2==2.9.6
+-   python3-openid==3.2.0
+-   pytz==2023.3
+-   requests-oauthlib==1.3.1
+-   s3transfer==0.6.1
+-   sqlparse==0.4.4
+-   stripe==5.5.0
+-   urllib3==1.26.16
 
 [Back to Index](#index)
 
