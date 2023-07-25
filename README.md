@@ -228,7 +228,8 @@ implemented in accordance with the required routes, models, forms and urls, usin
 
 1. Content:
 
-Identified a ....
+The Front page is designed differently to accommodate content added by the SuperUser. As there is a background image, the footer is deliberately plain black.
+The rest of the site uses a plain background and then the footer is an image to reflect the first page image. This is not an error, it was a design plan to remove any clashing of images on the front page, and the plain background for the rest of the site so as not to distract from the images of the products of handcrafted 'Flies'.
 
 
 2. Design: 
