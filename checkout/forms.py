@@ -10,11 +10,11 @@ class OrderForm(forms.ModelForm):
                   'town_or_city', 'postcode', 'country',
                   'county', 'email', 'phone_number',)
 
-#  over-riding the default methods:
     def __init__(self, *args, **kwargs):
         """
         Add placeholders and classes, remove auto-generated
-        labels and set autofocus on first field
+        labels and set autofocus on first field,
+        over-riding the default methods:
         """
         super().__init__(*args, **kwargs)
         placeholders = {

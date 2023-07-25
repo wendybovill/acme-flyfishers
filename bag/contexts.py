@@ -5,7 +5,13 @@ from products.models import Product
 
 
 def bag_contents(request):
-
+    """
+    Defining the requirement for the bag to display
+    properly and to perform the functions to present
+    the total quantity of each product purchased
+    as well as the amount of the order, and the 
+    delivery fee that they will be charged
+    """
     bag_items = []
     total = 0
     grand_total = 0
@@ -36,7 +42,8 @@ def bag_contents(request):
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
         ukmail = Decimal(2.99)
-        subdelivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
+        subdelivery = total * Decimal(
+            settings.STANDARD_DELIVERY_PERCENTAGE / 100)
         ukdelivery = ukmail + subdelivery
         delivery = ukdelivery
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
@@ -45,7 +52,6 @@ def bag_contents(request):
         free_delivery_delta = 0
 
     grand_total = delivery + total
-
 
     context = {
         'bag_items': bag_items,

@@ -3,6 +3,10 @@ from .models import Entry, Section
 
 
 class EntryAdmin(admin.ModelAdmin):
+    """
+    The Superuser section with the Entry options for the
+    index/home page
+    """
     readonly_fields = ['image_preview1', 'image_preview2',]
     list_display = (
         'name',
@@ -31,6 +35,10 @@ class EntryAdmin(admin.ModelAdmin):
 
 
 class SectionAdmin(admin.ModelAdmin):
+    """
+    The Superuser section with the Section options for the
+    index/home page
+    """
     readonly_fields = ['image_preview1', 'image_preview2',]
     list_display = (
         'name',

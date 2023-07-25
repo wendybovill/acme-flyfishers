@@ -1,3 +1,6 @@
+"""
+The Order processing Views in the Admin login section
+"""
 from django.contrib import admin
 from .models import Order, OrderLineItem
 

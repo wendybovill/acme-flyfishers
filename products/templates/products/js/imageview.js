@@ -1,3 +1,8 @@
+// The Modal that displays the product image in a pop up
+// from the view_product link. The user is able to close
+// the image without having to go back using the browser
+// they are still on the same product view page.
+
 // Get Modal to display product image
 var modal = document.getElementById("imgView{{product.id}}");
 

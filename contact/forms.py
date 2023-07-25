@@ -5,7 +5,8 @@ from .models import ContactForm
 
 class ContactForm(forms.ModelForm):
     """
-    A form for submitting contact information and messages.
+    Form for logged in users and visitors to
+    send emails to the shop owners
     """
     class Meta:
         model = ContactForm
@@ -20,6 +21,8 @@ class ContactForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         """
         Removing labels and using placeholders
+        customising how it loads onto the home
+        page
         """
         super().__init__(*args, **kwargs)
         placeholders = {

@@ -4,7 +4,12 @@ from .models import Product, Category
 
 
 class ProductForm(forms.ModelForm):
-
+    """
+    This is the form used for the admin, store owner
+    or stock keeper to add the products to the store
+    from their logged in front end profile. This form
+    is only available to restricted users.
+    """
     class Meta:
         model = Product
         fields = '__all__'

@@ -1,15 +1,20 @@
+/* Stylesheet for base template for site */
+
 html {
     height: 100%;
-}
-
-i {
-    color: black;
 }
 
 .logo {
     height: 90px;
     width: auto;
     display: inline !important;
+}
+
+h2.logo-text {
+    font-family: 'Oswald' !important;
+    font-size: 1.4rem;
+    color: black;
+    display: inline !important
 }
 
 header {
@@ -28,17 +33,13 @@ body {
     flex-direction: column;
 }
 
-h2.logo-text {
-    font-family: 'Oswald' !important;
-    font-size: 1.4rem;
-    color: black;
-    display: inline !important
-}
-
 main {
     flex: 1;
     padding-bottom: 65px;
 }
+
+
+/*  Navigation */
 
 .dropdown-item:hover *,
 .nav-item:hover * {
@@ -53,49 +54,6 @@ main {
     font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-a:hover {
-    text-decoration: none;
-    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(163, 147, 3);
-}
-
-a {
-    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(170, 158, 103);
-}
-
-hr {
-    border-bottom: 1px !important;
-    border-color: rgba(116, 114, 114, 0.562) !important;
-}
-
-.intro-text {
-    color: white;
-    width: 100%;
-    padding: 20px 35px;
-}
-
-.bg-black {
-    background-color: rgba(0, 0, 0, 0.637);
-}
-
-.textshadow {
-    text-shadow: rgba(0, 0, 0, 0.575) 0px 0px 4px !important;
-}
-
-h2 a {
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-h2 a:hover {
-    font-size: 1.8rem;
-    font-weight: 500;
-    color: red;
-    cursor: pointer;
-    text-decoration: none;
-}
 
 .dropdown-item {
     color: black;
@@ -114,6 +72,52 @@ h2 a:hover {
     text-decoration: none;
     background-color: rgb(122, 103, 55);
 }
+
+
+
+
+/* Icons, Links and Button Styles */
+
+i {
+    color: black;
+}
+
+i.fa-search {
+    color: rgb(168, 168, 168);
+}
+
+a {
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(170, 158, 103);
+}
+
+a:hover {
+    text-decoration: none;
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(163, 147, 3);
+}
+
+
+h1 {
+
+    margin: 0 50px;
+}
+
+h2 a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h2 a:hover {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: red;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
 
 .white-btn {
     background: white;
@@ -190,9 +194,6 @@ button.qty-btn:hover {
     padding: 0 4px !important;
 }
 
-i.fa-search {
-    color: rgb(168, 168, 168);
-}
 
 button.btn-search,
 .btn-search {
@@ -211,17 +212,6 @@ button.btn-search:hover,
     padding: 0 4px !important;
 }
 
-button:disabled {
-    background-color: rgb(53, 53, 53) !important;
-    border-color: rgb(61, 61, 61) !important;
-    color: rgb(61, 61, 61) !important;
-}
-
-.copyright {
-    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
-    color: #7a7667;
-    font-size: 0.9em;
-}
 
 .backtobrowse,
 .backtobrowse i,
@@ -240,16 +230,13 @@ a.update-link:hover,
     cursor: pointer;
 }
 
-h1 {
 
-    margin: 0 50px;
+button:disabled {
+    background-color: rgb(53, 53, 53) !important;
+    border-color: rgb(61, 61, 61) !important;
+    color: rgb(61, 61, 61) !important;
 }
 
-.signup,
-.login,
-.logout {
-    margin: 25px 50px;
-}
 
 .top-button,
 .button-top {
@@ -280,9 +267,47 @@ h1 {
     z-index: 1500;
 }
 
+
+.signup,
+.login,
+.logout {
+    margin: 25px 50px;
+}
+
+
+/* Content Styling */
+
+
+
+hr {
+    border-bottom: 1px !important;
+    border-color: rgba(116, 114, 114, 0.562) !important;
+}
+
+.intro-text {
+    color: white;
+    width: 100%;
+    padding: 20px 35px;
+}
+
+.bg-black {
+    background-color: rgba(0, 0, 0, 0.637);
+}
+
+.textshadow {
+    text-shadow: rgba(0, 0, 0, 0.575) 0px 0px 4px !important;
+}
+
 ul li {
     font-size: 1 rem;
 }
+
+div.order-history.table-responsive {
+    margin-top: 50px;
+}
+
+
+/* Footer */
 
 footer {
     width: 100%;
@@ -298,9 +323,12 @@ footer {
     position: fixed;
 }
 
-div.order-history.table-responsive {
-    margin-top: 50px;
+.copyright {
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    color: #7a7667;
+    font-size: 0.9em;
 }
+
 
 /* Allauth form formatting */
 
@@ -362,6 +390,7 @@ div.order-history.table-responsive {
     color: rgb(122, 103, 55);
     /* text-info */
 }
+
 
 /* Product Form */
 
@@ -479,8 +508,7 @@ select option[value=""] {
     color: white !important;
 }
 
-
-/* ======= IMAGE VIEW MODAL ====== */
+/* IMAGE VIEW MODAL */
 
 #imgView {
     border-radius: 5px;
@@ -589,7 +617,6 @@ select option[value=""] {
         width: 100%;
     }
 }
-
 
 
 

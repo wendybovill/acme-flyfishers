@@ -6,7 +6,10 @@ from .models import Entry, Section
 from django.conf import settings
 from django.template.loader import render_to_string
 
-# Create your views here.
+"""
+Defining the Home Page for the website, as well as pages
+to handle the errors for 404, and 500 http errors
+"""
 
 
 def index(request):

@@ -85,7 +85,9 @@ def email_sent(request):
 
 
 def send_auto_contact_received_email(contact_form):
-    """Send the user a confirmation email"""
+    """
+    Send the user a confirmation email
+    """
     if contact_form.is_valid():
         cust_email = contact_form.cleaned_data['contact_email']
         context = {

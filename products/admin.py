@@ -1,7 +1,10 @@
 from django.contrib import admin
 from .models import Category, Product, Slide, Season
 
-# register
+"""
+Defining classes for the Admin Views in the Superuser
+login section
+"""
 
 
 class CategoryAdmin(admin.ModelAdmin):

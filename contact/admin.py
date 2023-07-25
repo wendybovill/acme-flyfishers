@@ -3,6 +3,11 @@ from .models import ContactForm
 
 
 class ContactFormAdmin(admin.ModelAdmin):
+    """
+    The fields being used for admin view
+    showing display options and if editable
+    or not
+    """
     readonly_fields = [
         'contact_name',
         'contact_email',

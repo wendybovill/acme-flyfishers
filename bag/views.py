@@ -6,13 +6,19 @@ from products.models import Product
 
 
 def view_bag(request):
-    """ View to view bag """
-
+    """
+    View that shows the bag contents to the customer
+    They have the option to checkout or continue browsing
+    and go back to the shop
+    """
     return render(request, 'bag/bag.html')
 
 
 def add_to_bag(request, item_id):
-    """ add product qty to bag """
+    """
+    View for customer to add a product to the bag
+    and receive a notice that the product is added
+    """
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -33,7 +39,10 @@ def add_to_bag(request, item_id):
 
 
 def bag_update(request, item_id):
-    """update product quantity in bag"""
+    """
+    A view for the customer to add more to the bag
+    and receive confirmation that the bag is updated
+    """
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -55,7 +64,11 @@ def bag_update(request, item_id):
 
 
 def delete_from_bag(request, item_id):
-    """delete product from bag"""
+    """
+    A view for the customer to remove items
+    from the bag and receive confirmation that
+    these items are removed
+    """
 
     try:
         product = get_object_or_404(Product, pk=item_id)

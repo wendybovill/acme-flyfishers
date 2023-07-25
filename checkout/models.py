@@ -10,6 +10,10 @@ from django.utils.html import html, mark_safe
 
 
 class Order(models.Model):
+    """
+    Fields required in the order mode form
+    and the order processing
+    """
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
                                      null=True, blank=True,
@@ -42,7 +46,8 @@ class Order(models.Model):
 
     def update_total(self):
         """
-        Change total of order when a new lineitem is added, including delivery
+        Change total of order when a new lineitem is added,
+        including delivery
         """
         self.order_total = self.lineitems.aggregate(
             Sum('lineitem_total'))['lineitem_total__sum'] or 0
@@ -79,7 +84,7 @@ class OrderLineItem(models.Model):
 
     def save(self, *args, **kwargs):
         """
-        set line total and order total on save
+        Set line total and order total on save
         """
         self.lineitem_total = self.product.price * self.quantity
         super().save(*args, **kwargs)

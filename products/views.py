@@ -10,8 +10,12 @@ from .forms import ProductForm
 
 
 def products(request):
-    """ All product view with sorting and filters """
-
+    """
+    A view to present the products on the page
+    giving the shopper the option to sort and
+    filter the products to find what they want
+    faster
+    """
     products = Product.objects.all()
     query = None
     categories = Category.objects.all()
@@ -41,7 +45,12 @@ def products(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
-
+        """
+        The customer can search and sort according to category,
+        Season, and the Fishing Hook Size, as well as the Product
+        size for example: Dry will find all products that have the
+        word dry in them for Dry flies
+        """
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
@@ -64,7 +73,8 @@ def products(request):
                                "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | Q(
+                description__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -81,7 +91,16 @@ def products(request):
 
 
 def view_product(request, product_id):
-    """ A view to show individual product details """
+    """
+    A view to show individual product details.
+    This is customised further on the View_Product page
+    so that when the user clicks on the image, rather
+    than just the image that pops up in a separate browser
+    tab thus taking the user away from the shop, instead
+    Javascript Modal shows a full view image on the screen
+    as an overlay that the user can easily close,
+    and still be on the same product view page.
+    """
 
     product = get_object_or_404(Product, pk=product_id)
 
@@ -94,7 +113,15 @@ def view_product(request, product_id):
 
 @login_required
 def add_product(request):
-    """ Add a New product to the products """
+    """
+    This is an Admin Only view for the admin or store owner
+    or stock keeper to add new products to the page.
+    They can use the categories, seasons, etc provided.
+    They have to be logged in to add products to the shop.
+    An image can be uploaded and added to the product.
+    The product model is linked to the category model and
+    the season model
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Restricted to products')
         return redirect(reverse('home'))
@@ -122,7 +149,11 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-    """ Edit and Update a product in the products """
+    """
+    A view for the Admin Only, or stock keeper or store owner
+    to edit the products, change their prices, add new images,
+    change there categories and seasons.
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Restricted to products Owners')
         return redirect(reverse('home'))
@@ -153,7 +184,14 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """ Delete a product from the products """
+    """
+    A view for the Admin Only, or stock keeper or store owner
+    to Delete the products. This does not delete the categories
+    or seasons in relation to the product. The categories and
+    seasons have to be deleted independent of each other.
+    This view does not allow deleting or creating of the
+    categories or season. That is a feature yet to come.
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Restricted to products Owners')
         return redirect(reverse('home'))

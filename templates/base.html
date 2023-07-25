@@ -7,7 +7,12 @@
     {% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> {% endblock %} {% block more_meta %} {% endblock %} {% block corecss %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Half a century of dressing Trout, Atlantic Salmon, Large Mouth Bass and Saltwater flies - Quality in Excellence">
+    <meta name="keywords" content="acme, excellence, flyfishing, flytying, flydressing, troutfishing, trout, salmon, bass">
+    <meta name="author" content="ACME Flydressers">
+    {% endblock %} {% block more_meta %} {% endblock %} {% block corecss %}
+    <!--  CSS links  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,9 +23,15 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald&display=swap">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/toast.css' %}">
+    <!--  Favicon links  -->
+    <link rel="apple-touch-icon" sizes="150x150" href="{% media 'apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% media 'favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% media 'favicon-16x16.png' %}">
+    <link rel="manifest" href="assets/images/site.webmanifest">
     {% endblock %}
     {% block more_css %} {% endblock %}
     {% block corejs %}
+    <!--  Core JS  -->
     <script src="https://kit.fontawesome.com/e55fb01ad9.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -126,7 +137,7 @@
     </main>
     <footer class="text-center">
         <div class="copyright">
-            <a class="" href="{% url 'contact' %}" id="contact-link">Contact Us</a>
+            <a href="{% url 'contact' %}" id="contact-link">Contact Us</a>
             <br>
             &copy;2023 Copyright ACME Flydressers | All rights reserved. Product Images are property of ACME Flydressers
         </div>

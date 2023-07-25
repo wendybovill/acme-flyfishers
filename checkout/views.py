@@ -1,3 +1,7 @@
+"""
+These vies are not customised much as they are imported
+from Stripes documents
+"""
 from django.shortcuts import (render, redirect, reverse,
                               get_object_or_404, HttpResponse)
 from django.views.decorators.http import require_POST
@@ -26,7 +30,8 @@ def cache_checkout_data(request):
         return HttpResponse(status=200)
     except Exception as e:
         messages.error(request, ('Sorry, we cannot process your payment '
-                                 'right now, please try again later.'))
+                                 'right now, please try again later.'
+                                 'If it persists please contact us'))
         return HttpResponse(content=e, status=400)
 
 
@@ -80,12 +85,13 @@ def checkout(request):
                     messages.error(request, (
                         "One of the products in your basket wasn't "
                         "found in our database. "
-                        "Please call us for assistance!")
+                        "Please contact us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('view_bag'))
-
-            # Save the info to the user's profile if no errors
+            """
+            Save the info to the user's profile if no errors
+            """
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success',
                                     args=[order.order_number]))
@@ -107,8 +113,9 @@ def checkout(request):
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
         )
-
-        # Attempt to prefill the form with user profile info
+        """
+        Attempt to prefill the form with user profile info
+        """
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)

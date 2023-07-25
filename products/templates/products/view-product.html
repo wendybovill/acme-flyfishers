@@ -53,6 +53,7 @@
                             <h2 class="mb-0 py-2 text-center">{{ product.name }}</h2>
                             {% if product.image %}
                             <img class="modal-content card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}" id="product{{ product.id }}">
+                            <!-- Modal Product Popup Happens Here-->
                             <div id="imgView{{ product.id }}" class="modal" style="z-index: 9990;">
                                 <span class="close" style="z-index: 9995;">&times;</span>
                                 <img class="modal-content card-img-top img-fluid" style="z-index: 9991;" src="{{ product.image.url }}" alt="{{ product.name }}" id="product{{ product.id }}">
@@ -156,6 +157,13 @@
     $('.button-top').click(function(e) {
         window.scrollTo(0, 0)
     })
+
+
+    // A user experience enhancement where the user can view
+    // the product image without having to leave the page,
+    // and they can just close the image after viewing
+    // the enlarged product. There is no need to use the back
+    // browser buttons or try to find the tab again.
 
     // Get Modal to display product image
     var modal = document.getElementById("imgView{{ product.id }}");
