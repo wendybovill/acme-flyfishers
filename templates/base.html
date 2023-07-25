@@ -11,7 +11,9 @@
     <meta name="description" content="Half a century of dressing Trout, Atlantic Salmon, Large Mouth Bass and Saltwater flies - Quality in Excellence">
     <meta name="keywords" content="acme, excellence, flyfishing, flytying, flydressing, troutfishing, trout, salmon, bass">
     <meta name="author" content="ACME Flydressers">
-    {% endblock %} {% block more_meta %} {% endblock %} {% block corecss %}
+    {% endblock %}
+    {% block more_meta %} {% endblock %}
+    {% block corecss %}
     <!--  CSS links  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,13 +25,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald&display=swap">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/toast.css' %}">
-    <!--  Favicon links  -->
+    {% endblock %}
+    {% block more_css %}
     <link rel="apple-touch-icon" sizes="150x150" href="{% media 'apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% media 'favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% media 'favicon-16x16.png' %}">
     <link rel="manifest" href="assets/images/site.webmanifest">
     {% endblock %}
-    {% block more_css %} {% endblock %}
     {% block corejs %}
     <!--  Core JS  -->
     <script src="https://kit.fontawesome.com/e55fb01ad9.js" crossorigin="anonymous"></script>
