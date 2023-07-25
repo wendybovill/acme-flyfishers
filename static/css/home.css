@@ -126,7 +126,7 @@ footer {
 
 @media (min-width: 992px) {
     .header {
-        padding-top: 100px !important;
+        padding-top: 120px !important;
     }
 }
 
@@ -136,7 +136,7 @@ footer {
     }
 
     .welcome {
-        padding-top: 30px;
+        padding-top: 45px;
         padding-bottom: 45px;
     }
 
@@ -154,7 +154,7 @@ footer {
     }
 
     .welcome {
-        padding-top: 15px;
+        padding-top: 25px;
         padding-bottom: 15px;
     }
 
