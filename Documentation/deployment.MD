@@ -1,4 +1,4 @@
-## Steps to Deployment                                                                                                                                                                                                                                                                                                             
+## Steps to Deployment                                                                                                                                                                 
 
 | 1. Sign Up to Heroku or Sign in                                                                                                                                                                 |
 | 2. Create a new App on Heroku                                                                                                                                                                   |
@@ -36,4 +36,3 @@
 | 32. If you have already connected your gitub to heroku and its set to automatically deploy, then all you have to do is push it and heroku will receive the update and rebuild the app and start it. |
 | 33. Heroku will direct the files on Github and run them like a web serter. But  you need to eploy to update t                                                                                       |
 | 34. When you have pushed the new committed git then click app to view the app. You can also view the logs to catch any errors.                                                                      |
-
