@@ -468,7 +468,4 @@ Manual Testing various possible user attempts to work around the site security w
 [Back to Index](#index)
 
 
-[Back to Index](#index)
-
-
 
