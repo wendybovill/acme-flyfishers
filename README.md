@@ -96,7 +96,6 @@ The Schema requires 15 tables, being: Site: Home, Entry, Section, Contact, User,
 Please view the Database Schema Plan below.
 
 
-**Users are only allowed to edit their own events and event types, and as a result we have an 'added_by' field in the Event Types tables and in the Event tables. This allows the buttons for Edit and Delete to show only if the user is the user that added that entry, or if they are an admin user.**
 
 
 | Database Schema Plan 	|
