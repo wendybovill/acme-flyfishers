@@ -7,5 +7,13 @@ This shows the error logs and success logs. Events would get cancelled and my pc
 ![Stripe Logs](https://github.com/wendybovill/milestone-project-4/blob/6b16bd512e8d33c44dd5903246e99e4733dea523/Documentation/images/otherimages/stripelogs.png)
 
 
+*Screenshot showing email sent successfully*
+
+![Email Success](https://github.com/wendybovill/milestone-project-4/blob/744f0d11d445c12a75c11d5ad43d452019151092/Documentation/images/otherimages/emailsuccess.png)
+
+
+
+
+
 
 
