@@ -100,7 +100,7 @@ Please view the Database Schema Plan below.
 |![Database Schema](https://github.com/wendybovill/milestone-project-4/blob/1e4de3814bbd065a365cb5473397696f5a1a58cd/Documentation/images/otherimages/databaseschema.png)  |
 
 
-   **Blueprint:** Site Flow Chart Website Views Plan 
+**Site Flow Chart Website Views Plan**
 ![Site Flow Chart Blueprint](https://github.com/wendybovill/milestone-project-4/blob/1e4de3814bbd065a365cb5473397696f5a1a58cd/Documentation/images/otherimages/viewsplan.png)
 
 [Back to Index](#index)
@@ -246,7 +246,7 @@ The rest of the site uses a plain background and then the footer is an image to 
 
 | Mockups |
 |----------------|
-| ![Balsamiq Wireframe](https://github.com/wendybovill/milestone-project-4/blob/fd8676fe4da9e7c9cf3fae61e19312b00022326d/Documentation/images/otherimages/wireframe.png)     |
+| ![Balsamiq Wireframe](https://github.com/wendybovill/milestone-project-4/blob/f746d83e02044ecc7e3cc33e38deaa298694d5bc/Documentation/images/otherimages/wireframe1.png)     |
 
 *Logo:* Photo of a Handcrafted fly, edited in Photoshop and then imported into Illustrator, where it was converted to SVG and then the rest of the logo
 was designed in Illustrator and hand drawn. Client gave specifics of what he required for his brand.
