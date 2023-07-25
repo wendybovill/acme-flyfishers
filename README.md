@@ -30,9 +30,6 @@
 
 [12 Debugging and Test Results](#debugging-and-test-results)
 
-[13 Screenshots and Finished Site](#screenshots-of-finished-site) <br> 
-&ensp;-&ensp;[13a Screenshots Showing Update and Delete](#screenshots-showing-update-and-delete) <br> 
-&ensp;-&ensp;[13b Screenshots Responsive Design](#responsive-design-screenshots) <br> 
 
 <hr>
 
@@ -323,8 +320,6 @@ The site has extra features added which are not in the original mockups/wirefram
 
 **TEST CASES:**
 
-Test Cases and Debugging:
-
 | Test   Cases:                                                                                                                                                                                                                                                                                                                                                                                                                                                     	|
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
 | ID 1                                                                                                                                                                                                                                                                                                                                                                                                                                                              	|
@@ -442,11 +437,12 @@ Test Cases and Debugging:
 **User Testing:**
 
 Manual Testing various possible user attempts to work around the site security was undertaken to ensure a user could not:
-- edit, update or delete other users Events or Event Types
-- see or edit or update other users profiles
-- use url changing as logged in or logged out users to view other users content, either profiles, or edit events or edit event types
-- view, edit, update or delete member profiles as an admin user
 - urls cannot be changed to gain access to restricted areas, users are redirected either through http error status responses to the index page with a relevant message or on the same pages with flash messages instructing them they are not authorized and need to log in (where appropriate)
+- Allauth has a robust system for authentication and security
+- HTTPError handlers were setup to redirect for index page along with information about the errors.
+- During testing signups, logins, logouts any errors were caught by the debugging system and then corrected.
+- The worst errors came from styles not updating or saving properly and needing to be redone.
+- Stripe has had intermittent handling failures but this is due to the checkouts not completing when I lost connection as been having issues with my internet connections. Everything is installed and implemented, there are both successes and failures in the logs and more recently there are more successes.
 
 
 *References used to assist debugging:*
@@ -455,56 +451,13 @@ Manual Testing various possible user attempts to work around the site security w
 
 - W3 schools jigsaw css validator: http://jigsaw.w3.org
 
-- Werkzeug showing errors in debugging process
+- Visual Studio intalled debuggers, and Pylint, and JSLint
 
-- Regular commits were made throughout the process to github as deployed early to use gitpod for testing
-  (problems detected in the terminal were then corrected)
+- DevTools in the browser and the console
 
-- Python documentation, Flash documentation
-
-[Back to Index](#index)
-
-
-
-# Screenshots of Finished Site
-
-| Screenshot Desktop Index Page |
-|-----------------------------------------------------------------------|
-| ![Finished Site Desktop Index Page](https://github.com/wendybovill/milestone-project-3/blob/43f702c830ea4035ead9ffff36f81610628a9149/documentation/screenshots/laptop.png)|
-
- ## Screenshots Showing update and delete
- 
-| Screenshot Desktop EVENT READ, UPDATE/EDIT and DELETE |
-|-----------------------------------------------------------------------|
-| ![Event Read, Update/Edit, Delete](https://github.com/wendybovill/milestone-project-3/blob/ba10bc185289e3aba42954201590fc67d7603ad5/documentation/screenshots/event_edit_delete_view.png)|
-
-| Screenshot Desktop EVENT-TYPE READ, UPDATE/EDIT and DELETE |
-|-----------------------------------------------------------------------|
-| ![Event-Type Read, Update/Edit, Delete](https://github.com/wendybovill/milestone-project-3/blob/46eacafceed7928da2898f71d727457ad5c21622/documentation/screenshots/event_type_edit_delete.png)|
+- Python documentation, Django documentation
 
 [Back to Index](#index)
-
-| Screenshot Desktop PROFILE READ, UPDATE/EDIT |
-|-----------------------------------------------------------------------|
-| ![Profile View Read, Update/Edit, Delete](https://github.com/wendybovill/milestone-project-3/blob/46eacafceed7928da2898f71d727457ad5c21622/documentation/screenshots/admin_profile_view_edit_option.png)|
-
-| Screenshot Desktop MEMBERS LIST READ, UPDATE/EDIT and DELETE |
-|-----------------------------------------------------------------------|
-| ![Members List (Admin only view) Read, Update/Edit, Delete](https://github.com/wendybovill/milestone-project-3/blob/46eacafceed7928da2898f71d727457ad5c21622/documentation/screenshots/member_list_view_edit_delete.png)|
-
-[Back to Index](#index)
-
-
-## Responsive Design Screenshots
-
-| Screenshot Ipad Index Page |
-|-----------------------------------------------------------------------|
-| ![Finished Site Ipad Index Page](https://github.com/wendybovill/milestone-project-3/blob/5df605d3f7c8bf6e2c985f2d33b0908a51b0ab55/documentation/screenshots/Ipad_index.PNG)|
-
-| Screenshot Iphone Index Page |
-|-----------------------------------------------------------------------|
-| ![Finished Site Iphone Index Page](https://github.com/wendybovill/milestone-project-3/blob/200db3944839cdde5c523a451f6fd3ddd5c7bf78/documentation/screenshots/iphone.PNG)|
-
 
 
 [Back to Index](#index)
