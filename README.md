@@ -1,108 +1,179 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome wendybovill,
+# Milestone 3 Project: Back End Development
+[Deployed Project Link](http://event-lister.herokuapp.com/)
+![ACME Flydressers](https://github.com/wendybovill/milestone-project-4/blob/1e4de3814bbd065a365cb5473397696f5a1a58cd/Documentation/images/otherimages/ACMEdevices.jpeg)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Index
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+[1 Target Audience](#target-audience)
 
-## Gitpod Reminders
+[2 Purpose](#purpose)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+[3 Database Schema and Plan](#database-schema-and-site-plan) <br>
+&ensp;-&ensp;[3a Database Schema Plan Detail](#database-schema-plan-detail)
 
-`python3 -m http.server`
+[4 User Stories](#user-stories)
 
-A blue button should appear to click: _Make Public_,
+[5 Technology Requirements](#tecnology-requirements)
 
-Another blue button should appear to click: _Open Browser_.
+[6 Development Process](#development-process)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+[7 Security Features](#security-features)
 
-A blue button should appear to click: _Make Public_,
+[8 Site Design Process](#site-design-process)
 
-Another blue button should appear to click: _Open Browser_.
+[9 Future Development](#future-development)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+[10 Deployment Process](#deployment-process)
 
-To log into the Heroku toolbelt CLI:
+[11 Acknowledgements](#acknowledgements)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+[12 Debugging and Test Results](#debugging-and-test-results)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+[13 Screenshots and Finished Site](#screenshots-of-finished-site) <br> 
+&ensp;-&ensp;[13a Screenshots Showing Update and Delete](#screenshots-showing-update-and-delete) <br> 
+&ensp;-&ensp;[13b Screenshots Responsive Design](#responsive-design-screenshots) <br> 
 
-------
+<hr>
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+# Target Audience
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+- Fly Fishers who use fish for Salmon, Trout and Bass using handmade 'Flies' dressed to look like real insects in order to catch the fish.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- People who want to fish using a specific method, that requires specific equipment and crafted flies are part of this special equipment, but they can't make the equipment themselves.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+- The fly fishers who would like to buy these flies or have some bespoke flies made for them.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- Business owner who makes these flies and would like to sell them to his target audience.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+# Purpose
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+- To provide the target audience with a means of purchasing these flies. 
+- To provide various options of flies for various seasons. 
+- The owner of the business to sell these flies and make a profit.
+- To encourage new fly fishers to take up the sport by making these flies easily available and affordable.
+- To enable site users to make purchases, orders and to make contact throug a contact form to the site owner.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+[Back to Index](#index)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+# Database Schema and Site Plan
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+1. A view that acts as a landing page to the store and a welcome. This view can be changed by the superuser, to add in and remove content on this landing page.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+2. The landing page view has options to add sections and to add entries into these sections. The database schema plan shows the planing for these models and views and the way they relate to each other as entities.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+3. The landing page also has a functioning contact form, and a view and model to match this is in the database schema. The Contact Us form draws data from the User fields in order to be populated automatically if a user is already logged in.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+4. The Contact Us form serves as a way to email the store owner and for the store owner to accept any bespoke orders for products that are not yet available in his store. Customers can ask for specific Flies to purchase.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+5. The products can be added and edited and deleted by the store owner when logged in. They can upload images, and link the products with a category and a season. There are 3 categories currently for the flies, they are: Dry flies, Wet flies and Nymphs. The Product model uses data from the Category model by linking with the Primary Key. The Product model also links with the Primary Key from the Seasons model. This enables various means of filtering the products so the user can quickly sort and find the type of fly they need. The Product model also has a price and hook size associated with each product. These are used in the Bag model and the Checkout model when the customer makes a purchase.
 
-------
+6. There signing up is handled by Django All Auth. But this information is passed to Stripe for payment processing. The checkout model creates the order, it is then saved to the user database where they can view their order history.
 
-## FAQ about the uptime script
+6. As part of the Product model, there is a Slide model and equivalent database schema, the Slide model is a means to upload slide images for the product page. A url is display and this can be used when creating the slide.
 
-**Why have you added this script?**
+7. An email that gets sent to a user when signing up, to verify their email address. They need to follow
+   the emails instructions and click the link that launches the internet browser where they have to input
+   their email address and password to log in.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+8. There is feedback right throughout the site. By messages from Bootsrap Toasts.
 
-**How will this affect me?**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+## Database Schema Plan Detail:
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+The database schema was designed after deciding what the site functionality should be like. It needed to be a Relational Database, which met the requirements for multiple users to be logged, their data
+to be restored and orders to be shipped, the users can view their orders at anytime.
 
-**So….?**
+Once the views were identified, it was decided what each users would need for the views to operate correctly, portraying the correct information to each user, and this helped decide what routes were needed and therefore the functions to call and operate the routes and views by the user requirements.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+This is a Relational Database using Elephant Postgresl, and also using AWS Services for the storage of media. Heroku is the webserver.
 
-**Can I opt out?**
+The Schema requires 15 tables, being: Site: Home, Entry, Section, Contact, User, Basket/Bag, Products, Categories, Seasons, as well as the Checkout table, Stripe Integration, a Store table for store admin to manage the products and their images etc.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+Please view the Database Schema Plan below.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
 
-**Anything more?**
+**Users are only allowed to edit their own events and event types, and as a result we have an 'added_by' field in the Event Types tables and in the Event tables. This allows the buttons for Edit and Delete to show only if the user is the user that added that entry, or if they are an admin user.**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
 
----
+| Code Function Prep 	| Database Schema Plan 	|
+|---	|---	|
+| ![Database Schema](https://github.com/wendybovill/milestone-project-4/blob/1e4de3814bbd065a365cb5473397696f5a1a58cd/Documentation/images/otherimages/databaseschema.png)  	|
 
-Happy coding!
+
+   **Blueprint:** Documentation for Database Schema and Website Plan 
+![Site Flow Chart Blueprint](https://github.com/wendybovill/milestone-project-4/blob/1e4de3814bbd065a365cb5473397696f5a1a58cd/Documentation/images/otherimages/viewsplan.png)
+
+[Back to Index](#index)
+
+
+
+# User Stories
+
+| User   Stories 	| User                        	| Case                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              	|
+|----------------	|-----------------------------	|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+| 1              	| Pete - Owner                	| I need a website   I can sell the Fly Fishing flies from. These are handmade, and the site needs   to reflect the relaxing, yet classy sport, and have it appeal to all   generations. I need the site to have the products and categories available, a   checkout process, and an admin backend so that I can manage the products, and   view and dispatch the orders. I also need to be able to do a quote for a   custom order. And have a hidden product I can add to an invoice to be able to   customise that amount for that custom order. 	|
+| 2              	| Karen - Admin   and Manager 	| As a site admin   I need to easily be able to add products to the site, and remove or update   them. I also need to be able to add or change special offers. I need to be   able to send emails to the clients when orders are dispatched.                                                                                                                                                                                                                                                                                                        	|
+| 3              	| Andrew -   Customer         	| I need to be   able to access the products quickly by their type, and order quickly. I have   limitd time available to relax, and enjoy going fishing when I get the   chance. I want to be able to change the amount of any product ordered and   have a speedy checkout                                                                                                                                                                                                                                                                         	|
+| 4              	| Micah - Customer            	| I enjoy fly   fishing but battle to tie my own flies, I'd like to be able to request a   particular fly before placing an order.                                                                                                                                                                                                                                                                                                                                                                                                                  	|
+| 5              	| Sally - Customer            	| I don't know   much about fly fishing, but I'd like to be able to go on and view the   descriptions of each product so that I can choose some flies for his   birthday, that he can then use when he goes fly fishing.  I'm not very technical, so need to be able   to checkout easily and would like mutiple checkout options.                                                                                                                                                                                                                  	|
+| 6              	| Alex - Customer             	| I need to be   able to save my information and login, and view past orders, so I can keep   and eye on how much I spend. I am saving for a car. I enjoy trout fishing   when I get to go. Its important to me to have the order history in my account   view.                                                                                                                                                                                                                                                                                     	|
+| 7              	|                             	|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   	|
+| 8              	|                             	|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   	|
+| 9              	|                             	|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   	|
+
+[Back to Index](#index)
+
+
+
+# Technology Requirements
+
+Html<br>
+Css<br>
+MaterializeCss (included in script and style links)<br>
+Gitpod<br>
+VS Code<br>
+Git Repository<br>
+JS Query<br>
+Favicons (as pngs and linked in styles in html head section)<br>
+FontAwesome<br>
+Jinja Template<br>
+Mongo Database<br>
+Heroku<br>
+Adobe Illustrator to create the Favicon image<br>
+Pexels.com for the free image used on the site<br>
+Balsamiq for Wireframes<br>
+Lucid Charts for the Site Blueprint (Flowchart Diagram)<br>
+Microsoft Excel to create the usercases that are then uploaded as CSS to convert to MD Tables<br>
+MD Table converter<br>
+Favicon Converter<br>
+Chrome, Firefox, Safari<br>
+Ipad, Iphone, Macbook for testing<br>
+Windows, Android phone for testing<br>
+Python<br>
+Various Python Modules:<br>
+-   blinker==1.6.2<br>
+-   click==8.1.3<br>
+-   dnspython==2.3.0<br>
+-   Flask==2.3.2<br>
+-   Flask-Ext==0.1<br>
+-   Flask-Mail==0.9.1<br>
+-   Flask-PyMongo==2.3.0<br>
+-   ipywidgets==8.0.6<br>
+-   itsdangerous==2.1.2<br>
+-   jupyter==1.0.0<br>
+-   jupyter-console==6.6.3<br>
+-   jupyterlab-widgets==3.0.7<br>
+-   pymongo==4.3.3<br>
+-   qtconsole==5.4.3<br>
+-   QtPy==2.3.1<br>
+-   Werkzeug==2.3.4<br>
+-   widgetsnbextension==4.0.7<br>
+
+[Back to Index](#index)
+
+
+
