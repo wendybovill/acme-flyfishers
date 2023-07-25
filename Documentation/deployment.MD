@@ -1,14 +1,15 @@
-| 1. Sign Up to Heroku or Sign in                                                                                                                                                                 |
+| Steps to Deployment                                                                                                                                                                 |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1. Sign Up to Heroku or Sign in                                                                                                                                                                 |
 | 2. Create a new App on Heroku                                                                                                                                                                   |
 | 3. Go to ElephantSQL and sign up or sign in                                                                                                                                                     |
 | 4. Create a new database and Sign in                                                                                                                                                            |
 | 5. Then go to AWS Bucket Storag, and Join up or sign in                                                                                                                                         |
 | 5. Go to Heroku and tLhe Databse                                                                                                                                                                |
-| 6. In the dev terminal instaa                                                                                                                                                                   |
+| 6. In the dev terminal install Heroku                                                                                                                                                                   |
 | 7. When in Elephantsql                                                                                                                                                                          |
-| 8. In elephant sql check Browser and run SQL Query , you should see your new Superuser                                                                                                          |
-| 9. Add to your settings file: ACCOUNT_EMAIL_VERIFCATION = 'noneE'                                                                                                                               |
+| 8. In elephant sql check 'Browser' and run SQL Query , you should see your new Superuser                                                                                                          |
+| 9. Add to your settings file: ACCOUNT_EMAIL_VERIFCATION = 'none'                                                                                                                               |
 | 10. In AWS selecte ACLs and create your bucket policy.                                                                                                                                          |
 | 11. Add ACLs enabled and Bucket Preferred owner                                                                                                                                                 |
 | 12. On the properties tab, static website hosting scroll down to the permissions tab                                                                                                            |
