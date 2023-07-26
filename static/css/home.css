@@ -15,7 +15,7 @@ body {
 
 .container {
     max-width: 80%;
-    margin-top: 80px;
+    margin-top: 80px !important;
 }
 
 .message-container {
@@ -55,7 +55,7 @@ h4 {
 }
 
 .welcome {
-    padding-top: 80px;
+    padding-top: 80px !important;
     padding-bottom: 30px;
 }
 
@@ -133,7 +133,7 @@ footer {
 @media (min-width: 1200px) {
     .container {
         max-width: 80%;
-        margin-top: 80px;
+        margin-top: 80px !important;
     }
 }
 
@@ -149,7 +149,7 @@ footer {
     }
 
     .welcome {
-        padding-top: 80px;
+        padding-top: 80px !important;
         padding-bottom: 45px;
     }
 
@@ -167,7 +167,7 @@ footer {
     }
 
     .welcome {
-        padding-top: 25px;
+        padding-top: 25px !important;
         padding-bottom: 15px;
     }
 
