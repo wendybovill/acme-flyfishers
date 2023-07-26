@@ -866,13 +866,11 @@ select option[value=""] {
     }
 }
 
-@media (min-width: 600px) and (min-width: 768px) {
+@media (min-width: 400px) and (min-width: 768px) {
     .container {
         margin-top: 80px;
     }
-}
 
-@media (min-width: 400px) and (max-width: 600) {
     .header-container {
         padding-top: 116px;
     }
