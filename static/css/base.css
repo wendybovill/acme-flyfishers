@@ -183,15 +183,15 @@ button.qty-btn {
     background: black !important;
     color: white !important;
     border: 1px solid rgb(255, 255, 255) !important;
-    padding: 0 4px !important;
-
+    padding: 4px !important;
+    margin-bottom: unset !important;
 }
 
 button.qty-btn:hover {
     background: white !important;
     color: rgb(155, 155, 155) !important;
-    border: 1px solid rgb(212, 212, 212) !important;
-    padding: 0 4px !important;
+    padding: 4px !important;
+    margin-bottom: unset !important;
 }
 
 
