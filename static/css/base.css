@@ -866,6 +866,12 @@ select option[value=""] {
     }
 }
 
+@media (min-width: 400px) and (min-width: 768px) {
+    .container {
+        margin-top: 80px;
+    }
+}
+
 @media (min-width: 400px) and (max-width: 600) {
     .header-container {
         padding-top: 116px;
@@ -961,6 +967,7 @@ select option[value=""] {
         width: 100%;
     }
 }
+
 
 
 @media (min-width: 150px) and (max-width: 400px) {
