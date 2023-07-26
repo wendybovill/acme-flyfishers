@@ -366,6 +366,12 @@ a.remove-item:hover {
     }
 }
 
+@media (min-width: 992px) {
+        {
+        padding-top: unset !important;
+    }
+}
+
 @media (max-width: 991px) {
     .header {
         padding-top: 65px;
