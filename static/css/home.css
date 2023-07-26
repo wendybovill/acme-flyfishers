@@ -135,11 +135,22 @@ footer {
         max-width: 80%;
         margin-top: 80px !important;
     }
+
+
+    .welcome {
+        padding-top: 120px !important;
+        padding-bottom: 30px;
+    }
 }
 
 @media (min-width: 992px) {
     .header {
         padding-top: 120px !important;
+    }
+
+    .welcome {
+        padding-top: 120px !important;
+        padding-bottom: 30px;
     }
 }
 
