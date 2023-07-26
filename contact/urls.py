@@ -4,6 +4,6 @@ from . import views
 
 urlpatterns = [
     path('', views.contact, name='contact'),
-    path('email_sent/', views.email_sent,
+    path('email_sent', views.email_sent,
          name='email_sent'),
 ]

@@ -1,5 +1,5 @@
 """
-These vies are not customised much as they are imported
+These views are not customised much as they are imported
 from Stripes documents
 """
 from django.shortcuts import (render, redirect, reverse,
