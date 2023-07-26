@@ -226,13 +226,13 @@ if 'DEVELOPMENT' in os.environ:
     DEFAULT_FROM_EMAIL = 'acme@example.com'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-    EMAIL_USE_SSL = os.environ.get('EMAIL_USE_SSL')
+    EMAIL_USE_SSL = False
     EMAIL_USE_TLS = True
     EMAIL_HOST = 'mail.wideworldwebhosting.co.uk'
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
-    EMAIL_PORT = 587
+    EMAIL_PORT = 465
 
 
 # Default primary key field type
