@@ -4,7 +4,7 @@
 <!doctype html>
 <html lang="en">
 {%block more_css %}
-<link rel="stylesheet" href="{% static 'css/base.css' %}">
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
 {% endblock %}
 {% block page_header %}
 
@@ -18,10 +18,10 @@
         <div class="welcome text-center">
             <h2 class="text-white">Welcome to ACME Flydressers </h2>
 
-            <p class="py-2 lead">I'm sorry but it seems you have reached a 500 error page.<br></p>
+            <p class="py-2 lead">I'm sorry but it seems you have reached a 404 error, we couldn't find what you searched for.<br></p>
 
-            <p>If you were attempting to check out. You may wish to check your details on the form were correct. And check your internet connection.</p>
-            <p>If you were attempting to sign up, sign in, or add something to your basket and this error happens again, please <a class="" href="{% url 'contact' %}" id="contact-link">Contact Us</a></p>
+            <p>Try searching for a different search term. If it was a page/product that didn't load properly and it happens again, and it should be there, please let us know.</p>
+            <p>If you were attempting to sign up, sign in, or add something to your basket and this error happens again, please <a href="{% url 'contact' %}" id="contact-link">Contact Us</a> us.</p>
         </div>
 
         <div class="column text-center">
