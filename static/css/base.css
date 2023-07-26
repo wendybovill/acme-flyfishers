@@ -555,6 +555,7 @@ select option[value=""] {
     display: block;
     width: 80%;
     max-width: 800px;
+    cursor: pointer;
 }
 
 /* Caption of Modal Image */
