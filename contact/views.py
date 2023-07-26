@@ -20,7 +20,7 @@ def contact(request):
             send_contact_notify_admin(contact_form)
             messages.success(request, 'Thankyou for your email \
             we will respond as soon as we can.')
-            return render(request, 'contact/confirmsend.html')
+            return render(request, 'contact/email_sent.html')
         else:
             messages.error(request, 'Your email could not be sent. \
                 Please check your form for errors.')
@@ -79,7 +79,7 @@ def send_contact_notify_admin(contact_form):
 
 
 def email_sent(request):
-    template = 'contact/confirmsend.html'
+    template = 'contact/email_sent.html'
 
     return render(request, template, context)
 
