@@ -13,6 +13,11 @@ body {
     flex-direction: column;
 }
 
+.container {
+    max-width: 80%;
+    margin-top: 80px;
+}
+
 .message-container {
     position: inherit;
     top: inherit;
@@ -50,7 +55,7 @@ h4 {
 }
 
 .welcome {
-    padding-top: 116px;
+    padding-top: 80px;
     padding-bottom: 30px;
 }
 
@@ -128,7 +133,7 @@ footer {
 @media (min-width: 1200px) {
     .container {
         max-width: 80%;
-        margin-top: 100px;
+        margin-top: 80px;
     }
 }
 
