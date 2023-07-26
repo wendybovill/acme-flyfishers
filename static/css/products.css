@@ -378,6 +378,11 @@ a.remove-item:hover {
         margin-top: unset !important;
     }
 
+    main {
+        flex: 1;
+        padding-bottom: 65px;
+        padding-top: 20px;
+    }
 }
 
 /* Hide slideshow indicators but not arrows */
