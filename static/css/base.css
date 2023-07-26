@@ -762,6 +762,32 @@ select option[value=""] {
         color: #6c757d;
         /* text-secondary */
     }
+
+    .btn.btn-outline-black.rounded-0,
+    .btn.btn-black.rounded-0 {
+        padding: .375rem .375rem;
+        margin-bottom: 50px;
+    }
+
+    .btn.btn-outline-black.rounded-0.btn-lg,
+    .btn.btn-black.rounded-0.btn-lg {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+        margin-bottom: 50px;
+    }
+
+    .btn.btn-outline-black.rounded-0:hover,
+    .btn.btn-black.rounded-0:hover {
+        padding: .375rem .375rem;
+        margin-bottom: 50px;
+    }
+
+    .btn.btn-outline-black.rounded-0.btn-lg:hover,
+    .btn.btn-black.rounded-0.btn-lg:hover {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+        margin-bottom: 50px;
+    }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
@@ -804,12 +830,28 @@ select option[value=""] {
     .btn.btn-outline-black.rounded-0,
     .btn.btn-black.rounded-0 {
         padding: .375rem .375rem;
+        margin-bottom: 50px;
     }
 
     .btn.btn-outline-black.rounded-0.btn-lg,
     .btn.btn-black.rounded-0.btn-lg {
         padding: .375rem .375rem;
         font-size: .75rem;
+        margin-bottom: 50px;
+    }
+
+
+    .btn.btn-outline-black.rounded-0:hover,
+    .btn.btn-black.rounded-0:hover {
+        padding: .375rem .375rem;
+        margin-bottom: 50px;
+    }
+
+    .btn.btn-outline-black.rounded-0.btn-lg:hover,
+    .btn.btn-black.rounded-0.btn-lg:hover {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+        margin-bottom: 50px;
     }
 
     .increment-qty,
