@@ -164,6 +164,8 @@ button,
     border: 2px solid rgb(163, 159, 118) !important;
     padding: 7px !important;
     vertical-align: middle !important;
+    margin-bottom: 50px;
+
 }
 
 button:hover,
@@ -177,6 +179,7 @@ button:hover,
     border: 2px solid red !important;
     padding: 7px !important;
     vertical-align: middle !important;
+    margin-bottom: 50px;
 }
 
 button.qty-btn {
@@ -201,6 +204,7 @@ button.btn-search,
     color: white !important;
     border: 1px solid rgb(212, 212, 212) !important;
     padding: 0 4px !important;
+    margin-bottom: unset !important;
 
 }
 
@@ -210,6 +214,7 @@ button.btn-search:hover,
     color: rgb(131, 131, 131) !important;
     border: 1px solid rgb(212, 212, 212) !important;
     padding: 0 4px !important;
+    margin-bottom: unset !important;
 }
 
 
@@ -910,12 +915,14 @@ select option[value=""] {
     .btn.btn-outline-black.rounded-0,
     .btn.btn-black.rounded-0 {
         padding: .375rem .375rem;
+        margin-bottom: 50px;
     }
 
     .btn.btn-outline-black.rounded-0.btn-lg,
     .btn.btn-black.rounded-0.btn-lg {
         padding: .375rem .375rem;
         font-size: .75rem;
+        margin-bottom: 50px;
     }
 
     .increment-qty,
@@ -993,12 +1000,14 @@ select option[value=""] {
     .btn.btn-outline-black.rounded-0,
     .btn.btn-black.rounded-0 {
         padding: .375rem .375rem;
+        margin-bottom: 50px;
     }
 
     .btn.btn-outline-black.rounded-0.btn-lg,
     .btn.btn-black.rounded-0.btn-lg {
         padding: .375rem .375rem;
         font-size: .75rem;
+        margin-bottom: 50px;
     }
 
     .increment-qty,
