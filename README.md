@@ -472,7 +472,11 @@ Manual                                                                          
 | Estimate 1   hour                                                                                                                                                                                                                                                                                                                                                                                                                                                 	|
 | Type Acceptance                                                                                                                                                                                                                                                                                                                                                                                                                                                   	|
 | Automation Manual                                                                                                                                                                                                                                                                                                                                                                                                                                                 	|
-[Back to Index](#index)
+[Test File Showing Screenshots](https://github.com/wendybovill/milestone-project-4/blob/44c983b5db4a55d0b2f5383b75302146bc3be889/Documentation/Test.MD)
+
+
+[Back to Index](#index) 
+
 
 
 **User Testing:**
