@@ -20,6 +20,11 @@
                 {{ message }}
             </div>
         </div>
+        {% elif grand_total and not on_contact_page %}
+        <div class="row">
+            <div class="col text-dark">
+            </div>
+        </div>
         <p class="logo-font text-black py-1">Your bag ({{ product_count }})</p>
         <div class="bag-toast-wrapper">
             {% for item in bag_items %}
