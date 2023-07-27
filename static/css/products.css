@@ -238,7 +238,7 @@ a.remove-item:hover {
 
 #imgView {
     border-radius: 5px;
-    cursor: pointer;
+    cursor: zoom-in;
     transition: 0.3s;
 }
 
@@ -363,12 +363,6 @@ a.remove-item:hover {
 @media (min-width: 1200px) {
     .container {
         max-width: 80%;
-    }
-}
-
-@media (min-width: 992px) {
-        {
-        padding-top: unset !important;
     }
 }
 

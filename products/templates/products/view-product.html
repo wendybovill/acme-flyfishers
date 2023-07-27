@@ -53,6 +53,7 @@
                             <h2 class="mb-0 py-2 text-center">{{ product.name }}</h2>
                             {% if product.image %}
                             <img class="modal-content card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}" id="product{{ product.id }}">
+                            <i class="fa-solid fa-magnifying-glass-plus" onclick="img.onclick()" style="color: #aaaaaa; float:right; cursor:zoom-in"></i>
                             <!-- Modal Product Popup Happens Here-->
                             <div id="imgView{{ product.id }}" class="modal" style="z-index: 9990;">
                                 <span class="close" style="z-index: 9995;">&times;</span>
