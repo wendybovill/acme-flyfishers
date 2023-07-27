@@ -1,0 +1,13 @@
+Hello, {{ form_data.contact_name }}
+
+We recieved your email. Below is the content of your email.
+
+Subject: {{ form_data.contact_subject }}
+
+Message: {{ form_data.contact_message }}
+
+If you need to contact us urgently for example to cancel an order,
+or if you'd like to order a bespoke product, you can call us on: 
+01323 732123
+
+From ACME Flydressers

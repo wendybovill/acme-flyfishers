@@ -1,0 +1,10 @@
+Hi, 
+
+You have received an email:
+
+Name: {{ form_data.contact_name}}
+Email: {{ form_data.contact_email }}
+Subject: {{ form_data.contact_subject }}
+Message: {{ form_data.contact_message }}
+
+Please contact them as soon as possible.
