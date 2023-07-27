@@ -19,6 +19,6 @@
 
 *Screenshot showing Admin Login Django Managment*
 Able to Edit the Home Page Sections and Entries
-![Admin Index Page Section Mangement]()
+![Admin Index Page Section Mangement](https://github.com/wendybovill/milestone-project-4/blob/9a5b4ec664b2b6d14c6be190f32076ef9eb05ba0/Documentation/images/otherimages/adminchangesection.png)
 ---------------------------------------------------------
 ![Admin Index Page Entry Management]()
