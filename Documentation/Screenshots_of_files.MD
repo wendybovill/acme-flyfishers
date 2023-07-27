@@ -1,14 +1,18 @@
 
 *Screenshot showing Admin Login seeing the products to Edit or Delete*
-![Admin Frontend Product View]()
-
-
-*Screenshot showing Admin Login in the View to Add Products*
-![Admin Frontend Product Management]()
+![Admin Frontend Product View](https://github.com/wendybovill/milestone-project-4/blob/0467d708521dbb74b8e8a09d806edfa7842740ed/Documentation/images/otherimages/adminview.png)
 
 
 *Screenshot showing Customer Product View - not able to Edit or Delete*
-![Customer Product View]()
+![Customer Product View](https://github.com/wendybovill/milestone-project-4/blob/0467d708521dbb74b8e8a09d806edfa7842740ed/Documentation/images/otherimages/customerview.png)
+
+
+*Screenshot showing Admin Login in the View Product Management*
+![Admin Frontend Product Management](https://github.com/wendybovill/milestone-project-4/blob/0467d708521dbb74b8e8a09d806edfa7842740ed/Documentation/images/otherimages/adminproductmanagement.png)
+
+
+*Screenshot showing Customer Product View - not able to Edit or Delete*
+![Customer Product View](https://github.com/wendybovill/milestone-project-4/blob/0467d708521dbb74b8e8a09d806edfa7842740ed/Documentation/images/otherimages/customerview.png)
 
 
 *Screenshot showing Product on View_Product*
