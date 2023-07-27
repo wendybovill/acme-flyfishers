@@ -67,3 +67,31 @@
 .arrow-dark {
     border-bottom-color: #343a40 !important;
 }
+
+button.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #857a3b;
+    font-size: unset !important;
+    font-weight: bold;
+    transition: 0.3s;
+    padding: unset !important;
+    vertical-align: middle !important;
+    margin-bottom: 50px unset !important;
+    cursor: pointer;
+}
+
+button.close:hover {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #857a3b;
+    font-size: unset !important;
+    font-weight: bold;
+    transition: 0.3s;
+    padding: unset !important;
+    vertical-align: middle !important;
+    margin-bottom: 50px unset !important;
+    cursor: pointer;
+}
