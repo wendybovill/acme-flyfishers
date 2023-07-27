@@ -478,6 +478,13 @@ Manual                                                                          
 [Back to Index](#index) 
 
 
+**Screenshots of Features**
+[View Screenshots of Features](https://github.com/wendybovill/milestone-project-4/blob/9261f3dd13504c0ec4aa644f72deb24d10c0f5e6/Documentation/Screenshots_of_files.MD)
+- Product Management for Admin
+- Product Managment Restricted for Customer
+- Home page content managment
+- Emails sent and received
+
 
 **User Testing:**
 
