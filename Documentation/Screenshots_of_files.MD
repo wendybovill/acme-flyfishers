@@ -21,4 +21,4 @@
 Able to Edit the Home Page Sections and Entries
 ![Admin Index Page Section Mangement](https://github.com/wendybovill/milestone-project-4/blob/9a5b4ec664b2b6d14c6be190f32076ef9eb05ba0/Documentation/images/otherimages/adminchangesection.png)
 ---------------------------------------------------------
-![Admin Index Page Entry Management]()
+![Admin Index Page Entry Management](https://github.com/wendybovill/milestone-project-4/blob/342ef8fb41366b3bc01f7077fcc658640a31729e/Documentation/images/otherimages/entry.png)
