@@ -501,7 +501,7 @@ Manual Testing various possible user attempts to work around the site security w
 
 - DevTools in the browser and the console
 
-- Python documentation, Django documentation
+- Python documentation (Pep8), Django documentation
 
 [Back to Index](#index)
 
