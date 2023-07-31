@@ -299,7 +299,7 @@ The site has extra features added which are not in the original mockups/wirefram
 | 7  	|  In the dev terminal install heroku                                                                                                                                                                 	|
 | 8  	| When in Elephantsql                                                                                                                                                                                 	|
 | 9  	| In elephant sql check Browser and run SQL Query , you should see your new   Superuser                                                                                                               	|
-| 10 	| Add to your settings file: ACCOUNT_EMAIL_VERIFCATION = 'none'                                                                                                                                       	|
+| 10 	| Add to your settings file: ACCOUNT_EMAIL_VERIFICATION = 'none'                                                                                                                                       	|
 | 11 	| In AWS selecte ACLs and create your bucket policy.                                                                                                                                                  	|
 | 12 	|    Add ACLs enabled and Bucket Preferred owner                                                                                                                                                      	|
 | 13 	|  On the properties tab, static   website hosting scroll down to the permissions tab                                                                                                                 	|
@@ -309,12 +309,12 @@ The site has extra features added which are not in the original mockups/wirefram
 | 17 	| Connect to Django                                                                                                                                                                                   	|
 | 18 	| Install boto3 and Django storages in and django storages via python   manage in the terminal                                                                                                        	|
 | 19 	| Add storages as an installed app in django                                                                                                                                                          	|
-| 20 	| Then add and if statement: if "USE_AWS in the environment if there   is then define the AWS_STORAGE_BUCKET_NAME.                                                                                    	|
+| 20 	| Then add an if statement: if "USE_AWS in the environment if there   is then define the AWS_STORAGE_BUCKET_NAME.                                                                                    	|
 | 21 	| AWS_S3_REGION_NAME and our acess key, and secret access key we need to   get from the environment. - Keep these secret, only add them to Heroku config   Vars                                       	|
 | 22 	| Then go to AWS and create a media storage folder, grant the public read   access only                                                                                                               	|
 | 23 	| Upload your Product images to the newly created media folder.                                                                                                                                       	|
 | 24 	| Then click grant public read access to those Objects.                                                                                                                                               	|
-| 25 	| Confirm the superuser on the Postgres database. Do that in the django   admin. You will need to use the email confirmation link to do this,get this   link from the Heroku logs.                    	|
+| 25 	| Confirm the superuser on the Postgres database. Do that in the django   admin. You will need to use the email confirmation link to do this,get the   link from the Heroku logs.                    	|
 | 26 	| Then go to Stripe to get the Stripe Keys.                                                                                                                                                           	|
 | 27 	| Once you 've got them, go back to heroku and add them as config vars   (found in settings)                                                                                                          	|
 | 28 	| We need to create a new webhook  as   the one created is used for the gitpod app,                                                                                                                   	|
