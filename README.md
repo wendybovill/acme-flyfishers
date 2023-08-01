@@ -262,7 +262,7 @@ was designed in Illustrator and hand drawn. Client gave specifics of what he req
 
 
 ## Design Variation:
-The site has extra features added which are not in the original mockups/wireframes, such as a contact us link on the bottom of the page, the basket views, checkout views, view to edit front page, the Javascript feature of the modal image popup view, was added because as a Test User I found it frustrating that I had to keep closing the tab that was opened, and then trying to find the tab that I had previously been on. So instead I have made the image pop up with a button to click to close the modal and get returned to the same bage the user was on before.
+The site has extra features added which are not in the original mockups/wireframes, such as a contact us link on the bottom of the page, the basket views, checkout views, view to edit front page, the Javascript feature of the modal image popup view, was added because as a Test User I found it frustrating that I had to keep closing the tab that was opened, and then trying to find the tab that I had previously been on. So instead I have made the image pop up with a button to click to close the modal and get returned to the same page the user was on before.
 
 [Back to Index](#index)
 
