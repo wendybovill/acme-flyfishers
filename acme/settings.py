@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['acmeflydressers-882ac53eca0c.herokuapp.com',
+ALLOWED_HOSTS = ['acmeflydressers-882ac53eca0c.herokuapp.com', 'www.demoshop.wendywebweaver.com','demoshop.wendywebweaver.com', 
                  '8000-wendybovill-milestonepr-l6cezvkc4vc.ws-eu101.gitpod.io',
                  'localhost',
                  '127.0.0.1',
