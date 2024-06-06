@@ -52,7 +52,7 @@
 - To provide various options of flies for various seasons. 
 - The owner of the business to sell these flies and make a profit.
 - To encourage new fly fishers to take up the sport by making these flies easily available and affordable.
-- To enable site users to make purchases, orders and to make contact throug a contact form to the site owner.
+- To enable site users to make purchases, orders and to make contact through a contact form to the site owner.
 
 [Back to Index](#index)
 
@@ -330,7 +330,7 @@ The site has extra features added which are not in the original mockups/wirefram
 
 
 [Back to Index](#index)
-frawbfktgrh
+
 
 
 # Acknowledgements
